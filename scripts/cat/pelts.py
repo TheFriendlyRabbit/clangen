@@ -1,5 +1,23 @@
 from random import choice, randint
 
+COLOR_MAP = {\
+    'palegrey': 'pale grey',\
+    'darkgrey': 'dark grey',\
+    'paleginger': 'pale ginger',\
+    'darkginger': 'dark ginger',\
+    'lightbrown': 'light brown',\
+    'darkbrown': 'dark brown',\
+    }
+
+PELT_MAP = {\
+    'Tabby': ' tabby',\
+    'Speckled': ' speckled',\
+    'Bengal': ' bengal',\
+    'Marbled': ' marbled tabby',\
+    'Rosette': ' rosetted',\
+    'Ticked': ' ticked tabby',\
+    'Smoke': ' smoke',\
+    }
 
 class SingleColour():
     name = "SingleColour"
@@ -438,38 +456,16 @@ def choose_pelt(gender,colour=None,white=None,pelt=None,length=None,determined=F
             return Tortie(white, length)
     else:
         return Calico(length)
-
+    
 def describe_color(pelt, tortiecolour, tortiepattern, white_patches):
-        color_name = ''
         color_name = str(pelt.colour).lower()
         if tortiecolour is not None:
             color_name = str(tortiecolour).lower()
-        if color_name == 'palegrey':
-            color_name = 'pale grey'
-        elif color_name == 'darkgrey':
-            color_name = 'dark grey'
-        elif color_name == 'paleginger':
-            color_name = 'pale ginger'
-        elif color_name == 'darkginger':
-            color_name = 'dark ginger'
-        elif color_name == 'lightbrown':
-            color_name = 'light brown'
-        elif color_name == 'darkbrown':
-            color_name = 'dark brown'
-        if pelt.name == "Tabby":
-            color_name = color_name + ' tabby'
-        elif pelt.name == "Speckled":
-            color_name = color_name + ' speckled'
-        elif pelt.name == "Bengal":
-            color_name = color_name + ' bengal'
-        elif pelt.name == "Marbled":
-            color_name = color_name + ' marbled tabby'
-        elif pelt.name == "Rosette":
-            color_name = color_name + ' rosetted'
-        elif pelt.name == "Ticked":
-            color_name = color_name + ' ticked tabby'
-        elif pelt.name == "Smoke":
-            color_name = color_name + ' smoke'
+        
+        if color_name in COLOR_MAP:
+            color_name = COLOR_MAP[color_name]
+        if pelt.name in PELT_MAP:
+            color_name += PELT_MAP[pelt.name]
 
         elif pelt.name == "Tortie":
             if tortiepattern not in ["tortiesolid", "tortiesmoke"]:
@@ -500,8 +496,6 @@ def describe_color(pelt, tortiecolour, tortiepattern, white_patches):
             # vitiligo
             elif white_patches in vit:
                 color_name = color_name + ' with vitiligo'
-        else:
-            color_name = color_name
 
         if color_name == 'tortie':
             color_name = 'tortoiseshell'
