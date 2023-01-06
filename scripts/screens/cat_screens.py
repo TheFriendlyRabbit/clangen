@@ -2000,21 +2000,12 @@ class CeremonyScreen(Screens):
         # as of right now, chooses random starclan cats to give lives
         # in the future, plan to have starclan cats with high relationships to give lives
         # if not enough cats to give lives, generate a new random cat name to give a life
-        starclan = ["", "", "", "", "", "", "", "" , ""]
-        known = None
-        virtues = None
+        starclan = [""] * 9
         if len(cat.life_givers) == 0:
-            queen_virtues = ["affection","compassion","empathy","duty","protection","pride"]
-            warrior_virtues = ["acceptance","bravery","certainty", "clear judgement","confidence"]
-            kit_virtues = ["adventure","curiosity","forgiveness","hope","perspective","protection"]
-            warrior2_virtues = ["courage","determination","endurance","sympathy"]
-            app_virtues = ["happiness","honesty","humor","justice","mentoring","trust"]
-            elder_virtues = ["empathy","grace","humility","integrity","persistence","resilience"]
-            warrior3_virtues = ["farsightedness","friendship","instincts","mercy","strength","unity"]
-            med_cat_virtues = ["clear sight","devotion","faith","healing","patience","selflessness","wisdom"]
-            prev_lead_virtues = ["endurance in the face of hardship","knowing when to fight and when to choose peace","leadership through the darkest times","loyalty to their clan","the strength to overcome their fears","tireless energy"]
-            virtues = [choice(queen_virtues), choice(warrior_virtues), choice(kit_virtues), choice(warrior2_virtues), choice(app_virtues), choice(elder_virtues), choice(warrior3_virtues), choice(med_cat_virtues), choice(prev_lead_virtues)]
-            known = [False, False, False, False, False, False, False, False, False]
+            virtues = []
+            for virt_index in range(0, 9):
+                virtues.append(choice(list(game.langman.fetch_table("CAT_SCREEN.LIVES_VIRTUES_" + str(virt_index)).keys())))
+            known = [False] * 9
             
             status_reqs = ["queen", "warrior", "kitten", "warrior", "apprentice", "elder", "warrior", "medicine cat", "leader"]
 
@@ -2041,7 +2032,7 @@ class CeremonyScreen(Screens):
         out_str = game.langman.localize("CAT_SCREEN.LIVES_CEREMONY", "intro")
         
         for idx, known_bool in enumerate(known):
-            out_str += game.langman.localize("CAT_SCREEN.LIVES_CEREMONY", ("known" if known_bool else "unknown") + str(idx)).replace("%virt%", cat.virtues[idx]).replace("%sc%", starclan[idx])
+            out_str += game.langman.localize("CAT_SCREEN.LIVES_CEREMONY", ("known" if known_bool else "unknown") + str(idx)).replace("%virt%", game.langman.localize("CAT_SCREEN.LIVES_VIRTUES_" + str(idx), cat.virtues[idx])).replace("%sc%", starclan[idx])
             
         out_str += game.langman.localize("CAT_SCREEN.LIVES_CEREMONY", ("known_fin" if known[8] else "unknown_fin")).replace("%pref%", cat.name.prefix).replace("%clan%", game.clan.name)
         out_str = out_str.replace("%cat%", dep_name)
