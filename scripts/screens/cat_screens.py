@@ -187,6 +187,19 @@ class ProfileScreen(Screens):
     # Keep track of current tabs open. Can be used to keep tabs open when pages are switched, and
     # helps with exiting the screen
     open_tab = None
+    
+    EVENT_BUTTON_LOOKUP = {\
+                            "#back_button": "back_button_callback",\
+                            "#previous_cat_button": "previous_cat_button_callback",\
+                            "#next_cat_button": "next_cat_button_callback",\
+                            "#relations_tab_button": "toggle_relations_tab",\
+                            "#roles_tab_button": "toggle_roles_tab",\
+                            "#personal_tab_button": "toggle_personal_tab",\
+                            "#dangerous_tab_button": "toggle_dangerous_tab",\
+                            "#conditions_tab_button": "toggle_conditions_tab",\
+                            "#leader_ceremony_button": "ceremony_button_callback",\
+                            "#backstory_tab_button": "backstory_button_callback",\
+                           }
 
     def __init__(self, name=None):
         super().__init__(name)
@@ -242,47 +255,46 @@ class ProfileScreen(Screens):
         self.prevent_fading_text = None
         self.checkboxes = {}
         self.profile_elements = {}
+    
+    def back_button_callback(self):
+        self.close_current_tab()
+        self.change_screen(game.last_screen_forProfile)
+        
+    def backstory_button_callback(self):
+        if self.open_sub_tab is None:
+            if game.settings['favorite sub tab'] is None:
+                self.open_sub_tab = 'life events'
+            else:
+                self.open_sub_tab = game.settings['favorite sub tab']
 
+        self.toggle_history_tab()
+        
+    def ceremony_button_callback(self):
+        self.change_screen('ceremony screen')
+        
+    def next_cat_button_callback(self):
+        self.clear_profile()
+        game.switches['cat'] = self.next_cat
+        self.build_profile()
+        self.update_disabled_buttons_and_text()
+        
+    def previous_cat_button_callback(self):
+        self.clear_profile()
+        game.switches['cat'] = self.previous_cat
+        self.build_profile()
+        self.update_disabled_buttons_and_text()
+        
     def handle_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
-            if event.ui_element == self.back_button:
-                self.close_current_tab()
-                self.change_screen(game.last_screen_forProfile)
-            elif event.ui_element == self.previous_cat_button:
-                self.clear_profile()
-                game.switches['cat'] = self.previous_cat
-                self.build_profile()
-                self.update_disabled_buttons_and_text()
-            elif event.ui_element == self.next_cat_button:
-                self.clear_profile()
-                game.switches['cat'] = self.next_cat
-                self.build_profile()
-                self.update_disabled_buttons_and_text()
-            elif event.ui_element == self.relations_tab_button:
-                self.toggle_relations_tab()
-            elif event.ui_element == self.roles_tab_button:
-                self.toggle_roles_tab()
-            elif event.ui_element == self.personal_tab_button:
-                self.toggle_personal_tab()
-            elif event.ui_element == self.dangerous_tab_button:
-                self.toggle_dangerous_tab()
-            elif event.ui_element == self.backstory_tab_button:
-                if self.open_sub_tab is None:
-                    if game.settings['favorite sub tab'] is None:
-                        self.open_sub_tab = 'life events'
-                    else:
-                        self.open_sub_tab = game.settings['favorite sub tab']
-
-                self.toggle_history_tab()
-            elif event.ui_element == self.conditions_tab_button:
-                self.toggle_conditions_tab()
-            elif event.ui_element == self.leader_ceremony_button:
-                self.change_screen('ceremony screen')
-            else:
-                self.handle_tab_events(event)
-
+        
+            ui_element_name = event.ui_element.combined_element_ids[0]
+            
+            # use the EVENT_BUTTON_LOOKUP dict to specify button callbacks
+            getattr(self, self.EVENT_BUTTON_LOOKUP[ui_element_name])() if ui_element_name in self.EVENT_BUTTON_LOOKUP else self.handle_tab_events(event)
+            
             if self.the_cat.dead and game.settings["fading"]:
-                if event.ui_element == self.checkboxes["prevent_fading"]:
+                # we can only get here at all if this is the "fading" checkbox
+                if "checkbox" in ui_element_name:
                     if self.the_cat.prevent_fading:
                         self.the_cat.prevent_fading = False
                     else:
@@ -291,7 +303,7 @@ class ProfileScreen(Screens):
                     self.clear_profile()
                     self.build_profile()
 
-        if event.type == pygame_gui.UI_BUTTON_ON_HOVERED:
+        elif event.type == pygame_gui.UI_BUTTON_ON_HOVERED:
             if event.ui_element == self.alert:
                 print('Test button hovered')
 
