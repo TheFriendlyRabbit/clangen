@@ -33,6 +33,8 @@ COLLAR_COLS = {\
     'multi': 'multi',\
     }
     
+# These are 2 separate dicts to keep translation easier
+
 BACKSTORY_INDEX = {\
     'default': "This cat was born into the Clan where they currently reside.",\
     'clan_founder': "This cat is one of the founding members of the Clan.",\
@@ -85,6 +87,34 @@ BACKSTORY_INDEX = {\
     'orphaned': ("This cat was found with a deceased parent. The Clan took "
                  "them in, but doesn't hide where they came from."),\
     }
+    
+SHORT_BACKSTORY_INDEX = {\
+                         'clanborn': 'clanborn',\
+                         'clan_founder': 'clan founder',\
+                         'halfclan1': 'half-clan',\
+                         'halfclan2': 'half-clan',\
+                         'outsider_roots1': 'outsider roots',\
+                         'outsider_roots2': 'outsider roots',\
+                         'loner1': 'formerly a loner',\
+                         'loner2': 'formerly a loner',\
+                         'kittypet1': 'formerly a kittypet',\
+                         'kittypet2': 'formerly a kittypet',\
+                         'rogue1': 'formerly a rogue',\
+                         'rogue2': 'formerly a rogue',\
+                         'abandoned1': 'formerly abandoned',\
+                         'abandoned2': 'formerly abandoned',\
+                         'abandoned3': 'formerly abandoned',\
+                         'medicine_cat': 'formerly a medicine cat',\
+                         'otherclan1': 'formerly from another clan',\
+                         'otherclan2': 'formerly from another clan',\
+                         'ostracized_warrior': 'ostracized warrior',\
+                         'retired_leader': 'retired leader',\
+                         'refugee': 'refugee',\
+                         'tragedy_survivor': 'survivor of a tragedy',\
+                         'orphaned': 'orphaned',\
+                         'disgraced_medcat': 'disgraced medicine cat',\
+                         'disgraced_dep': 'disgraced deputy',\
+                        }
 
 
 # ---------------------------------------------------------------------------- #
@@ -130,49 +160,12 @@ def bs_blurb_text(cat):
 #             change how backstory info displays on cat profiles               #
 # ---------------------------------------------------------------------------- #
 def backstory_text(cat):
-    backstory = cat.backstory
-    if backstory is None:
+    if not cat.backstory:
         return ''
-    bs_display = backstory
-    if bs_display == 'clanborn':
-        bs_display = 'clanborn'
-    elif bs_display == 'clan_founder':
-        bs_display = 'clan founder'
-    elif bs_display in ['halfclan1', 'halfclan2']:
-        bs_display = 'half-clan'
-    elif bs_display in ['outsider_roots1', 'outsider_roots2']:
-        bs_display = 'outsider roots'
-    elif bs_display in ['loner1', 'loner2']:
-        bs_display = 'formerly a loner'
-    elif bs_display in ['kittypet1', 'kittypet2']:
-        bs_display = 'formerly a kittypet'
-    elif bs_display in ['rogue1', 'rogue2']:
-        bs_display = 'formerly a rogue'
-    elif bs_display in ['abandoned1', 'abandoned2', 'abandoned3']:
-        bs_display = 'formerly abandoned'
-    elif bs_display == 'medicine_cat':
-        bs_display = 'formerly a medicine cat'
-    elif bs_display in ['otherclan', 'otherclan2']:
-        bs_display = 'formerly from another clan'
-    elif bs_display == 'ostracized_warrior':
-        bs_display = 'ostracized warrior'
-    elif bs_display == 'disgraced':
-        if cat.status == 'medicine cat':
-            bs_display = 'disgraced medicine cat'
-        elif cat.status in ['warrior', 'elder']:
-            bs_display = 'disgraced deputy'
-    elif bs_display == 'retired_leader':
-        bs_display = 'retired leader'
-    elif bs_display == 'refugee':
-        bs_display = 'refugee'
-    elif bs_display == 'tragedy_survivor':
-        bs_display = 'survivor of a tragedy'
-    elif bs_display == 'orphaned':
-        bs_display = 'orphaned'
-    if bs_display is None:
-        bs_display = None
+    elif cat.backstory == 'disgraced':
+        return SHORT_BACKSTORY_INDEX['disgraced_medcat'] if cat.status == 'medicine cat' else SHORT_BACKSTORY_INDEX['disgraced_dep']
     else:
-        return bs_display
+        return SHORT_BACKSTORY_INDEX[cat.backstory] if cat.backstory in SHORT_BACKSTORY_INDEX else ''
 
 
 # ---------------------------------------------------------------------------- #
