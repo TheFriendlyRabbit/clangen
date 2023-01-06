@@ -17,6 +17,22 @@ from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import *
 from scripts.cat.names import *
 
+COLLAR_COLS = {\
+    'crimson': 'red',\
+    'blue': 'blue',\
+    'yellow': 'yellow',\
+    'cyan': 'cyan',\
+    'red': 'orange',\
+    'lime': 'lime',\
+    'green': 'green',\
+    'rainbow': 'rainbow',\
+    'black': 'black',\
+    'spikes': 'spiky',\
+    'pink': 'pink',\
+    'purple': 'purple',\
+    'multi': 'multi',\
+    }
+
 
 # ---------------------------------------------------------------------------- #
 #             change how accessory info displays on cat profiles               #
@@ -28,53 +44,25 @@ def accessory_display_name(cat):
         return ''
     acc_display = accessory.lower()
 
-    if accessory is not None:
-        if accessory in collars:
-            collar_color = None
-            if acc_display.startswith('crimson'):
-                collar_color = 'red'
-            elif acc_display.startswith('blue'):
-                collar_color = 'blue'
-            elif acc_display.startswith('yellow'):
-                collar_color = 'yellow'
-            elif acc_display.startswith('cyan'):
-                collar_color = 'cyan'
-            elif acc_display.startswith('red'):
-                collar_color = 'orange'
-            elif acc_display.startswith('lime'):
-                collar_color = 'lime'
-            elif acc_display.startswith('green'):
-                collar_color = 'green'
-            elif acc_display.startswith('rainbow'):
-                collar_color = 'rainbow'
-            elif acc_display.startswith('black'):
-                collar_color = 'black'
-            elif acc_display.startswith('spikes'):
-                collar_color = 'spiky'
-            elif acc_display.startswith('pink'):
-                collar_color = 'pink'
-            elif acc_display.startswith('purple'):
-                collar_color = 'purple'
-            elif acc_display.startswith('multi'):
-                collar_color = 'multi'
-            if acc_display.endswith('bow') and not acc_display == 'rainbow':
-                acc_display = collar_color + ' bow'
-            elif acc_display.endswith('bell'):
-                acc_display = collar_color + ' bell collar'
-            else:
-                acc_display = collar_color + ' collar'
-
+    if accessory in collars:
+        collar_color = None
+        for color in COLLAR_COLS:
+            if acc_display.startswith(color):
+                collar_color = COLLAR_COLS[color]
+        if acc_display.endswith('bow') and not acc_display == 'rainbow':
+            acc_display = collar_color + ' bow'
+        elif acc_display.endswith('bell'):
+            acc_display = collar_color + ' bell collar'
+        else:
+            acc_display = collar_color + ' collar'
     elif accessory in wild_accessories:
         if acc_display == 'blue feathers':
             acc_display = 'crow feathers'
         elif acc_display == 'red feathers':
             acc_display = 'cardinal feathers'
-        else:
-            acc_display = acc_display
     else:
-        acc_display = acc_display
-    if accessory is None:
-        acc_display = None
+        acc_display = ''
+        
     return acc_display
 
 
