@@ -8,6 +8,8 @@ from pygame_gui.elements import UIWindow
 
 from scripts.game_structure.image_button import UIImageButton, UITextBoxTweaked
 
+from languages import lang
+
 
 screen_x = 800
 screen_y = 700
@@ -23,6 +25,8 @@ class Game():
     #allegiance_scroll_ct = 0
     #max_relation_events_displayed = 10
     #relation_scroll_ct = 0
+    
+    langman = lang.LanguageManager()
 
     ranks_changed_timeskip = False  # Flag for when a cat's status changes occurs during a timeskip.
 

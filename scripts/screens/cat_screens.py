@@ -9,113 +9,12 @@ from .base_screens import Screens, cat_profiles
 from scripts.utility import get_text_box_theme
 from scripts.cat.cats import Cat
 from scripts.cat.pelts import collars, wild_accessories
-import scripts.game_structure.image_cache as image_cache
 import pygame_gui
 from re import sub
 from scripts.game_structure.image_button import UIImageButton, UITextBoxTweaked#, UIImageTextBox, UISpriteButton
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import *
 from scripts.cat.names import *
-
-COLLAR_COLS = {\
-    'crimson': 'red',\
-    'blue': 'blue',\
-    'yellow': 'yellow',\
-    'cyan': 'cyan',\
-    'red': 'orange',\
-    'lime': 'lime',\
-    'green': 'green',\
-    'rainbow': 'rainbow',\
-    'black': 'black',\
-    'spikes': 'spiky',\
-    'pink': 'pink',\
-    'purple': 'purple',\
-    'multi': 'multi',\
-    }
-    
-# These are 2 separate dicts to keep translation easier
-
-BACKSTORY_INDEX = {\
-    'default': "This cat was born into the Clan where they currently reside.",\
-    'clan_founder': "This cat is one of the founding members of the Clan.",\
-    'clanborn': "This cat was born into the Clan where they currently reside.",\
-    'halfclan1': ("This cat was born into the Clan, "
-                 "but one of their parents resides in another Clan."
-                 ),\
-    'halfclan2': ("This cat was born in another Clan, but chose to come to this"
-                  "Clan to be with their other parent."),\
-    'outsider_roots1': ("This cat was born into the clan, but one of their "
-                        "parents is an outsider that belongs to no clan."),\
-    'outsider_roots2': ("This cat was born outside the clan, but came to live "
-                        "in the Clan with their parent at a young age."),\
-    'loner1': "This cat joined the Clan by choice after living life as a loner.",\
-    'loner2': ("This cat used to live in a barn, but mostly stayed away from "
-               "twolegs. They decided clan life might be an interesting change"
-               " of pace."),\
-    'kittypet1': ("This cat joined the Clan by choice after living life with "
-                  "twolegs as a kittypet."),\
-    'kittypet2': ("This cat used to live on something called a “boat” with "
-                  "twolegs, but decided to join the clan."),\
-    'rogue1': "This cat joined the Clan by choice after living life as a rogue.",\
-    'rogue2': ("This cat used to live in a twolegplace, scrounging for what "
-               "they could find. They thought the Clan might offer them more "
-               "security."),\
-    'abandoned1': ("This cat was found by the Clan as a kit, and has been "
-                   "living with them ever since."),\
-    'abandoned2': ("This cat was born into a kittypet life, but was brought "
-                   "to the Clan as a kit, and has lived here ever since."),\
-    'abandoned3': ("This cat was born into another clan, but they were left "
-                   "here as a kit for the Clan to raise."),\
-    'medicine_cat': "This cat was once a medicine cat in another clan.",\
-    'otherclan': ("This cat was born into another clan, but came to this Clan "
-                 "by choice."),\
-    'otherclan2': ("This cat was unhappy in their old Clan, and decided to "
-                   "come here instead."),\
-    'ostracized_warrior': ("This cat was ostracized from their old clan, but "
-                           "no one really knows why."),\
-    'disgraced': ("This cat was cast out of their old Clan for some "
-                  "transgression that they're not keen on talking about."),\
-    'retired_leader': ("This cat used to be the leader of another Clan, before"
-                       "deciding they needed a change of scenery after "
-                       "leadership became too much. They returned their nine "
-                       "lives, and let their deputy take over before coming "
-                       "here."),\
-    'refugee': ("This cat came to this Clan after fleeing from their former "
-                "Clan and the tyrannical leader that had taken over."),\
-    'tragedy_survivor': ("Something horrible happened to this cat's previous "
-                         "clan. They refuse to speak about it."),\
-    'orphaned': ("This cat was found with a deceased parent. The Clan took "
-                 "them in, but doesn't hide where they came from."),\
-    }
-    
-SHORT_BACKSTORY_INDEX = {\
-                         'clanborn': 'clanborn',\
-                         'clan_founder': 'clan founder',\
-                         'halfclan1': 'half-clan',\
-                         'halfclan2': 'half-clan',\
-                         'outsider_roots1': 'outsider roots',\
-                         'outsider_roots2': 'outsider roots',\
-                         'loner1': 'formerly a loner',\
-                         'loner2': 'formerly a loner',\
-                         'kittypet1': 'formerly a kittypet',\
-                         'kittypet2': 'formerly a kittypet',\
-                         'rogue1': 'formerly a rogue',\
-                         'rogue2': 'formerly a rogue',\
-                         'abandoned1': 'formerly abandoned',\
-                         'abandoned2': 'formerly abandoned',\
-                         'abandoned3': 'formerly abandoned',\
-                         'medicine_cat': 'formerly a medicine cat',\
-                         'otherclan1': 'formerly from another clan',\
-                         'otherclan2': 'formerly from another clan',\
-                         'ostracized_warrior': 'ostracized warrior',\
-                         'retired_leader': 'retired leader',\
-                         'refugee': 'refugee',\
-                         'tragedy_survivor': 'survivor of a tragedy',\
-                         'orphaned': 'orphaned',\
-                         'disgraced_medcat': 'disgraced medicine cat',\
-                         'disgraced_dep': 'disgraced deputy',\
-                        }
-
 
 # ---------------------------------------------------------------------------- #
 #             change how accessory info displays on cat profiles               #
@@ -129,9 +28,9 @@ def accessory_display_name(cat):
 
     if accessory in collars:
         collar_color = None
-        for color in COLLAR_COLS:
+        for color in game.langman.fetch_table('CAT_SCREEN.COLLAR_COLS'):
             if acc_display.startswith(color):
-                collar_color = COLLAR_COLS[color]
+                collar_color = game.langman.localize("CAT_SCREEN.COLLAR_COLS", color)
         if acc_display.endswith('bow') and not acc_display == 'rainbow':
             acc_display = collar_color + ' bow'
         elif acc_display.endswith('bell'):
@@ -153,19 +52,17 @@ def accessory_display_name(cat):
 #               assigns backstory blurbs to the backstory                      #
 # ---------------------------------------------------------------------------- #
 def bs_blurb_text(cat):
-    return BACKSTORY_INDEX[cat.backstory] if cat.backstory else BACKSTORY_INDEX['default']
+    return game.langman.localize('CAT_SCREEN.BACKSTORY', cat.backstory)
 
 
 # ---------------------------------------------------------------------------- #
 #             change how backstory info displays on cat profiles               #
 # ---------------------------------------------------------------------------- #
 def backstory_text(cat):
-    if not cat.backstory:
-        return ''
-    elif cat.backstory == 'disgraced':
-        return SHORT_BACKSTORY_INDEX['disgraced_medcat'] if cat.status == 'medicine cat' else SHORT_BACKSTORY_INDEX['disgraced_dep']
+    if cat.backstory == 'disgraced':
+        return game.langman.localize('CAT_SCREEN.BACKSTORY_SHORT', 'disgraced_medcat') if cat.status == 'medicine cat' else game.langman.localize('CAT_SCREEN.BACKSTORY', 'disgraced_dep')
     else:
-        return SHORT_BACKSTORY_INDEX[cat.backstory] if cat.backstory in SHORT_BACKSTORY_INDEX else ''
+        return game.langman.localize('CAT_SCREEN.BACKSTORY_SHORT', cat.backstory)
 
 
 # ---------------------------------------------------------------------------- #
@@ -1040,7 +937,7 @@ class ProfileScreen(Screens):
         output = ""
         if self.open_sub_tab == 'life events':
             # start our history with the backstory, since all cats get one
-            life_history = [str(self.get_backstory_text())]
+            life_history = [self.get_backstory_text()]
             body_history = []
 
             # now get mentor influence history and add that if any exists
@@ -1072,7 +969,7 @@ class ProfileScreen(Screens):
         text = None
         bs_blurb = bs_blurb_text(self.the_cat)
         if bs_blurb is not None:
-            adjust_text = str(bs_blurb).replace('This cat', str(self.the_cat.name))
+            adjust_text = bs_blurb.replace('%cat%', str(self.the_cat.name))
             text = adjust_text
         else:
             text = f"{str(self.the_cat.name)} was born into the Clan where they currently reside."
