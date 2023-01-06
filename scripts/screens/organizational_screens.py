@@ -329,16 +329,19 @@ class SettingsScreen(Screens):
     def handle_lang_events(self, event):
         if event.ui_element == self.checkboxes['english']:
             game.settings['language'] = 'english'
+            game.langman.reload_lang('english')
             self.settings_changed = True
             self.update_save_button()
             self.refresh_checkboxes()
         elif event.ui_element == self.checkboxes['spanish']:
             game.settings['language'] = 'spanish'
+            game.langman.reload_lang('spanish')
             self.settings_changed = True
             self.update_save_button()
             self.refresh_checkboxes()
         elif event.ui_element == self.checkboxes['german']:
             game.settings['language'] = 'german'
+            game.langman.reload_lang('german')
             self.settings_changed = True
             self.update_save_button()
             self.refresh_checkboxes()

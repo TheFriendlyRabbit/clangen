@@ -26,7 +26,7 @@ class Game():
     #max_relation_events_displayed = 10
     #relation_scroll_ct = 0
     
-    langman = lang.LanguageManager()
+    langman = None
 
     ranks_changed_timeskip = False  # Flag for when a cat's status changes occurs during a timeskip.
 
@@ -273,17 +273,8 @@ class Game():
                     self.settings[parts[0]] = parts[1]
 
         self.switches['language'] = self.settings['language']
+        self.langman = lang.LanguageManager(self)
         self.switches['game_mode'] = self.settings['game_mode']
-        if self.settings['language'] != 'english':
-            self.switch_language()
-
-    def switch_language(self):
-        # add translation information here
-        if os.path.exists('languages/' + game.settings['language'] + '.txt'):
-            with open('languages/' + game.settings['language'] + '.txt',
-                      'r') as read_file:
-                raw_language = read_file.read()
-            game.language = literal_eval(raw_language)
 
     def switch_setting(self, setting_name):
         """ Call this function to change a setting given in the parameter by one to the right on it's list """

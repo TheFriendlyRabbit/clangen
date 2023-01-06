@@ -1,13 +1,19 @@
 import json
 
+LANG_DICT = {\
+             'english': 'en',
+             'spanish': 'es',
+             'german': 'de'
+            }
+
 class LanguageManager():
-    # obv a way of changing this eventually, but for now
-    CURRENT_LANG = 'en'
-    
     language_json = ""
     
-    def __init__(self):
-        with open("languages/" + self.CURRENT_LANG + ".json", mode="r", encoding="utf-8") as f:
+    def __init__(self, game):
+        self.reload_lang(game.settings['language'])
+            
+    def reload_lang(self, language):
+        with open("languages/" + LANG_DICT[language] + ".json", mode="r", encoding="utf-8") as f:
             self.language_json = json.load(f)
         
     def localize(self, dict_str, lookup_str):
