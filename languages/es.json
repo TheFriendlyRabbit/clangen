@@ -1,4 +1,10 @@
 {
+  "NAME.SPECIAL_SUFFIX": {
+    "kitten": "kit",
+    "apprentice": "paw",
+    "medicine cat apprentice": "paw",
+    "leader": "star"
+  },
   "CAT_SCREEN.COLLAR_COLS": {
     "crimson": "rojo",
     "blue": "azul",

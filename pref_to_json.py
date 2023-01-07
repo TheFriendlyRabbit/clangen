@@ -1,4 +1,5 @@
 import sqlite3
+import json
 
 special_suffixes = {
     "kitten": "kit",
@@ -310,3 +311,10 @@ for name, vals in occurrences.items():
     cursor.execute("INSERT INTO " + sql_string.replace(" REAL", "").replace(" text", "").replace(" PRIMARY KEY", "").replace(" integer", "") + " VALUES(%s)" % ', '.join('?' for a in sql_occ_vals), sql_occ_vals)
 conn.commit()
 conn.close()
+
+placeholder_json = {name: {'loc': name, 'locgender': 0} for name in names_full}
+name_loc_json = {name: {'loc': name} for name in names_full}
+with open("languages/name/placeholder.json", "w+", encoding="utf-8") as f:
+    json.dump(placeholder_json, f, indent=4)
+with open("languages/name/en.json", "w+", encoding="utf-8") as f:
+    json.dump(name_loc_json, f, indent=4)

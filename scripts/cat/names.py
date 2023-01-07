@@ -4,13 +4,6 @@ import numpy as np
 from scripts.game_structure.game_essentials import *
 
 class Name():
-    special_suffixes = {
-        "kitten": "kit",
-        "apprentice": "paw",
-        "medicine cat apprentice": "paw",
-        "leader": "star"
-    }
-
     # Migrate this later
     """if os.path.exists('saves/prefixlist.txt'):
         with open('saves/prefixlist.txt', 'r') as read_file:
@@ -39,6 +32,8 @@ class Name():
         self.status = status
         self.prefix = prefix
         self.suffix = suffix
+        self.localized = None
+        self.last_lang = ""
         
     def gen_name(self,
                  colour=None,
@@ -68,21 +63,30 @@ class Name():
                     else:
                         suffix_category = "std_suf_prb"
                 
-                name_query = np.array(game.langman.db_cursor.execute("SELECT name, {field} FROM NAMES WHERE {field} > 0".format(field=prefix_category)).fetchall())
-                self.prefix = np.random.choice(name_query[:, 0], 1, p=name_query[:, 1].astype(np.float64))[0]
+                name_query = np.array(game.langman.db_cursor.execute("SELECT name, loc, locgender, {field} FROM NAMES WHERE {field} > 0".format(field=prefix_category)).fetchall())
+                self.prefix = np.random.choice(name_query[:, 0], 1, p=name_query[:, 3].astype(np.float64))[0]
                 while not self.suffix:
-                    name_query = np.array(game.langman.db_cursor.execute("SELECT name, {field} FROM NAMES WHERE {field} > 0".format(field=suffix_category)).fetchall())
-                    pot_suf = np.random.choice(name_query[:, 0], 1, p=name_query[:, 1].astype(np.float64))[0]
+                    name_query = np.array(game.langman.db_cursor.execute("SELECT name, loc, locgender, {field} FROM NAMES WHERE {field} > 0".format(field=suffix_category)).fetchall())
+                    pot_suf = np.random.choice(name_query[:, 0], 1, p=name_query[:, 3].astype(np.float64))[0]
                     if pot_suf.lower() != self.prefix.lower():
                         self.suffix = pot_suf
                         
                 game.langman.close_name_db()
+                self.localized = game.langman.fetch_localized_name(self.prefix, self.suffix)
+                self.last_lang = game.langman.current_lang
 
     def __repr__(self):
-        if self.status in ["deputy", "warrior", "medicine cat", "elder"]:
-            return self.prefix + self.suffix
+        if self.localized and self.last_lang == game.langman.current_lang:
+            return self.localized
         else:
-            return self.prefix + self.special_suffixes[self.status]
+            if game.langman:
+                self.last_lang = game.langman.current_lang
+                if self.status in ["deputy", "warrior", "medicine cat", "elder"]:
+                    return game.langman.fetch_localized_name(self.prefix, self.suffix)
+                else:
+                    return game.langman.fetch_localized_name(self.prefix, self.suffix, self.status)
+            else:
+                return self.prefix + self.suffix
 
 
 names = Name()
