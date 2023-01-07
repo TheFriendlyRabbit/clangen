@@ -80,17 +80,7 @@ if clan_list:
     except Exception as e:
         print(traceback.format_exc())
         if not game.switches['error_message']:
-            game.switches[
-                'error_message'] = 'There was an error loading the cats file!'
-"""
-    try:
-        game.map_info = load_map('saves/' + game.clan.name)
-    except NameError:
-        game.map_info = {}
-    except:
-        game.map_info = load_map("Fallback")
-        print("Default map loaded.")
-        """
+            game.switches['error_message'] = 'There was an error loading the cats file!'
 
 # LOAD settings
 if not os.path.exists('saves/settings.txt'):

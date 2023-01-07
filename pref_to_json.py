@@ -280,7 +280,8 @@ for name in names_full:
     occurrences[name] = {\
                          'loc': name,\
                          'locgender': None,\
-                         'standard': normal_suffixes.count(name) / len(normal_suffixes),\
+                         'standard_suf': normal_suffixes.count(name) / len(normal_suffixes),\
+                         'standard_pre': normal_prefixes.count(name) / len(normal_prefixes),\
                          'loner': loner_names.count(name) / len(loner_names),\
                          'pelt': {k: v.count(name) / len(v) for k, v in pelt_suff.items()},\
                          'color': {k: v.count(name) / len(v) for k, v in colour_prefixes.items()},\
@@ -295,14 +296,14 @@ for key in colour_prefixes:
 for key in eye_prefixes:
     sql_string += "eye_prb_" + key + " REAL, "
 
-sql_string = "Names(name text PRIMARY KEY, loc text, locgender integer, std_prb REAL, lon_prob REAL, " + sql_string[:-2]  + ")"
+sql_string = "NAMES(name text PRIMARY KEY, loc text, locgender integer, std_suf_prb REAL, std_pre_prb REAL, lon_prb REAL, " + sql_string[:-2]  + ")"
   
-conn = sqlite3.connect("names.db")
+conn = sqlite3.connect("languages/names.db")
 cursor = conn.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS " + sql_string)
 
 for name, vals in occurrences.items():
-    sql_occ_vals = [name, vals['loc'], vals['locgender'], vals['standard'], vals['loner']]
+    sql_occ_vals = [name, vals['loc'], vals['locgender'], vals['standard_suf'], vals['standard_pre'], vals['loner']]
     sql_occ_vals.extend(list(v for k,v in vals['pelt'].items()))
     sql_occ_vals.extend(list(v for k,v in vals['color'].items()))
     sql_occ_vals.extend(list(v for k,v in vals['eye'].items()))
