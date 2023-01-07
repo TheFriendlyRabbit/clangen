@@ -143,7 +143,11 @@ class MakeClanScreen(Screens):
 
     def handle_name_clan_event(self, event):
         if event.ui_element == self.elements["random"]:
-            self.elements["name_entry"].set_text(choice(names.normal_prefixes))
+            game.langman.load_name_db()
+            # Disregard general probability, which only matters for cat names
+            name_query = game.langman.db_cursor.execute("SELECT name FROM NAMES WHERE std_pre_prb > 0").fetchall()
+            self.elements["name_entry"].set_text(choice(name_query)[0])
+            game.langman.close_name_db()
         elif event.ui_element == self.elements["reset_name"]:
             self.elements["name_entry"].set_text("")
         elif event.ui_element == self.elements['next_step']:
