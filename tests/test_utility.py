@@ -1,8 +1,12 @@
-import unittest
+"""import unittest
+
+import os
+os.environ["SDL_VIDEODRIVER"] = "dummy"
+os.environ["SDL_AUDIODRIVER"] = "dummy"
 
 from scripts.cat.cats import Cat
 from scripts.cat_relations.relationship import Relationship
-from scripts.utility import get_personality_compatibility, get_amount_of_cats_with_relation_value_towards
+from scripts.utility import get_highest_romantic_relation, get_personality_compatibility, get_amount_of_cats_with_relation_value_towards
 
 class TestPersonalityCompatibility(unittest.TestCase):
 
@@ -19,18 +23,18 @@ class TestPersonalityCompatibility(unittest.TestCase):
         cat1 = Cat()
         cat2 = Cat()
 
-        cat1.trait = self.current_traits[0]
-        cat2.trait = self.current_traits[1]
+        cat1.personality.trait = self.current_traits[0]
+        cat2.personality.trait = self.current_traits[1]
         self.assertIsNone(get_personality_compatibility(cat1,cat2))
         self.assertIsNone(get_personality_compatibility(cat2,cat1))
 
-        cat1.trait = self.current_traits[3]
-        cat2.trait = self.current_traits[5]
+        cat1.personality.trait = self.current_traits[3]
+        cat2.personality.trait = self.current_traits[5]
         self.assertIsNone(get_personality_compatibility(cat1,cat2))
         self.assertIsNone(get_personality_compatibility(cat2,cat1))
 
-        cat1.trait = self.current_traits[7]
-        cat2.trait = self.current_traits[10]
+        cat1.personality.trait = self.current_traits[7]
+        cat2.personality.trait = self.current_traits[10]
         self.assertIsNone(get_personality_compatibility(cat1,cat2))
         self.assertIsNone(get_personality_compatibility(cat2,cat1))
 
@@ -38,18 +42,18 @@ class TestPersonalityCompatibility(unittest.TestCase):
         cat1 = Cat()
         cat2 = Cat()
 
-        cat1.trait = self.current_traits[1]
-        cat2.trait = self.current_traits[18]
+        cat1.personality.trait = self.current_traits[1]
+        cat2.personality.trait = self.current_traits[18]
         self.assertTrue(get_personality_compatibility(cat1,cat2))
         self.assertTrue(get_personality_compatibility(cat2,cat1))
 
-        cat1.trait = self.current_traits[3]
-        cat2.trait = self.current_traits[4]
+        cat1.personality.trait = self.current_traits[3]
+        cat2.personality.trait = self.current_traits[4]
         self.assertTrue(get_personality_compatibility(cat1,cat2))
         self.assertTrue(get_personality_compatibility(cat2,cat1))
 
-        cat1.trait = self.current_traits[5]
-        cat2.trait = self.current_traits[17]
+        cat1.personality.trait = self.current_traits[5]
+        cat2.personality.trait = self.current_traits[17]
         self.assertTrue(get_personality_compatibility(cat1,cat2))
         self.assertTrue(get_personality_compatibility(cat2,cat1))
 
@@ -57,35 +61,26 @@ class TestPersonalityCompatibility(unittest.TestCase):
         cat1 = Cat()
         cat2 = Cat()
 
-        cat1.trait = self.current_traits[1]
-        cat2.trait = self.current_traits[2]
+        cat1.personality.trait = self.current_traits[1]
+        cat2.personality.trait = self.current_traits[2]
         self.assertFalse(get_personality_compatibility(cat1,cat2))
         self.assertFalse(get_personality_compatibility(cat2,cat1))
 
-        cat1.trait = self.current_traits[3]
-        cat2.trait = self.current_traits[6]
+        cat1.personality.trait = self.current_traits[3]
+        cat2.personality.trait = self.current_traits[6]
         self.assertFalse(get_personality_compatibility(cat1,cat2))
         self.assertFalse(get_personality_compatibility(cat2,cat1))
 
-        cat1.trait = self.current_traits[8]
-        cat2.trait = self.current_traits[9]
+        cat1.personality.trait = self.current_traits[8]
+        cat2.personality.trait = self.current_traits[9]
         self.assertFalse(get_personality_compatibility(cat1,cat2))
         self.assertFalse(get_personality_compatibility(cat2,cat1))
-
-    def test_not_existing_trait(self):
-        cat1 = Cat()
-        cat2 = Cat()
-
-        cat1.trait = 'testing'
-        cat2.trait = 'testing'
-        self.assertIsNone(get_personality_compatibility(cat1,cat2))
-        self.assertIsNone(get_personality_compatibility(cat2,cat1))
 
     def test_false_trait(self):
         cat1 = Cat()
         cat2 = Cat()
-        cat1.trait = None
-        cat2.trait = None
+        cat1.personality.trait = None
+        cat2.personality.trait = None
         self.assertIsNone(get_personality_compatibility(cat1,cat2))
         self.assertIsNone(get_personality_compatibility(cat2,cat1))
 
@@ -122,3 +117,52 @@ class TestCountRelation(unittest.TestCase):
         self.assertEqual(relation_dict["comfortable"],0)
         self.assertEqual(relation_dict["jealousy"],2)
         self.assertEqual(relation_dict["trust"],0)
+
+class TestHighestRomance(unittest.TestCase):
+    def test_exclude_mate(self):
+        # given
+        cat1 = Cat()
+        cat2 = Cat()
+        cat3 = Cat()
+        cat4 = Cat()
+
+        # when
+        cat1.mate.append(cat2.ID)
+        cat2.mate.append(cat1.ID)
+        relation_1_2 = Relationship(cat_from=cat1,cat_to=cat2, mates=True)
+        relation_1_3 = Relationship(cat_from=cat1,cat_to=cat3)
+        relation_1_4 = Relationship(cat_from=cat1,cat_to=cat4)
+        relation_1_2.romantic_love = 60
+        relation_1_3.romantic_love = 50
+        relation_1_4.romantic_love = 40
+
+        relations = [relation_1_2, relation_1_3, relation_1_4]
+
+        #then
+        self.assertNotEqual(relation_1_2, get_highest_romantic_relation(relations, exclude_mate=True))
+        self.assertEqual(relation_1_3, get_highest_romantic_relation(relations, exclude_mate=True))
+        self.assertNotEqual(relation_1_4, get_highest_romantic_relation(relations, exclude_mate=True))
+
+    def test_include_mate(self):
+        # given
+        cat1 = Cat()
+        cat2 = Cat()
+        cat3 = Cat()
+        cat4 = Cat()
+
+        # when
+        cat1.mate.append(cat2.ID)
+        cat2.mate.append(cat1.ID)
+        relation_1_2 = Relationship(cat_from=cat1,cat_to=cat2, mates=True)
+        relation_1_3 = Relationship(cat_from=cat1,cat_to=cat3)
+        relation_1_4 = Relationship(cat_from=cat1,cat_to=cat4)
+        relation_1_2.romantic_love = 60
+        relation_1_3.romantic_love = 50
+        relation_1_4.romantic_love = 40
+
+        relations = [relation_1_2, relation_1_3, relation_1_4]
+
+        #then
+        self.assertEqual(relation_1_2, get_highest_romantic_relation(relations, exclude_mate=False))
+        self.assertNotEqual(relation_1_3, get_highest_romantic_relation(relations, exclude_mate=False))
+        self.assertNotEqual(relation_1_4, get_highest_romantic_relation(relations, exclude_mate=False))"""

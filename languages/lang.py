@@ -39,6 +39,7 @@ class LanguageManager():
         if not dict_str in self.language_json:
             return "INVALID LOOKUP DICT"
         if not lookup_str in self.language_json[dict_str]:
+            print(f"No localization key found for {lookup_str}")
             return "INVALID DICT KEY"
         return self.language_json[dict_str][lookup_str]
         
@@ -55,17 +56,23 @@ class LanguageManager():
     def fetch_localized_name(self, prefix, suffix, status=None):
         self.load_name_db()
         pref_loc = self.db_cursor.execute("SELECT loc, locgender FROM NAMES WHERE name==?", [prefix]).fetchone()
-        if not status:
+        if not status or not suffix:
             suf_loc = self.db_cursor.execute("SELECT loc, locgender FROM NAMES WHERE name==?", [suffix]).fetchone()
         else:
             suf_loc = self.localize("NAME.SPECIAL_SUFFIX", status)
         self.close_name_db()
+        out_str = ""
         if self.current_lang not in LANG_CALLBACKS:
-            return pref_loc[0] + (suf_loc if status else suf_loc[0])
+            out_str = pref_loc[0]
+            if suf_loc:
+                out_str += (suf_loc if status else suf_loc[0])
         else:
             try:
                 return getattr(self, "lang_name_callback_" + self.current_lang)
             except:
                 print("Woah! You tried to run special localization on a language that doesn't support it. Falling back to default concatenation...")
-                return pref_loc[0] + (suf_loc if status else suf_loc[0])
+                out_str = pref_loc[0]
+                if suf_loc:
+                    out_str += (suf_loc if status else suf_loc[0])
+        return out_str
         

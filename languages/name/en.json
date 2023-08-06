@@ -1,4 +1,7 @@
 {
+    "Abuko": {
+        "loc": "Abuko"
+    },
     "Abyss": {
         "loc": "Abyss"
     },
@@ -11,26 +14,104 @@
     "Acorn": {
         "loc": "Acorn"
     },
+    "Adaliz": {
+        "loc": "Adaliz"
+    },
+    "Adam": {
+        "loc": "Adam"
+    },
+    "Addax": {
+        "loc": "Addax"
+    },
     "Adder": {
         "loc": "Adder"
+    },
+    "Admiral": {
+        "loc": "Admiral"
+    },
+    "Adora": {
+        "loc": "Adora"
+    },
+    "Aether": {
+        "loc": "Aether"
+    },
+    "Agatha": {
+        "loc": "Agatha"
+    },
+    "Agave": {
+        "loc": "Agave"
+    },
+    "Agent Smith": {
+        "loc": "Agent Smith"
     },
     "Ah": {
         "loc": "Ah"
     },
+    "Ah ha": {
+        "loc": "Ah ha"
+    },
+    "Aidan": {
+        "loc": "Aidan"
+    },
+    "Aiden": {
+        "loc": "Aiden"
+    },
+    "Air": {
+        "loc": "Air"
+    },
+    "Akila": {
+        "loc": "Akila"
+    },
+    "Akilah": {
+        "loc": "Akilah"
+    },
+    "Alba": {
+        "loc": "Alba"
+    },
+    "Albatross": {
+        "loc": "Albatross"
+    },
+    "Albedo": {
+        "loc": "Albedo"
+    },
     "Alcina": {
         "loc": "Alcina"
+    },
+    "Alcyone": {
+        "loc": "Alcyone"
     },
     "Alder": {
         "loc": "Alder"
     },
+    "Aldrich": {
+        "loc": "Aldrich"
+    },
     "Alec": {
         "loc": "Alec"
+    },
+    "Alexa": {
+        "loc": "Alexa"
+    },
+    "Alfie": {
+        "loc": "Alfie"
+    },
+    "Alfredo": {
+        "loc": "Alfredo"
     },
     "Algae": {
         "loc": "Algae"
     },
+    "Algernon": {
+        "loc": "Algernon"
+    },
     "Alice": {
         "loc": "Alice"
+    },
+    "Alligator": {
+        "loc": "Alligator"
+    },
+    "Alma": {
+        "loc": "Alma"
     },
     "Almond": {
         "loc": "Almond"
@@ -38,23 +119,98 @@
     "Aloe": {
         "loc": "Aloe"
     },
+    "Alonzo": {
+        "loc": "Alonzo"
+    },
+    "Alpaca": {
+        "loc": "Alpaca"
+    },
+    "Alphonse": {
+        "loc": "Alphonse"
+    },
+    "Alphys": {
+        "loc": "Alphys"
+    },
+    "Alpine": {
+        "loc": "Alpine"
+    },
+    "Altair": {
+        "loc": "Altair"
+    },
+    "Amani": {
+        "loc": "Amani"
+    },
+    "Amaretto": {
+        "loc": "Amaretto"
+    },
+    "Amari": {
+        "loc": "Amari"
+    },
+    "Amaya": {
+        "loc": "Amaya"
+    },
     "Amber": {
         "loc": "Amber"
+    },
+    "Amelia": {
+        "loc": "Amelia"
+    },
+    "Amethyst": {
+        "loc": "Amethyst"
+    },
+    "Amigo": {
+        "loc": "Amigo"
+    },
+    "Amir": {
+        "loc": "Amir"
     },
     "Amity": {
         "loc": "Amity"
     },
+    "Amongus": {
+        "loc": "Amongus"
+    },
+    "Amor": {
+        "loc": "Amor"
+    },
     "Amy": {
         "loc": "Amy"
+    },
+    "Anchovy": {
+        "loc": "Anchovy"
+    },
+    "Andrew": {
+        "loc": "Andrew"
+    },
+    "Andromeda": {
+        "loc": "Andromeda"
+    },
+    "Anemone": {
+        "loc": "Anemone"
     },
     "Angel": {
         "loc": "Angel"
     },
+    "Anise": {
+        "loc": "Anise"
+    },
     "Anita": {
         "loc": "Anita"
     },
+    "Anju": {
+        "loc": "Anju"
+    },
+    "Ankha": {
+        "loc": "Ankha"
+    },
     "Ant": {
         "loc": "Ant"
+    },
+    "Antares": {
+        "loc": "Antares"
+    },
+    "Antelope": {
+        "loc": "Antelope"
     },
     "Antler": {
         "loc": "Antler"
@@ -62,23 +218,71 @@
     "Anubis": {
         "loc": "Anubis"
     },
+    "Anya": {
+        "loc": "Anya"
+    },
+    "Apex": {
+        "loc": "Apex"
+    },
+    "Aphid": {
+        "loc": "Aphid"
+    },
     "Apple": {
         "loc": "Apple"
+    },
+    "Apple Cider": {
+        "loc": "Apple Cider"
     },
     "Apricot": {
         "loc": "Apricot"
     },
-    "Arc": {
-        "loc": "Arc"
+    "April": {
+        "loc": "April"
+    },
+    "Apu": {
+        "loc": "Apu"
+    },
+    "Aquarius": {
+        "loc": "Aquarius"
     },
     "Arch": {
         "loc": "Arch"
     },
-    "Arctic": {
-        "loc": "Arctic"
+    "Archie": {
+        "loc": "Archie"
+    },
+    "Archimedes": {
+        "loc": "Archimedes"
+    },
+    "Arcturus": {
+        "loc": "Arcturus"
+    },
+    "Arid": {
+        "loc": "Arid"
+    },
+    "Ariel": {
+        "loc": "Ariel"
+    },
+    "Aries": {
+        "loc": "Aries"
+    },
+    "Armageddon": {
+        "loc": "Armageddon"
     },
     "Armin": {
         "loc": "Armin"
+    },
+    "Arroyo": {
+        "loc": "Arroyo"
+    },
+    "Artificer": {
+        "loc": "Artificer"
+    },
+    "Arusha": {
+        "loc": "Arusha"
+    },
+    "Asgore": {
+        "loc": "Asgore"
     },
     "Ash": {
         "loc": "Ash"
@@ -86,32 +290,116 @@
     "Ashen": {
         "loc": "Ashen"
     },
+    "Askari": {
+        "loc": "Askari"
+    },
     "Aspen": {
         "loc": "Aspen"
+    },
+    "Asriel": {
+        "loc": "Asriel"
     },
     "Aster": {
         "loc": "Aster"
     },
+    "Astrid": {
+        "loc": "Astrid"
+    },
+    "Auburn": {
+        "loc": "Auburn"
+    },
     "Aurora": {
         "loc": "Aurora"
     },
-    "Autumn": {
-        "loc": "Autumn"
+    "Ava": {
+        "loc": "Ava"
+    },
+    "Avalanche": {
+        "loc": "Avalanche"
+    },
+    "Avellana": {
+        "loc": "Avellana"
+    },
+    "Avocet": {
+        "loc": "Avocet"
+    },
+    "Award Winning Smile": {
+        "loc": "Award Winning Smile"
+    },
+    "Axel": {
+        "loc": "Axel"
+    },
+    "Axolotl": {
+        "loc": "Axolotl"
+    },
+    "Azalea": {
+        "loc": "Azalea"
+    },
+    "Azizi": {
+        "loc": "Azizi"
     },
     "Azula": {
         "loc": "Azula"
     },
+    "Azurite": {
+        "loc": "Azurite"
+    },
+    "Baba Yaga": {
+        "loc": "Baba Yaga"
+    },
+    "Baby": {
+        "loc": "Baby"
+    },
+    "Baby Dog": {
+        "loc": "Baby Dog"
+    },
     "Badger": {
         "loc": "Badger"
+    },
+    "Badru": {
+        "loc": "Badru"
     },
     "Bagel": {
         "loc": "Bagel"
     },
+    "Bagheera": {
+        "loc": "Bagheera"
+    },
+    "Bahati": {
+        "loc": "Bahati"
+    },
     "Bailey": {
         "loc": "Bailey"
     },
+    "Baisel": {
+        "loc": "Baisel"
+    },
+    "Baja Blast": {
+        "loc": "Baja Blast"
+    },
+    "Baliyo": {
+        "loc": "Baliyo"
+    },
+    "Baloo": {
+        "loc": "Baloo"
+    },
+    "Bamboo": {
+        "loc": "Bamboo"
+    },
     "Bandit": {
         "loc": "Bandit"
+    },
+    "Banshee": {
+        "loc": "Banshee"
+    },
+    "Banzai": {
+        "loc": "Banzai"
+    },
+    "Baobei": {
+        "loc": "Baobei"
+    },
+    "Baojin": {
+        "loc": "Baojin"
     },
     "Baphomet": {
         "loc": "Baphomet"
@@ -119,8 +407,26 @@
     "Bark": {
         "loc": "Bark"
     },
+    "Barker": {
+        "loc": "Barker"
+    },
     "Barley": {
         "loc": "Barley"
+    },
+    "Barnaby": {
+        "loc": "Barnaby"
+    },
+    "Barnacle": {
+        "loc": "Barnacle"
+    },
+    "Barracuda": {
+        "loc": "Barracuda"
+    },
+    "Barren": {
+        "loc": "Barren"
+    },
+    "Basalt": {
+        "loc": "Basalt"
     },
     "Basil": {
         "loc": "Basil"
@@ -146,14 +452,29 @@
     "Bean": {
         "loc": "Bean"
     },
+    "Beanie": {
+        "loc": "Beanie"
+    },
+    "Beanie Baby": {
+        "loc": "Beanie Baby"
+    },
     "Beans": {
         "loc": "Beans"
     },
     "Bear": {
         "loc": "Bear"
     },
+    "Beatle": {
+        "loc": "Beatle"
+    },
+    "Beau": {
+        "loc": "Beau"
+    },
     "Beaver": {
         "loc": "Beaver"
+    },
+    "Bebe": {
+        "loc": "Bebe"
     },
     "Bede": {
         "loc": "Bede"
@@ -164,26 +485,104 @@
     "Beech": {
         "loc": "Beech"
     },
+    "Beef Stroganoff": {
+        "loc": "Beef Stroganoff"
+    },
+    "Beesechurger": {
+        "loc": "Beesechurger"
+    },
     "Beetle": {
         "loc": "Beetle"
+    },
+    "Bell": {
+        "loc": "Bell"
+    },
+    "Bella": {
+        "loc": "Bella"
+    },
+    "Bellafide": {
+        "loc": "Bellafide"
+    },
+    "Bellatrix": {
+        "loc": "Bellatrix"
     },
     "Belle": {
         "loc": "Belle"
     },
+    "Bellibolt": {
+        "loc": "Bellibolt"
+    },
+    "Bellini": {
+        "loc": "Bellini"
+    },
+    "Beluga": {
+        "loc": "Beluga"
+    },
+    "Ben": {
+        "loc": "Ben"
+    },
+    "Benito": {
+        "loc": "Benito"
+    },
     "Benny": {
         "loc": "Benny"
     },
-    "Bently": {
-        "loc": "Bently"
+    "Bentley": {
+        "loc": "Bentley"
+    },
+    "Beowulf": {
+        "loc": "Beowulf"
+    },
+    "Berlioz": {
+        "loc": "Berlioz"
     },
     "Berry": {
         "loc": "Berry"
     },
+    "Betelgeuse": {
+        "loc": "Betelgeuse"
+    },
     "Beverly": {
         "loc": "Beverly"
     },
+    "Bianca": {
+        "loc": "Bianca"
+    },
+    "Bibelot": {
+        "loc": "Bibelot"
+    },
+    "Bibimbap": {
+        "loc": "Bibimbap"
+    },
+    "Bidoof": {
+        "loc": "Bidoof"
+    },
     "Big": {
         "loc": "Big"
+    },
+    "Big Mac": {
+        "loc": "Big Mac"
+    },
+    "Big Man": {
+        "loc": "Big Man"
+    },
+    "Big Papa Huge Time": {
+        "loc": "Big Papa Huge Time"
+    },
+    "Bigwig": {
+        "loc": "Bigwig"
+    },
+    "Bill Bailey": {
+        "loc": "Bill Bailey"
+    },
+    "Billow": {
+        "loc": "Billow"
+    },
+    "Bingsu": {
+        "loc": "Bingsu"
+    },
+    "Binx": {
+        "loc": "Binx"
     },
     "Birb": {
         "loc": "Birb"
@@ -194,8 +593,20 @@
     "Bird": {
         "loc": "Bird"
     },
+    "Birdie": {
+        "loc": "Birdie"
+    },
+    "Bismuth": {
+        "loc": "Bismuth"
+    },
+    "Bison": {
+        "loc": "Bison"
+    },
     "Bite": {
         "loc": "Bite"
+    },
+    "Bitnara": {
+        "loc": "Bitnara"
     },
     "Bitter": {
         "loc": "Bitter"
@@ -203,8 +614,32 @@
     "Bittern": {
         "loc": "Bittern"
     },
+    "Bixbite": {
+        "loc": "Bixbite"
+    },
+    "Bixby": {
+        "loc": "Bixby"
+    },
     "Black": {
         "loc": "Black"
+    },
+    "Blade": {
+        "loc": "Blade"
+    },
+    "Blahaj": {
+        "loc": "Blahaj"
+    },
+    "Blair": {
+        "loc": "Blair"
+    },
+    "Blaire": {
+        "loc": "Blaire"
+    },
+    "Blanche": {
+        "loc": "Blanche"
+    },
+    "Blavingad": {
+        "loc": "Blavingad"
     },
     "Blaze": {
         "loc": "Blaze"
@@ -212,14 +647,17 @@
     "Bleak": {
         "loc": "Bleak"
     },
-    "Blight": {
-        "loc": "Blight"
-    },
-    "Blink": {
-        "loc": "Blink"
+    "Blinky Stubbins": {
+        "loc": "Blinky Stubbins"
     },
     "Bliss": {
         "loc": "Bliss"
+    },
+    "Blister": {
+        "loc": "Blister"
+    },
+    "Blitzo": {
+        "loc": "Blitzo"
     },
     "Blizzard": {
         "loc": "Blizzard"
@@ -242,17 +680,41 @@
     "Bluebell": {
         "loc": "Bluebell"
     },
+    "Bluebird": {
+        "loc": "Bluebird"
+    },
     "Bluff": {
         "loc": "Bluff"
+    },
+    "Boar": {
+        "loc": "Boar"
+    },
+    "Bob": {
+        "loc": "Bob"
+    },
+    "Bobby": {
+        "loc": "Bobby"
     },
     "Bog": {
         "loc": "Bog"
     },
-    "Bold": {
-        "loc": "Bold"
+    "Bok Choy": {
+        "loc": "Bok Choy"
+    },
+    "Bokshiri": {
+        "loc": "Bokshiri"
+    },
+    "Bologna": {
+        "loc": "Bologna"
     },
     "Bolt": {
         "loc": "Bolt"
+    },
+    "Bombalurina": {
+        "loc": "Bombalurina"
+    },
+    "Bombon": {
+        "loc": "Bombon"
     },
     "Bonbon": {
         "loc": "Bonbon"
@@ -263,8 +725,26 @@
     "Bongo": {
         "loc": "Bongo"
     },
+    "Boni": {
+        "loc": "Boni"
+    },
+    "Bonnie": {
+        "loc": "Bonnie"
+    },
+    "Bonny": {
+        "loc": "Bonny"
+    },
     "Boo": {
         "loc": "Boo"
+    },
+    "Boobear": {
+        "loc": "Boobear"
+    },
+    "Booker": {
+        "loc": "Booker"
+    },
+    "Boots": {
+        "loc": "Boots"
     },
     "Borage": {
         "loc": "Borage"
@@ -287,14 +767,26 @@
     "Branch": {
         "loc": "Branch"
     },
+    "Brandywine": {
+        "loc": "Brandywine"
+    },
     "Brave": {
         "loc": "Brave"
     },
     "Breeze": {
         "loc": "Breeze"
     },
+    "Bren": {
+        "loc": "Bren"
+    },
+    "Brian": {
+        "loc": "Brian"
+    },
     "Briar": {
         "loc": "Briar"
+    },
+    "Brick": {
+        "loc": "Brick"
     },
     "Bright": {
         "loc": "Bright"
@@ -302,8 +794,17 @@
     "Brindle": {
         "loc": "Brindle"
     },
+    "Brine": {
+        "loc": "Brine"
+    },
+    "Brioche": {
+        "loc": "Brioche"
+    },
     "Bristle": {
         "loc": "Bristle"
+    },
+    "Brittle": {
+        "loc": "Brittle"
     },
     "Broccoli": {
         "loc": "Broccoli"
@@ -314,32 +815,74 @@
     "Brook": {
         "loc": "Brook"
     },
+    "Brooklyn": {
+        "loc": "Brooklyn"
+    },
+    "Broom": {
+        "loc": "Broom"
+    },
+    "Brother Dubious": {
+        "loc": "Brother Dubious"
+    },
     "Brown": {
         "loc": "Brown"
+    },
+    "Bruce": {
+        "loc": "Bruce"
     },
     "Brush": {
         "loc": "Brush"
     },
-    "Bubble": {
-        "loc": "Bubble"
+    "Bub": {
+        "loc": "Bub"
     },
     "Bubbling": {
         "loc": "Bubbling"
     },
+    "Buchito": {
+        "loc": "Buchito"
+    },
     "Buck": {
         "loc": "Buck"
+    },
+    "Bud": {
+        "loc": "Bud"
     },
     "Buddy": {
         "loc": "Buddy"
     },
+    "Buffalo": {
+        "loc": "Buffalo"
+    },
+    "Buffy": {
+        "loc": "Buffy"
+    },
     "Bug": {
         "loc": "Bug"
+    },
+    "Bugbear": {
+        "loc": "Bugbear"
+    },
+    "Bulgogi": {
+        "loc": "Bulgogi"
+    },
+    "Bullrush": {
+        "loc": "Bullrush"
+    },
+    "Bullwinkle": {
+        "loc": "Bullwinkle"
     },
     "Bumble": {
         "loc": "Bumble"
     },
     "Bumblebee": {
         "loc": "Bumblebee"
+    },
+    "Bun": {
+        "loc": "Bun"
+    },
+    "Bunga": {
+        "loc": "Bunga"
     },
     "Bunny": {
         "loc": "Bunny"
@@ -356,29 +899,155 @@
     "Burn": {
         "loc": "Burn"
     },
+    "Burnet": {
+        "loc": "Burnet"
+    },
+    "Burning Skies": {
+        "loc": "Burning Skies"
+    },
     "Burnt": {
         "loc": "Burnt"
     },
     "Burr": {
         "loc": "Burr"
     },
+    "Burrow": {
+        "loc": "Burrow"
+    },
     "Bush": {
         "loc": "Bush"
+    },
+    "Bustopher Jones": {
+        "loc": "Bustopher Jones"
+    },
+    "Buttercup": {
+        "loc": "Buttercup"
+    },
+    "Butterfly": {
+        "loc": "Butterfly"
+    },
+    "Butternut": {
+        "loc": "Butternut"
+    },
+    "Butterscotch": {
+        "loc": "Butterscotch"
     },
     "Buzzard": {
         "loc": "Buzzard"
     },
+    "Byeol": {
+        "loc": "Byeol"
+    },
+    "Caakiri": {
+        "loc": "Caakiri"
+    },
+    "Cactus": {
+        "loc": "Cactus"
+    },
+    "Cadence": {
+        "loc": "Cadence"
+    },
+    "Caesar": {
+        "loc": "Caesar"
+    },
+    "Cake": {
+        "loc": "Cake"
+    },
+    "Calamari": {
+        "loc": "Calamari"
+    },
     "Callie": {
         "loc": "Callie"
+    },
+    "Callisto": {
+        "loc": "Callisto"
     },
     "Calvin": {
         "loc": "Calvin"
     },
+    "Calypso": {
+        "loc": "Calypso"
+    },
+    "Camel": {
+        "loc": "Camel"
+    },
+    "Camouflage": {
+        "loc": "Camouflage"
+    },
+    "Campion": {
+        "loc": "Campion"
+    },
+    "Canary": {
+        "loc": "Canary"
+    },
+    "Candi": {
+        "loc": "Candi"
+    },
+    "Candy": {
+        "loc": "Candy"
+    },
+    "Canela": {
+        "loc": "Canela"
+    },
+    "Canned Beans": {
+        "loc": "Canned Beans"
+    },
+    "Canned Tuna": {
+        "loc": "Canned Tuna"
+    },
+    "Cannelloni": {
+        "loc": "Cannelloni"
+    },
+    "Canopus": {
+        "loc": "Canopus"
+    },
+    "Canopy": {
+        "loc": "Canopy"
+    },
+    "Canyon": {
+        "loc": "Canyon"
+    },
+    "Capella": {
+        "loc": "Capella"
+    },
+    "Cappuccino": {
+        "loc": "Cappuccino"
+    },
+    "Capricorn": {
+        "loc": "Capricorn"
+    },
+    "Captain": {
+        "loc": "Captain"
+    },
+    "Car Alarm": {
+        "loc": "Car Alarm"
+    },
+    "Caracal": {
+        "loc": "Caracal"
+    },
     "Caramel": {
         "loc": "Caramel"
     },
+    "Cardamom": {
+        "loc": "Cardamom"
+    },
+    "Cardboard": {
+        "loc": "Cardboard"
+    },
+    "Caribou": {
+        "loc": "Caribou"
+    },
     "Carmen": {
         "loc": "Carmen"
+    },
+    "Carmin": {
+        "loc": "Carmin"
+    },
+    "Carnation": {
+        "loc": "Carnation"
+    },
+    "Carolina": {
+        "loc": "Carolina"
     },
     "Caroline": {
         "loc": "Caroline"
@@ -389,23 +1058,104 @@
     "Carrie": {
         "loc": "Carrie"
     },
+    "Cashmere": {
+        "loc": "Cashmere"
+    },
+    "Cassandra": {
+        "loc": "Cassandra"
+    },
+    "Castor": {
+        "loc": "Castor"
+    },
+    "Catalina": {
+        "loc": "Catalina"
+    },
+    "Caterpillar": {
+        "loc": "Caterpillar"
+    },
     "Catie": {
         "loc": "Catie"
+    },
+    "Catrick": {
+        "loc": "Catrick"
+    },
+    "Catty": {
+        "loc": "Catty"
+    },
+    "Cauliflower": {
+        "loc": "Cauliflower"
+    },
+    "Cave": {
+        "loc": "Cave"
+    },
+    "Cavern": {
+        "loc": "Cavern"
+    },
+    "Cayenne": {
+        "loc": "Cayenne"
+    },
+    "Cece": {
+        "loc": "Cece"
     },
     "Cedar": {
         "loc": "Cedar"
     },
+    "Celebi": {
+        "loc": "Celebi"
+    },
+    "Celeste": {
+        "loc": "Celeste"
+    },
+    "Celia": {
+        "loc": "Celia"
+    },
+    "Centipede": {
+        "loc": "Centipede"
+    },
+    "Cerberus": {
+        "loc": "Cerberus"
+    },
+    "Ceres": {
+        "loc": "Ceres"
+    },
     "Chaffinch": {
         "loc": "Chaffinch"
     },
+    "Chai": {
+        "loc": "Chai"
+    },
+    "Chamois": {
+        "loc": "Chamois"
+    },
+    "Chance": {
+        "loc": "Chance"
+    },
     "Chanel": {
         "loc": "Chanel"
+    },
+    "Chansey": {
+        "loc": "Chansey"
+    },
+    "Chanterelle": {
+        "loc": "Chanterelle"
     },
     "Chaos": {
         "loc": "Chaos"
     },
     "Char": {
         "loc": "Char"
+    },
+    "Chara": {
+        "loc": "Chara"
+    },
+    "Charcoal": {
+        "loc": "Charcoal"
+    },
+    "Chari": {
+        "loc": "Chari"
+    },
+    "Chariklo": {
+        "loc": "Chariklo"
     },
     "Charles": {
         "loc": "Charles"
@@ -419,14 +1169,35 @@
     "Charm": {
         "loc": "Charm"
     },
+    "Charon": {
+        "loc": "Charon"
+    },
+    "Charred": {
+        "loc": "Charred"
+    },
     "Chase": {
         "loc": "Chase"
+    },
+    "Chasing": {
+        "loc": "Chasing"
+    },
+    "Chasm": {
+        "loc": "Chasm"
+    },
+    "Chayanne": {
+        "loc": "Chayanne"
     },
     "Cheese": {
         "loc": "Cheese"
     },
+    "Cheese Beast": {
+        "loc": "Cheese Beast"
+    },
     "Cheesecake": {
         "loc": "Cheesecake"
+    },
+    "Cheesepuff": {
+        "loc": "Cheesepuff"
     },
     "Cheetah": {
         "loc": "Cheetah"
@@ -434,29 +1205,86 @@
     "Cheeto": {
         "loc": "Cheeto"
     },
+    "Cheeto Puff": {
+        "loc": "Cheeto Puff"
+    },
     "Cheetoman": {
         "loc": "Cheetoman"
+    },
+    "Chef": {
+        "loc": "Chef"
+    },
+    "Chekhov's Gun": {
+        "loc": "Chekhov's Gun"
+    },
+    "Chekov": {
+        "loc": "Chekov"
     },
     "Cherry": {
         "loc": "Cherry"
     },
+    "Cherubi": {
+        "loc": "Cherubi"
+    },
+    "Chervil": {
+        "loc": "Chervil"
+    },
+    "Cheshire": {
+        "loc": "Cheshire"
+    },
+    "Chester": {
+        "loc": "Chester"
+    },
     "Chestnut": {
         "loc": "Chestnut"
+    },
+    "Chevre": {
+        "loc": "Chevre"
+    },
+    "Chewie": {
+        "loc": "Chewie"
     },
     "Chewy": {
         "loc": "Chewy"
     },
+    "Chiaki": {
+        "loc": "Chiaki"
+    },
+    "Chica": {
+        "loc": "Chica"
+    },
     "Chicco": {
         "loc": "Chicco"
+    },
+    "Chick": {
+        "loc": "Chick"
+    },
+    "Chickpea": {
+        "loc": "Chickpea"
     },
     "Chief": {
         "loc": "Chief"
     },
-    "Chinook": {
-        "loc": "Chinook"
+    "Chihiro": {
+        "loc": "Chihiro"
+    },
+    "Chikorita": {
+        "loc": "Chikorita"
+    },
+    "Chiku": {
+        "loc": "Chiku"
     },
     "Chip": {
         "loc": "Chip"
+    },
+    "Chiquito": {
+        "loc": "Chiquito"
+    },
+    "Chirp": {
+        "loc": "Chirp"
+    },
+    "Chispa": {
+        "loc": "Chispa"
     },
     "Chive": {
         "loc": "Chive"
@@ -467,11 +1295,35 @@
     "Chocolate": {
         "loc": "Chocolate"
     },
+    "Chocolate Chip": {
+        "loc": "Chocolate Chip"
+    },
+    "Chocolate Pudding": {
+        "loc": "Chocolate Pudding"
+    },
+    "Chorizo": {
+        "loc": "Chorizo"
+    },
+    "Chris": {
+        "loc": "Chris"
+    },
     "Chrissy": {
         "loc": "Chrissy"
     },
+    "Chub": {
+        "loc": "Chub"
+    },
+    "Churro": {
+        "loc": "Churro"
+    },
     "Cicada": {
         "loc": "Cicada"
+    },
+    "Cielo": {
+        "loc": "Cielo"
+    },
+    "Cilantro": {
+        "loc": "Cilantro"
     },
     "Cinder": {
         "loc": "Cinder"
@@ -479,41 +1331,122 @@
     "Cinderblock": {
         "loc": "Cinderblock"
     },
+    "Cinnabon": {
+        "loc": "Cinnabon"
+    },
     "Cinnamon": {
         "loc": "Cinnamon"
+    },
+    "Civet": {
+        "loc": "Civet"
+    },
+    "Clam": {
+        "loc": "Clam"
     },
     "Claw": {
         "loc": "Claw"
     },
+    "Clawdette": {
+        "loc": "Clawdette"
+    },
     "Clay": {
         "loc": "Clay"
+    },
+    "Clear": {
+        "loc": "Clear"
+    },
+    "Cleffa": {
+        "loc": "Cleffa"
+    },
+    "Clementine": {
+        "loc": "Clementine"
+    },
+    "Cleo": {
+        "loc": "Cleo"
+    },
+    "Clicker": {
+        "loc": "Clicker"
     },
     "Cliff": {
         "loc": "Cliff"
     },
+    "Cloe": {
+        "loc": "Cloe"
+    },
     "Cloud": {
         "loc": "Cloud"
+    },
+    "Cloudy": {
+        "loc": "Cloudy"
+    },
+    "Clove": {
+        "loc": "Clove"
     },
     "Clover": {
         "loc": "Clover"
     },
+    "Coal": {
+        "loc": "Coal"
+    },
     "Coast": {
         "loc": "Coast"
+    },
+    "Coati": {
+        "loc": "Coati"
+    },
+    "Cobalt": {
+        "loc": "Cobalt"
     },
     "Cobra": {
         "loc": "Cobra"
     },
+    "Cobweb": {
+        "loc": "Cobweb"
+    },
+    "Cocoa": {
+        "loc": "Cocoa"
+    },
     "Cocoa Puff": {
         "loc": "Cocoa Puff"
+    },
+    "Coconut": {
+        "loc": "Coconut"
     },
     "Cod": {
         "loc": "Cod"
     },
+    "Coffee": {
+        "loc": "Coffee"
+    },
+    "Cola": {
+        "loc": "Cola"
+    },
+    "Colby Jack": {
+        "loc": "Colby Jack"
+    },
     "Cold": {
         "loc": "Cold"
     },
+    "Colin Robinson": {
+        "loc": "Colin Robinson"
+    },
+    "Comet": {
+        "loc": "Comet"
+    },
+    "Comfrey": {
+        "loc": "Comfrey"
+    },
+    "Comfy": {
+        "loc": "Comfy"
+    },
     "Conan": {
         "loc": "Conan"
+    },
+    "Conch": {
+        "loc": "Conch"
+    },
+    "Concrete": {
+        "loc": "Concrete"
     },
     "Condor": {
         "loc": "Condor"
@@ -521,26 +1454,65 @@
     "Cone": {
         "loc": "Cone"
     },
+    "Confetti": {
+        "loc": "Confetti"
+    },
     "Conifer": {
         "loc": "Conifer"
+    },
+    "Conk Crete": {
+        "loc": "Conk Crete"
+    },
+    "Conker": {
+        "loc": "Conker"
     },
     "Cookie": {
         "loc": "Cookie"
     },
+    "Cooper": {
+        "loc": "Cooper"
+    },
     "Copper": {
         "loc": "Copper"
+    },
+    "Copse": {
+        "loc": "Copse"
+    },
+    "Coquito": {
+        "loc": "Coquito"
     },
     "Coral": {
         "loc": "Coral"
     },
+    "Coriander": {
+        "loc": "Coriander"
+    },
+    "Coricopat": {
+        "loc": "Coricopat"
+    },
+    "Cormorant": {
+        "loc": "Cormorant"
+    },
+    "Corn": {
+        "loc": "Corn"
+    },
     "Cosmo": {
         "loc": "Cosmo"
+    },
+    "Cosmos": {
+        "loc": "Cosmos"
     },
     "Cotton": {
         "loc": "Cotton"
     },
     "Cougar": {
         "loc": "Cougar"
+    },
+    "Courage": {
+        "loc": "Courage"
+    },
+    "Cove": {
+        "loc": "Cove"
     },
     "Cow": {
         "loc": "Cow"
@@ -554,8 +1526,14 @@
     "Coyote": {
         "loc": "Coyote"
     },
+    "Cozy": {
+        "loc": "Cozy"
+    },
     "Crab": {
         "loc": "Crab"
+    },
+    "Cracked Earth": {
+        "loc": "Cracked Earth"
     },
     "Cracker": {
         "loc": "Cracker"
@@ -572,14 +1550,35 @@
     "Creek": {
         "loc": "Creek"
     },
+    "Creeper": {
+        "loc": "Creeper"
+    },
+    "Crema": {
+        "loc": "Crema"
+    },
+    "Crescent": {
+        "loc": "Crescent"
+    },
     "Cress": {
         "loc": "Cress"
+    },
+    "Crest": {
+        "loc": "Crest"
     },
     "Crested": {
         "loc": "Crested"
     },
     "Cricket": {
         "loc": "Cricket"
+    },
+    "Crispy": {
+        "loc": "Crispy"
+    },
+    "Crocodile": {
+        "loc": "Crocodile"
+    },
+    "Crocus": {
+        "loc": "Crocus"
     },
     "Crooked": {
         "loc": "Crooked"
@@ -590,11 +1589,20 @@
     "Crow": {
         "loc": "Crow"
     },
+    "Crumpet": {
+        "loc": "Crumpet"
+    },
     "Crunchwrap": {
         "loc": "Crunchwrap"
     },
     "Crunchy": {
         "loc": "Crunchy"
+    },
+    "Cullen": {
+        "loc": "Cullen"
+    },
+    "Cupcake": {
+        "loc": "Cupcake"
     },
     "Curl": {
         "loc": "Curl"
@@ -605,8 +1613,29 @@
     "Curly": {
         "loc": "Curly"
     },
+    "Current": {
+        "loc": "Current"
+    },
+    "Curry": {
+        "loc": "Curry"
+    },
+    "Cutie": {
+        "loc": "Cutie"
+    },
+    "Cybele": {
+        "loc": "Cybele"
+    },
+    "Cygnet": {
+        "loc": "Cygnet"
+    },
     "Cypress": {
         "loc": "Cypress"
+    },
+    "Cyprus": {
+        "loc": "Cyprus"
+    },
+    "Daffodil": {
+        "loc": "Daffodil"
     },
     "Dahlia": {
         "loc": "Dahlia"
@@ -614,17 +1643,47 @@
     "Daisy": {
         "loc": "Daisy"
     },
+    "Daisy Mae": {
+        "loc": "Daisy Mae"
+    },
+    "Dakarai": {
+        "loc": "Dakarai"
+    },
+    "Dakari": {
+        "loc": "Dakari"
+    },
     "Dakota": {
         "loc": "Dakota"
     },
-    "Damp": {
-        "loc": "Damp"
+    "Dali": {
+        "loc": "Dali"
+    },
+    "Daliah": {
+        "loc": "Daliah"
+    },
+    "Dambi": {
+        "loc": "Dambi"
     },
     "Dan": {
         "loc": "Dan"
     },
+    "Danbi": {
+        "loc": "Danbi"
+    },
+    "Danchu": {
+        "loc": "Danchu"
+    },
+    "Dancing": {
+        "loc": "Dancing"
+    },
     "Dandelion": {
         "loc": "Dandelion"
+    },
+    "Danger Dave": {
+        "loc": "Danger Dave"
+    },
+    "Dapper": {
+        "loc": "Dapper"
     },
     "Dapple": {
         "loc": "Dapple"
@@ -635,6 +1694,15 @@
     "Dark": {
         "loc": "Dark"
     },
+    "Dart": {
+        "loc": "Dart"
+    },
+    "Dash": {
+        "loc": "Dash"
+    },
+    "Dasik": {
+        "loc": "Dasik"
+    },
     "Dave": {
         "loc": "Dave"
     },
@@ -644,11 +1712,11 @@
     "Day": {
         "loc": "Day"
     },
-    "Dead": {
-        "loc": "Dead"
+    "Dayo": {
+        "loc": "Dayo"
     },
-    "Decay": {
-        "loc": "Decay"
+    "Dazzle": {
+        "loc": "Dazzle"
     },
     "Deep": {
         "loc": "Deep"
@@ -656,11 +1724,98 @@
     "Deer": {
         "loc": "Deer"
     },
+    "Deimos": {
+        "loc": "Deimos"
+    },
+    "Deino": {
+        "loc": "Deino"
+    },
+    "Deirdre": {
+        "loc": "Deirdre"
+    },
+    "Deli": {
+        "loc": "Deli"
+    },
     "Delilah": {
         "loc": "Delilah"
     },
+    "Della": {
+        "loc": "Della"
+    },
+    "Delta": {
+        "loc": "Delta"
+    },
+    "Demeter": {
+        "loc": "Demeter"
+    },
+    "Desert": {
+        "loc": "Desert"
+    },
+    "Destiny": {
+        "loc": "Destiny"
+    },
     "Dew": {
         "loc": "Dew"
+    },
+    "Dewey": {
+        "loc": "Dewey"
+    },
+    "Diablo": {
+        "loc": "Diablo"
+    },
+    "Diallo": {
+        "loc": "Diallo"
+    },
+    "Diamond": {
+        "loc": "Diamond"
+    },
+    "Diana": {
+        "loc": "Diana"
+    },
+    "Digiorno": {
+        "loc": "Digiorno"
+    },
+    "Dinah": {
+        "loc": "Dinah"
+    },
+    "Dingo": {
+        "loc": "Dingo"
+    },
+    "Dino": {
+        "loc": "Dino"
+    },
+    "Diona": {
+        "loc": "Diona"
+    },
+    "Dipper": {
+        "loc": "Dipper"
+    },
+    "Dirk": {
+        "loc": "Dirk"
+    },
+    "Disco": {
+        "loc": "Disco"
+    },
+    "Distinguished Gentleman": {
+        "loc": "Distinguished Gentleman"
+    },
+    "Diva": {
+        "loc": "Diva"
+    },
+    "Dizzy": {
+        "loc": "Dizzy"
+    },
+    "Djungelskog": {
+        "loc": "Djungelskog"
+    },
+    "Dmitri": {
+        "loc": "Dmitri"
+    },
+    "Dobie": {
+        "loc": "Dobie"
+    },
+    "Doc": {
+        "loc": "Doc"
     },
     "Doe": {
         "loc": "Doe"
@@ -668,8 +1823,50 @@
     "Dog": {
         "loc": "Dog"
     },
+    "Doja": {
+        "loc": "Doja"
+    },
     "Dolly": {
         "loc": "Dolly"
+    },
+    "Dolphin": {
+        "loc": "Dolphin"
+    },
+    "Domingo": {
+        "loc": "Domingo"
+    },
+    "Domino": {
+        "loc": "Domino"
+    },
+    "Donald": {
+        "loc": "Donald"
+    },
+    "Donut": {
+        "loc": "Donut"
+    },
+    "Donuts": {
+        "loc": "Donuts"
+    },
+    "Doodle": {
+        "loc": "Doodle"
+    },
+    "Doofenshmirtz": {
+        "loc": "Doofenshmirtz"
+    },
+    "Dori": {
+        "loc": "Dori"
+    },
+    "Dorian": {
+        "loc": "Dorian"
+    },
+    "Dorothy": {
+        "loc": "Dorothy"
+    },
+    "Double Trouble": {
+        "loc": "Double Trouble"
+    },
+    "Dova": {
+        "loc": "Dova"
     },
     "Dove": {
         "loc": "Dove"
@@ -683,8 +1880,11 @@
     "Dragonfly": {
         "loc": "Dragonfly"
     },
-    "Drake": {
-        "loc": "Drake"
+    "Draugr": {
+        "loc": "Draugr"
+    },
+    "Dream": {
+        "loc": "Dream"
     },
     "Dreamy": {
         "loc": "Dreamy"
@@ -692,8 +1892,17 @@
     "Drift": {
         "loc": "Drift"
     },
+    "Drip": {
+        "loc": "Drip"
+    },
     "Drizzle": {
         "loc": "Drizzle"
+    },
+    "Drop": {
+        "loc": "Drop"
+    },
+    "Droplet": {
+        "loc": "Droplet"
     },
     "Drought": {
         "loc": "Drought"
@@ -707,8 +1916,14 @@
     "Duck": {
         "loc": "Duck"
     },
-    "Dull": {
-        "loc": "Dull"
+    "Dulce": {
+        "loc": "Dulce"
+    },
+    "Dumpling": {
+        "loc": "Dumpling"
+    },
+    "Dumpster": {
+        "loc": "Dumpster"
     },
     "Dune": {
         "loc": "Dune"
@@ -722,6 +1937,21 @@
     "Dust": {
         "loc": "Dust"
     },
+    "Dust Bunny": {
+        "loc": "Dust Bunny"
+    },
+    "Dusty": {
+        "loc": "Dusty"
+    },
+    "Dusty Cuddles": {
+        "loc": "Dusty Cuddles"
+    },
+    "Dwarf": {
+        "loc": "Dwarf"
+    },
+    "Dysnomia": {
+        "loc": "Dysnomia"
+    },
     "Eagle": {
         "loc": "Eagle"
     },
@@ -734,14 +1964,26 @@
     "Eclipse": {
         "loc": "Eclipse"
     },
+    "Ed": {
+        "loc": "Ed"
+    },
     "Eda": {
         "loc": "Eda"
     },
     "Eddie": {
         "loc": "Eddie"
     },
-    "Eel": {
-        "loc": "Eel"
+    "Edelweiss": {
+        "loc": "Edelweiss"
+    },
+    "Edward": {
+        "loc": "Edward"
+    },
+    "Eepy": {
+        "loc": "Eepy"
+    },
+    "Eevee": {
+        "loc": "Eevee"
     },
     "Egg": {
         "loc": "Egg"
@@ -749,14 +1991,38 @@
     "Egret": {
         "loc": "Egret"
     },
+    "Egypt": {
+        "loc": "Egypt"
+    },
+    "Elden": {
+        "loc": "Elden"
+    },
+    "Elder": {
+        "loc": "Elder"
+    },
+    "Elijah": {
+        "loc": "Elijah"
+    },
+    "Elio": {
+        "loc": "Elio"
+    },
     "Elk": {
         "loc": "Elk"
+    },
+    "Ellie": {
+        "loc": "Ellie"
     },
     "Elm": {
         "loc": "Elm"
     },
+    "Elton": {
+        "loc": "Elton"
+    },
     "Ember": {
         "loc": "Ember"
+    },
+    "Emeline": {
+        "loc": "Emeline"
     },
     "Emerald": {
         "loc": "Emerald"
@@ -764,29 +2030,107 @@
     "Emi": {
         "loc": "Emi"
     },
+    "Emilio": {
+        "loc": "Emilio"
+    },
+    "Emma": {
+        "loc": "Emma"
+    },
     "Emy": {
         "loc": "Emy"
+    },
+    "Enchilada": {
+        "loc": "Enchilada"
+    },
+    "End": {
+        "loc": "End"
+    },
+    "Ender Dragon": {
+        "loc": "Ender Dragon"
+    },
+    "Endless": {
+        "loc": "Endless"
+    },
+    "Endless Reflections": {
+        "loc": "Endless Reflections"
+    },
+    "Enoki": {
+        "loc": "Enoki"
+    },
+    "Envy": {
+        "loc": "Envy"
+    },
+    "Erebus": {
+        "loc": "Erebus"
     },
     "Erica": {
         "loc": "Erica"
     },
+    "Eris": {
+        "loc": "Eris"
+    },
     "Ermine": {
         "loc": "Ermine"
+    },
+    "Esme": {
+        "loc": "Esme"
+    },
+    "Espeon": {
+        "loc": "Espeon"
     },
     "Espresso": {
         "loc": "Espresso"
     },
+    "Espurr": {
+        "loc": "Espurr"
+    },
+    "Esther": {
+        "loc": "Esther"
+    },
+    "Etoile": {
+        "loc": "Etoile"
+    },
+    "Europa": {
+        "loc": "Europa"
+    },
+    "Eva": {
+        "loc": "Eva"
+    },
+    "Eve": {
+        "loc": "Eve"
+    },
     "Evelyn": {
         "loc": "Evelyn"
+    },
+    "Evening": {
+        "loc": "Evening"
+    },
+    "Evie": {
+        "loc": "Evie"
     },
     "Evilface": {
         "loc": "Evilface"
     },
+    "Ewe": {
+        "loc": "Ewe"
+    },
+    "Extra Cuddles": {
+        "loc": "Extra Cuddles"
+    },
+    "Ezra": {
+        "loc": "Ezra"
+    },
     "Faded": {
         "loc": "Faded"
     },
-    "Fading": {
-        "loc": "Fading"
+    "Fairy": {
+        "loc": "Fairy"
+    },
+    "Faith": {
+        "loc": "Faith"
+    },
+    "Faizah": {
+        "loc": "Faizah"
     },
     "Falcon": {
         "loc": "Falcon"
@@ -794,11 +2138,17 @@
     "Fallen": {
         "loc": "Fallen"
     },
+    "Falling": {
+        "loc": "Falling"
+    },
     "Fallow": {
         "loc": "Fallow"
     },
     "Fang": {
         "loc": "Fang"
+    },
+    "Fauna": {
+        "loc": "Fauna"
     },
     "Fawn": {
         "loc": "Fawn"
@@ -806,8 +2156,23 @@
     "Feather": {
         "loc": "Feather"
     },
+    "Felicette": {
+        "loc": "Felicette"
+    },
+    "Felicity": {
+        "loc": "Felicity"
+    },
     "Felix": {
         "loc": "Felix"
+    },
+    "Feliz": {
+        "loc": "Feliz"
+    },
+    "Fennec": {
+        "loc": "Fennec"
+    },
+    "Fennekin": {
+        "loc": "Fennekin"
     },
     "Fennel": {
         "loc": "Fennel"
@@ -821,11 +2186,23 @@
     "Ferry": {
         "loc": "Ferry"
     },
+    "Fickle": {
+        "loc": "Fickle"
+    },
     "Fidget": {
         "loc": "Fidget"
     },
+    "Field": {
+        "loc": "Field"
+    },
     "Fierce": {
         "loc": "Fierce"
+    },
+    "Fig": {
+        "loc": "Fig"
+    },
+    "Figaro": {
+        "loc": "Figaro"
     },
     "Fin": {
         "loc": "Fin"
@@ -833,17 +2210,32 @@
     "Finch": {
         "loc": "Finch"
     },
+    "Finnian": {
+        "loc": "Finnian"
+    },
     "Fir": {
         "loc": "Fir"
     },
     "Fire": {
         "loc": "Fire"
     },
+    "Fireball": {
+        "loc": "Fireball"
+    },
+    "Firecracker": {
+        "loc": "Firecracker"
+    },
     "Firefly": {
         "loc": "Firefly"
     },
+    "First Generation iPod": {
+        "loc": "First Generation iPod"
+    },
     "Fish": {
         "loc": "Fish"
+    },
+    "Fishleg": {
+        "loc": "Fishleg"
     },
     "Fishtail": {
         "loc": "Fishtail"
@@ -859,6 +2251,12 @@
     },
     "Flame": {
         "loc": "Flame"
+    },
+    "Flamenco": {
+        "loc": "Flamenco"
+    },
+    "Flare": {
+        "loc": "Flare"
     },
     "Flash": {
         "loc": "Flash"
@@ -884,11 +2282,23 @@
     "Flip": {
         "loc": "Flip"
     },
+    "Flit": {
+        "loc": "Flit"
+    },
     "Flood": {
         "loc": "Flood"
     },
+    "Flopper": {
+        "loc": "Flopper"
+    },
+    "Flounder": {
+        "loc": "Flounder"
+    },
     "Flower": {
         "loc": "Flower"
+    },
+    "Fluff": {
+        "loc": "Fluff"
     },
     "Fluffy": {
         "loc": "Fluffy"
@@ -911,14 +2321,29 @@
     "Fog": {
         "loc": "Fog"
     },
+    "Foggy": {
+        "loc": "Foggy"
+    },
     "Forest": {
         "loc": "Forest"
     },
     "Fork": {
         "loc": "Fork"
     },
+    "Four Needles": {
+        "loc": "Four Needles"
+    },
     "Fox": {
         "loc": "Fox"
+    },
+    "Foxglove": {
+        "loc": "Foxglove"
+    },
+    "Foxtrot": {
+        "loc": "Foxtrot"
+    },
+    "Fran Bow": {
+        "loc": "Fran Bow"
     },
     "Frank": {
         "loc": "Frank"
@@ -947,8 +2372,23 @@
     "French": {
         "loc": "French"
     },
+    "French Fry": {
+        "loc": "French Fry"
+    },
+    "Freya": {
+        "loc": "Freya"
+    },
+    "Frigid": {
+        "loc": "Frigid"
+    },
     "Fringe": {
         "loc": "Fringe"
+    },
+    "Frisk": {
+        "loc": "Frisk"
+    },
+    "Frita": {
+        "loc": "Frita"
     },
     "Frito": {
         "loc": "Frito"
@@ -956,20 +2396,86 @@
     "Frog": {
         "loc": "Frog"
     },
+    "Froggy": {
+        "loc": "Froggy"
+    },
     "Frond": {
         "loc": "Frond"
     },
     "Frost": {
         "loc": "Frost"
     },
+    "Frosty": {
+        "loc": "Frosty"
+    },
     "Frozen": {
         "loc": "Frozen"
+    },
+    "Fruit": {
+        "loc": "Fruit"
+    },
+    "Fruity Pebble": {
+        "loc": "Fruity Pebble"
+    },
+    "Frumpkin": {
+        "loc": "Frumpkin"
+    },
+    "Fry": {
+        "loc": "Fry"
+    },
+    "Frye": {
+        "loc": "Frye"
+    },
+    "Fuchsia": {
+        "loc": "Fuchsia"
+    },
+    "Fudge": {
+        "loc": "Fudge"
+    },
+    "Fuecoco": {
+        "loc": "Fuecoco"
+    },
+    "Fuli": {
+        "loc": "Fuli"
+    },
+    "Fumble": {
+        "loc": "Fumble"
+    },
+    "Furby": {
+        "loc": "Furby"
     },
     "Furled": {
         "loc": "Furled"
     },
+    "Furze": {
+        "loc": "Furze"
+    },
+    "Fuzz": {
+        "loc": "Fuzz"
+    },
+    "Fuzz Lightyear": {
+        "loc": "Fuzz Lightyear"
+    },
+    "Fuzzbo": {
+        "loc": "Fuzzbo"
+    },
+    "Fuzziwig": {
+        "loc": "Fuzziwig"
+    },
     "Fuzzy": {
         "loc": "Fuzzy"
+    },
+    "Gabriel": {
+        "loc": "Gabriel"
+    },
+    "Gala": {
+        "loc": "Gala"
+    },
+    "Galahad": {
+        "loc": "Galahad"
+    },
+    "Gale": {
+        "loc": "Gale"
     },
     "Gamble": {
         "loc": "Gamble"
@@ -977,17 +2483,59 @@
     "Gander": {
         "loc": "Gander"
     },
+    "Ganiru": {
+        "loc": "Ganiru"
+    },
     "Gannet": {
         "loc": "Gannet"
+    },
+    "Ganymede": {
+        "loc": "Ganymede"
+    },
+    "Gar": {
+        "loc": "Gar"
+    },
+    "Gardenia": {
+        "loc": "Gardenia"
+    },
+    "Garfield": {
+        "loc": "Garfield"
     },
     "Gargoyle": {
         "loc": "Gargoyle"
     },
+    "Garlic": {
+        "loc": "Garlic"
+    },
     "Garnet": {
         "loc": "Garnet"
     },
-    "Gem": {
-        "loc": "Gem"
+    "Gato": {
+        "loc": "Gato"
+    },
+    "Gayle": {
+        "loc": "Gayle"
+    },
+    "Gazelle": {
+        "loc": "Gazelle"
+    },
+    "Gemelli": {
+        "loc": "Gemelli"
+    },
+    "Gemini": {
+        "loc": "Gemini"
+    },
+    "General Erasmus Dickinson": {
+        "loc": "General Erasmus Dickinson"
+    },
+    "Genji": {
+        "loc": "Genji"
+    },
+    "Gentle": {
+        "loc": "Gentle"
+    },
+    "Geode": {
+        "loc": "Geode"
     },
     "George": {
         "loc": "George"
@@ -995,26 +2543,47 @@
     "Ghost": {
         "loc": "Ghost"
     },
-    "Giant": {
-        "loc": "Giant"
-    },
     "Gibby": {
         "loc": "Gibby"
+    },
+    "Gible": {
+        "loc": "Gible"
+    },
+    "Gigabyte": {
+        "loc": "Gigabyte"
+    },
+    "Gilded Lily": {
+        "loc": "Gilded Lily"
     },
     "Gill": {
         "loc": "Gill"
     },
+    "Ginger": {
+        "loc": "Ginger"
+    },
+    "Gingersnap": {
+        "loc": "Gingersnap"
+    },
     "Gir": {
         "loc": "Gir"
+    },
+    "Girly Pop": {
+        "loc": "Girly Pop"
     },
     "Gizmo": {
         "loc": "Gizmo"
     },
+    "Glade": {
+        "loc": "Glade"
+    },
+    "Glameow": {
+        "loc": "Glameow"
+    },
     "Glass": {
         "loc": "Glass"
     },
-    "Gleam": {
-        "loc": "Gleam"
+    "Glint": {
+        "loc": "Glint"
     },
     "Glory": {
         "loc": "Glory"
@@ -1022,14 +2591,41 @@
     "Glow": {
         "loc": "Glow"
     },
+    "Gluttony": {
+        "loc": "Gluttony"
+    },
+    "Gnocchi": {
+        "loc": "Gnocchi"
+    },
+    "Goat": {
+        "loc": "Goat"
+    },
+    "Gobi": {
+        "loc": "Gobi"
+    },
+    "Godzilla": {
+        "loc": "Godzilla"
+    },
+    "Gofrette": {
+        "loc": "Gofrette"
+    },
     "Gold": {
         "loc": "Gold"
     },
     "Golden": {
         "loc": "Golden"
     },
+    "Goldfish": {
+        "loc": "Goldfish"
+    },
+    "Good Sir": {
+        "loc": "Good Sir"
+    },
     "Goose": {
         "loc": "Goose"
+    },
+    "Gopher": {
+        "loc": "Gopher"
     },
     "Gorge": {
         "loc": "Gorge"
@@ -1037,11 +2633,32 @@
     "Gorse": {
         "loc": "Gorse"
     },
+    "Goryo": {
+        "loc": "Goryo"
+    },
+    "Gosling": {
+        "loc": "Gosling"
+    },
+    "Gossamer": {
+        "loc": "Gossamer"
+    },
+    "Gourmand": {
+        "loc": "Gourmand"
+    },
     "Grace": {
         "loc": "Grace"
     },
+    "Grackle": {
+        "loc": "Grackle"
+    },
     "Grain": {
         "loc": "Grain"
+    },
+    "Grandpa": {
+        "loc": "Grandpa"
+    },
+    "Granite": {
+        "loc": "Granite"
     },
     "Grass": {
         "loc": "Grass"
@@ -1049,20 +2666,47 @@
     "Grasshopper": {
         "loc": "Grasshopper"
     },
+    "Grave": {
+        "loc": "Grave"
+    },
     "Gravel": {
         "loc": "Gravel"
     },
     "Gravy": {
         "loc": "Gravy"
     },
+    "Gray": {
+        "loc": "Gray"
+    },
+    "Grebe": {
+        "loc": "Grebe"
+    },
+    "Greed": {
+        "loc": "Greed"
+    },
     "Green": {
         "loc": "Green"
     },
-    "Grey": {
-        "loc": "Grey"
+    "Grizabella": {
+        "loc": "Grizabella"
+    },
+    "Grizzly": {
+        "loc": "Grizzly"
     },
     "Grouse": {
         "loc": "Grouse"
+    },
+    "Grove": {
+        "loc": "Grove"
+    },
+    "Growlithe": {
+        "loc": "Growlithe"
+    },
+    "Grunkle Stan": {
+        "loc": "Grunkle Stan"
+    },
+    "Guillermo": {
+        "loc": "Guillermo"
     },
     "Guinness": {
         "loc": "Guinness"
@@ -1070,11 +2714,50 @@
     "Gull": {
         "loc": "Gull"
     },
+    "Gully": {
+        "loc": "Gully"
+    },
+    "Gumbo": {
+        "loc": "Gumbo"
+    },
+    "Guppy": {
+        "loc": "Guppy"
+    },
+    "Gus": {
+        "loc": "Gus"
+    },
     "Gust": {
         "loc": "Gust"
     },
+    "Gustavo": {
+        "loc": "Gustavo"
+    },
+    "Guzma": {
+        "loc": "Guzma"
+    },
+    "Gwendoline": {
+        "loc": "Gwendoline"
+    },
+    "Gwyndolin": {
+        "loc": "Gwyndolin"
+    },
+    "Gwynn": {
+        "loc": "Gwynn"
+    },
+    "Gyoza": {
+        "loc": "Gyoza"
+    },
     "Habanero": {
         "loc": "Habanero"
+    },
+    "Habika": {
+        "loc": "Habika"
+    },
+    "Hadar": {
+        "loc": "Hadar"
+    },
+    "Haiku": {
+        "loc": "Haiku"
     },
     "Hail": {
         "loc": "Hail"
@@ -1082,11 +2765,32 @@
     "Haku": {
         "loc": "Haku"
     },
+    "Halcyon": {
+        "loc": "Halcyon"
+    },
+    "Hale-Bopp": {
+        "loc": "Hale-Bopp"
+    },
     "Half": {
         "loc": "Half"
     },
+    "Halloween": {
+        "loc": "Halloween"
+    },
+    "Hamburger": {
+        "loc": "Hamburger"
+    },
+    "Hantu": {
+        "loc": "Hantu"
+    },
     "Hare": {
         "loc": "Hare"
+    },
+    "Harlequin": {
+        "loc": "Harlequin"
+    },
+    "Haru": {
+        "loc": "Haru"
     },
     "Harvest": {
         "loc": "Harvest"
@@ -1097,23 +2801,44 @@
     "Hatch": {
         "loc": "Hatch"
     },
+    "Hatsune Miku": {
+        "loc": "Hatsune Miku"
+    },
+    "Haven": {
+        "loc": "Haven"
+    },
     "Havoc": {
         "loc": "Havoc"
     },
     "Hawk": {
         "loc": "Hawk"
     },
+    "Hawkbit": {
+        "loc": "Hawkbit"
+    },
+    "Hawkeye": {
+        "loc": "Hawkeye"
+    },
+    "Hawthorn": {
+        "loc": "Hawthorn"
+    },
     "Hay": {
         "loc": "Hay"
-    },
-    "Haze": {
-        "loc": "Haze"
     },
     "Hazel": {
         "loc": "Hazel"
     },
+    "Hazy": {
+        "loc": "Hazy"
+    },
+    "Heart": {
+        "loc": "Heart"
+    },
     "Heath": {
         "loc": "Heath"
+    },
+    "Heathcliff": {
+        "loc": "Heathcliff"
     },
     "Heather": {
         "loc": "Heather"
@@ -1121,26 +2846,71 @@
     "Heavy": {
         "loc": "Heavy"
     },
-    "Hedge": {
-        "loc": "Hedge"
+    "Heisenberg": {
+        "loc": "Heisenberg"
     },
-    "Hen": {
-        "loc": "Hen"
+    "Helix": {
+        "loc": "Helix"
+    },
+    "Hemlock": {
+        "loc": "Hemlock"
+    },
+    "Henry": {
+        "loc": "Henry"
+    },
+    "Herbert": {
+        "loc": "Herbert"
     },
     "Herc": {
         "loc": "Herc"
     },
+    "Hercules": {
+        "loc": "Hercules"
+    },
+    "Hermit": {
+        "loc": "Hermit"
+    },
     "Heron": {
         "loc": "Heron"
+    },
+    "Hershey": {
+        "loc": "Hershey"
+    },
+    "Hex": {
+        "loc": "Hex"
+    },
+    "Hiccup": {
+        "loc": "Hiccup"
     },
     "Hickory": {
         "loc": "Hickory"
     },
+    "High": {
+        "loc": "High"
+    },
+    "Highness": {
+        "loc": "Highness"
+    },
     "Hill": {
         "loc": "Hill"
     },
-    "Hoarse": {
-        "loc": "Hoarse"
+    "Himiko": {
+        "loc": "Himiko"
+    },
+    "Hiyoko": {
+        "loc": "Hiyoko"
+    },
+    "Hlao": {
+        "loc": "Hlao"
+    },
+    "Hobbes": {
+        "loc": "Hobbes"
+    },
+    "Hobohime": {
+        "loc": "Hobohime"
+    },
+    "Hocus Pocus": {
+        "loc": "Hocus Pocus"
     },
     "Hollow": {
         "loc": "Hollow"
@@ -1148,8 +2918,20 @@
     "Holly": {
         "loc": "Holly"
     },
+    "Hollyhock": {
+        "loc": "Hollyhock"
+    },
+    "Honda": {
+        "loc": "Honda"
+    },
     "Honey": {
         "loc": "Honey"
+    },
+    "Honeydew": {
+        "loc": "Honeydew"
+    },
+    "Honeysuckle": {
+        "loc": "Honeysuckle"
     },
     "Hoot": {
         "loc": "Hoot"
@@ -1160,8 +2942,17 @@
     "Hope": {
         "loc": "Hope"
     },
+    "Hopper": {
+        "loc": "Hopper"
+    },
+    "Horizon": {
+        "loc": "Horizon"
+    },
     "Hornet": {
         "loc": "Hornet"
+    },
+    "Horse": {
+        "loc": "Horse"
     },
     "Hot Sauce": {
         "loc": "Hot Sauce"
@@ -1172,23 +2963,65 @@
     "Hound": {
         "loc": "Hound"
     },
+    "Howl": {
+        "loc": "Howl"
+    },
+    "Howler": {
+        "loc": "Howler"
+    },
+    "Hubert": {
+        "loc": "Hubert"
+    },
     "Hughie": {
         "loc": "Hughie"
     },
     "Human": {
         "loc": "Human"
     },
+    "Humphrey": {
+        "loc": "Humphrey"
+    },
     "Hunter": {
         "loc": "Hunter"
+    },
+    "Hush": {
+        "loc": "Hush"
+    },
+    "Hyacinth": {
+        "loc": "Hyacinth"
+    },
+    "Hydra": {
+        "loc": "Hydra"
+    },
+    "Hyeri": {
+        "loc": "Hyeri"
+    },
+    "Ibis": {
+        "loc": "Ibis"
     },
     "Ice": {
         "loc": "Ice"
     },
+    "Ice Cube": {
+        "loc": "Ice Cube"
+    },
+    "Ice Spice": {
+        "loc": "Ice Spice"
+    },
     "Icecube": {
         "loc": "Icecube"
     },
+    "Icee": {
+        "loc": "Icee"
+    },
+    "Icicle": {
+        "loc": "Icicle"
+    },
     "Icy": {
         "loc": "Icy"
+    },
+    "Iggy": {
+        "loc": "Iggy"
     },
     "Igor": {
         "loc": "Igor"
@@ -1196,14 +3029,56 @@
     "Ike": {
         "loc": "Ike"
     },
+    "Ikea": {
+        "loc": "Ikea"
+    },
     "Indi": {
         "loc": "Indi"
+    },
+    "Inigo": {
+        "loc": "Inigo"
+    },
+    "Iniko": {
+        "loc": "Iniko"
+    },
+    "Ink": {
+        "loc": "Ink"
+    },
+    "Inky": {
+        "loc": "Inky"
     },
     "Insect": {
         "loc": "Insect"
     },
+    "Inspector": {
+        "loc": "Inspector"
+    },
+    "Io": {
+        "loc": "Io"
+    },
+    "Ipsy": {
+        "loc": "Ipsy"
+    },
     "Iris": {
         "loc": "Iris"
+    },
+    "Isabel": {
+        "loc": "Isabel"
+    },
+    "Isabella": {
+        "loc": "Isabella"
+    },
+    "Isaiah": {
+        "loc": "Isaiah"
+    },
+    "Israel": {
+        "loc": "Israel"
+    },
+    "Itsy Bitsy": {
+        "loc": "Itsy Bitsy"
+    },
+    "Ivory": {
+        "loc": "Ivory"
     },
     "Ivy": {
         "loc": "Ivy"
@@ -1211,17 +3086,53 @@
     "Jack": {
         "loc": "Jack"
     },
+    "Jackal": {
+        "loc": "Jackal"
+    },
+    "Jackdaw": {
+        "loc": "Jackdaw"
+    },
+    "Jackrabbit": {
+        "loc": "Jackrabbit"
+    },
+    "Jade": {
+        "loc": "Jade"
+    },
+    "Jae": {
+        "loc": "Jae"
+    },
     "Jagged": {
         "loc": "Jagged"
+    },
+    "Jaiden": {
+        "loc": "Jaiden"
+    },
+    "Jakada": {
+        "loc": "Jakada"
     },
     "Jake": {
         "loc": "Jake"
     },
+    "Jalebi": {
+        "loc": "Jalebi"
+    },
     "James": {
         "loc": "James"
     },
+    "Jamilah": {
+        "loc": "Jamilah"
+    },
+    "Jasmine": {
+        "loc": "Jasmine"
+    },
     "Jasper": {
         "loc": "Jasper"
+    },
+    "Jattelik": {
+        "loc": "Jattelik"
+    },
+    "Jattematt": {
+        "loc": "Jattematt"
     },
     "Jaxon": {
         "loc": "Jaxon"
@@ -1229,8 +3140,35 @@
     "Jay": {
         "loc": "Jay"
     },
+    "Jaylen": {
+        "loc": "Jaylen"
+    },
+    "Jeep Wrangler": {
+        "loc": "Jeep Wrangler"
+    },
+    "Jelly Jam": {
+        "loc": "Jelly Jam"
+    },
+    "Jellyfish": {
+        "loc": "Jellyfish"
+    },
+    "Jellylorum": {
+        "loc": "Jellylorum"
+    },
+    "Jemila": {
+        "loc": "Jemila"
+    },
     "Jenny": {
         "loc": "Jenny"
+    },
+    "Jennyanydots": {
+        "loc": "Jennyanydots"
+    },
+    "Jerboa": {
+        "loc": "Jerboa"
+    },
+    "Jerry": {
+        "loc": "Jerry"
     },
     "Jesse": {
         "loc": "Jesse"
@@ -1238,20 +3176,47 @@
     "Jessica": {
         "loc": "Jessica"
     },
-    "Jet": {
-        "loc": "Jet"
+    "Jester": {
+        "loc": "Jester"
     },
     "Jethro": {
         "loc": "Jethro"
     },
+    "Jetta": {
+        "loc": "Jetta"
+    },
+    "Jewel": {
+        "loc": "Jewel"
+    },
     "Jewels": {
         "loc": "Jewels"
+    },
+    "Jigsaw": {
+        "loc": "Jigsaw"
+    },
+    "Jim": {
+        "loc": "Jim"
+    },
+    "Jiminy Cricket": {
+        "loc": "Jiminy Cricket"
     },
     "Jimmy": {
         "loc": "Jimmy"
     },
+    "Jinn": {
+        "loc": "Jinn"
+    },
     "Jinx": {
         "loc": "Jinx"
+    },
+    "Jirachi": {
+        "loc": "Jirachi"
+    },
+    "Jitters": {
+        "loc": "Jitters"
+    },
+    "Joanne": {
+        "loc": "Joanne"
     },
     "John": {
         "loc": "John"
@@ -1262,8 +3227,20 @@
     "Joker": {
         "loc": "Joker"
     },
+    "Jolly": {
+        "loc": "Jolly"
+    },
+    "Jolly Rancher": {
+        "loc": "Jolly Rancher"
+    },
     "Joob": {
         "loc": "Joob"
+    },
+    "Joy": {
+        "loc": "Joy"
+    },
+    "Jozi": {
+        "loc": "Jozi"
     },
     "Jubie": {
         "loc": "Jubie"
@@ -1277,14 +3254,29 @@
     "Judy": {
         "loc": "Judy"
     },
+    "Julie": {
+        "loc": "Julie"
+    },
     "Juliet": {
         "loc": "Juliet"
+    },
+    "Jumble": {
+        "loc": "Jumble"
     },
     "Jump": {
         "loc": "Jump"
     },
+    "Junco": {
+        "loc": "Junco"
+    },
+    "June": {
+        "loc": "June"
+    },
     "Juniper": {
         "loc": "Juniper"
+    },
+    "Juno": {
+        "loc": "Juno"
     },
     "Jupiter": {
         "loc": "Jupiter"
@@ -1292,11 +3284,65 @@
     "KD": {
         "loc": "KD"
     },
+    "Kabuki": {
+        "loc": "Kabuki"
+    },
+    "Kaede": {
+        "loc": "Kaede"
+    },
+    "Kaito": {
+        "loc": "Kaito"
+    },
+    "Kaizo": {
+        "loc": "Kaizo"
+    },
+    "Kale": {
+        "loc": "Kale"
+    },
+    "Kaleb": {
+        "loc": "Kaleb"
+    },
+    "Kamari": {
+        "loc": "Kamari"
+    },
+    "Kamau": {
+        "loc": "Kamau"
+    },
+    "Karen": {
+        "loc": "Karen"
+    },
+    "Kariba": {
+        "loc": "Kariba"
+    },
+    "Karkinos": {
+        "loc": "Karkinos"
+    },
+    "Karma": {
+        "loc": "Karma"
+    },
+    "Kasha": {
+        "loc": "Kasha"
+    },
+    "Kasi": {
+        "loc": "Kasi"
+    },
     "Kate": {
         "loc": "Kate"
     },
+    "Katjie": {
+        "loc": "Katjie"
+    },
     "Katy": {
         "loc": "Katy"
+    },
+    "Keanu": {
+        "loc": "Keanu"
+    },
+    "Keiko": {
+        "loc": "Keiko"
+    },
+    "Kellas": {
+        "loc": "Kellas"
     },
     "Kelloggs": {
         "loc": "Kelloggs"
@@ -1310,6 +3356,15 @@
     "Kenny": {
         "loc": "Kenny"
     },
+    "Kenya": {
+        "loc": "Kenya"
+    },
+    "Kepler": {
+        "loc": "Kepler"
+    },
+    "Kerberos": {
+        "loc": "Kerberos"
+    },
     "Kermit": {
         "loc": "Kermit"
     },
@@ -1322,8 +3377,44 @@
     "Ketchup": {
         "loc": "Ketchup"
     },
+    "Ketsl": {
+        "loc": "Ketsl"
+    },
+    "Kettlingur": {
+        "loc": "Kettlingur"
+    },
+    "Keyboard": {
+        "loc": "Keyboard"
+    },
+    "Keziah": {
+        "loc": "Keziah"
+    },
+    "Kianna": {
+        "loc": "Kianna"
+    },
+    "Kiara": {
+        "loc": "Kiara"
+    },
+    "Kibble": {
+        "loc": "Kibble"
+    },
+    "Kid Cat": {
+        "loc": "Kid Cat"
+    },
+    "Kiki": {
+        "loc": "Kiki"
+    },
+    "Kimani": {
+        "loc": "Kimani"
+    },
+    "Kimberly": {
+        "loc": "Kimberly"
+    },
     "King": {
         "loc": "King"
+    },
+    "Kingfisher": {
+        "loc": "Kingfisher"
     },
     "Kingston": {
         "loc": "Kingston"
@@ -1331,8 +3422,14 @@
     "Kink": {
         "loc": "Kink"
     },
+    "Kion": {
+        "loc": "Kion"
+    },
     "Kip": {
         "loc": "Kip"
+    },
+    "Kipling": {
+        "loc": "Kipling"
     },
     "Kisha": {
         "loc": "Kisha"
@@ -1343,23 +3440,107 @@
     "Kitty": {
         "loc": "Kitty"
     },
+    "Kitty Cat": {
+        "loc": "Kitty Cat"
+    },
+    "Kitty Softpaws": {
+        "loc": "Kitty Softpaws"
+    },
+    "Kivu": {
+        "loc": "Kivu"
+    },
+    "Kiwi": {
+        "loc": "Kiwi"
+    },
+    "Klee": {
+        "loc": "Klee"
+    },
     "Klondike": {
         "loc": "Klondike"
+    },
+    "Knorrig": {
+        "loc": "Knorrig"
     },
     "Knox": {
         "loc": "Knox"
     },
+    "Koala": {
+        "loc": "Koala"
+    },
+    "Koba": {
+        "loc": "Koba"
+    },
+    "Kodi": {
+        "loc": "Kodi"
+    },
     "Kodiak": {
         "loc": "Kodiak"
+    },
+    "Kokichi": {
+        "loc": "Kokichi"
+    },
+    "Kokomi": {
+        "loc": "Kokomi"
+    },
+    "Kokum": {
+        "loc": "Kokum"
+    },
+    "Komaru": {
+        "loc": "Komaru"
     },
     "Kong": {
         "loc": "Kong"
     },
+    "Kovu": {
+        "loc": "Kovu"
+    },
+    "Kramig": {
+        "loc": "Kramig"
+    },
+    "Kudu": {
+        "loc": "Kudu"
+    },
+    "Kushi": {
+        "loc": "Kushi"
+    },
+    "Kyle": {
+        "loc": "Kyle"
+    },
+    "Kyoko": {
+        "loc": "Kyoko"
+    },
+    "Kyu": {
+        "loc": "Kyu"
+    },
     "L": {
         "loc": "L"
     },
+    "Laburnum": {
+        "loc": "Laburnum"
+    },
     "Lacy": {
         "loc": "Lacy"
+    },
+    "Lady": {
+        "loc": "Lady"
+    },
+    "Lady Figment": {
+        "loc": "Lady Figment"
+    },
+    "Lady Liberty": {
+        "loc": "Lady Liberty"
+    },
+    "Ladybug": {
+        "loc": "Ladybug"
+    },
+    "Lagoon": {
+        "loc": "Lagoon"
+    },
+    "Laika": {
+        "loc": "Laika"
+    },
+    "Laila": {
+        "loc": "Laila"
     },
     "Lake": {
         "loc": "Lake"
@@ -1367,14 +3548,32 @@
     "Lakota": {
         "loc": "Lakota"
     },
+    "Laksha": {
+        "loc": "Laksha"
+    },
     "Laku": {
         "loc": "Laku"
+    },
+    "Lamb": {
+        "loc": "Lamb"
+    },
+    "Lapis": {
+        "loc": "Lapis"
     },
     "Larch": {
         "loc": "Larch"
     },
+    "Larimar": {
+        "loc": "Larimar"
+    },
     "Lark": {
         "loc": "Lark"
+    },
+    "Larkspur": {
+        "loc": "Larkspur"
+    },
+    "Laszlo": {
+        "loc": "Laszlo"
     },
     "Laurel": {
         "loc": "Laurel"
@@ -1382,14 +3581,35 @@
     "Lavender": {
         "loc": "Lavender"
     },
+    "Lazarus": {
+        "loc": "Lazarus"
+    },
+    "Lazuli": {
+        "loc": "Lazuli"
+    },
     "Leaf": {
         "loc": "Leaf"
     },
     "Leap": {
         "loc": "Leap"
     },
+    "Leche": {
+        "loc": "Leche"
+    },
     "Lee": {
         "loc": "Lee"
+    },
+    "Leif": {
+        "loc": "Leif"
+    },
+    "Lemmy": {
+        "loc": "Lemmy"
+    },
+    "Lemon": {
+        "loc": "Lemon"
+    },
+    "Lemon Boy": {
+        "loc": "Lemon Boy"
     },
     "Leo": {
         "loc": "Leo"
@@ -1397,14 +3617,32 @@
     "Leon": {
         "loc": "Leon"
     },
+    "Leonardo": {
+        "loc": "Leonardo"
+    },
     "Leopard": {
         "loc": "Leopard"
     },
     "Lester": {
         "loc": "Lester"
     },
+    "Levi": {
+        "loc": "Levi"
+    },
+    "Leviathan": {
+        "loc": "Leviathan"
+    },
+    "Levon": {
+        "loc": "Levon"
+    },
     "Lex": {
         "loc": "Lex"
+    },
+    "Li Shang": {
+        "loc": "Li Shang"
+    },
+    "Libra": {
+        "loc": "Libra"
     },
     "Lichen": {
         "loc": "Lichen"
@@ -1415,32 +3653,107 @@
     "Lightning": {
         "loc": "Lightning"
     },
+    "Lil Baby": {
+        "loc": "Lil Baby"
+    },
     "Lilac": {
         "loc": "Lilac"
+    },
+    "Lilith": {
+        "loc": "Lilith"
+    },
+    "Lilleplutt": {
+        "loc": "Lilleplutt"
     },
     "Lily": {
         "loc": "Lily"
     },
+    "Lime": {
+        "loc": "Lime"
+    },
+    "Linden": {
+        "loc": "Linden"
+    },
+    "Linguine": {
+        "loc": "Linguine"
+    },
+    "Linzhi": {
+        "loc": "Linzhi"
+    },
     "Lion": {
         "loc": "Lion"
+    },
+    "Lionel": {
+        "loc": "Lionel"
+    },
+    "Litten": {
+        "loc": "Litten"
     },
     "Little": {
         "loc": "Little"
     },
+    "Little Baby": {
+        "loc": "Little Baby"
+    },
+    "Little Ghost": {
+        "loc": "Little Ghost"
+    },
+    "Little Lady": {
+        "loc": "Little Lady"
+    },
+    "Little Nicky": {
+        "loc": "Little Nicky"
+    },
+    "Little One": {
+        "loc": "Little One"
+    },
+    "Livlig": {
+        "loc": "Livlig"
+    },
     "Lizard": {
         "loc": "Lizard"
+    },
+    "Loach": {
+        "loc": "Loach"
+    },
+    "Loaf": {
+        "loc": "Loaf"
+    },
+    "Lobo": {
+        "loc": "Lobo"
     },
     "Lobster": {
         "loc": "Lobster"
     },
+    "Loca": {
+        "loc": "Loca"
+    },
     "Locust": {
         "loc": "Locust"
+    },
+    "Lodesh": {
+        "loc": "Lodesh"
     },
     "Log": {
         "loc": "Log"
     },
+    "Loki": {
+        "loc": "Loki"
+    },
     "Lola": {
         "loc": "Lola"
+    },
+    "Lollipop": {
+        "loc": "Lollipop"
+    },
+    "Lolly": {
+        "loc": "Lolly"
+    },
+    "Lonardo": {
+        "loc": "Lonardo"
+    },
+    "London": {
+        "loc": "London"
     },
     "Long": {
         "loc": "Long"
@@ -1451,8 +3764,8 @@
     "Lora": {
         "loc": "Lora"
     },
-    "Lost": {
-        "loc": "Lost"
+    "Lorado": {
+        "loc": "Lorado"
     },
     "Lotus": {
         "loc": "Lotus"
@@ -1460,11 +3773,35 @@
     "Loud": {
         "loc": "Loud"
     },
+    "Louie": {
+        "loc": "Louie"
+    },
     "Louis": {
         "loc": "Louis"
     },
+    "Lovebug": {
+        "loc": "Lovebug"
+    },
     "Low": {
         "loc": "Low"
+    },
+    "Loyalty": {
+        "loc": "Loyalty"
+    },
+    "Luchasaurus": {
+        "loc": "Luchasaurus"
+    },
+    "Luci-Purr": {
+        "loc": "Luci-Purr"
+    },
+    "Lucia": {
+        "loc": "Lucia"
+    },
+    "Luciel": {
+        "loc": "Luciel"
+    },
+    "Luck": {
+        "loc": "Luck"
     },
     "Lucky": {
         "loc": "Lucky"
@@ -1478,29 +3815,128 @@
     "Luigi": {
         "loc": "Luigi"
     },
+    "Lulu": {
+        "loc": "Lulu"
+    },
+    "Lumine": {
+        "loc": "Lumine"
+    },
     "Luna": {
         "loc": "Luna"
+    },
+    "Lupine": {
+        "loc": "Lupine"
     },
     "Lupo": {
         "loc": "Lupo"
     },
+    "Luxio": {
+        "loc": "Luxio"
+    },
+    "Luz": {
+        "loc": "Luz"
+    },
+    "Lydia": {
+        "loc": "Lydia"
+    },
     "Lynx": {
         "loc": "Lynx"
+    },
+    "Lyre": {
+        "loc": "Lyre"
+    },
+    "Mabel": {
+        "loc": "Mabel"
+    },
+    "Mac": {
+        "loc": "Mac"
+    },
+    "Macaroon": {
+        "loc": "Macaroon"
+    },
+    "Macavity": {
+        "loc": "Macavity"
+    },
+    "Maddy": {
+        "loc": "Maddy"
     },
     "Madi": {
         "loc": "Madi"
     },
-    "Maggot": {
-        "loc": "Maggot"
+    "Madoka": {
+        "loc": "Madoka"
+    },
+    "Maggie": {
+        "loc": "Maggie"
+    },
+    "Magic": {
+        "loc": "Magic"
+    },
+    "Magnolia": {
+        "loc": "Magnolia"
+    },
+    "Magpie": {
+        "loc": "Magpie"
+    },
+    "Maiko": {
+        "loc": "Maiko"
+    },
+    "Maize": {
+        "loc": "Maize"
+    },
+    "Majesty": {
+        "loc": "Majesty"
+    },
+    "Makalu": {
+        "loc": "Makalu"
+    },
+    "Makena": {
+        "loc": "Makena"
+    },
+    "Makini": {
+        "loc": "Makini"
+    },
+    "Mako": {
+        "loc": "Mako"
+    },
+    "Makoto": {
+        "loc": "Makoto"
+    },
+    "Makula": {
+        "loc": "Makula"
     },
     "Makwa": {
         "loc": "Makwa"
     },
+    "Malachite": {
+        "loc": "Malachite"
+    },
     "Maleficent": {
         "loc": "Maleficent"
     },
+    "Mali": {
+        "loc": "Mali"
+    },
+    "Malia": {
+        "loc": "Malia"
+    },
+    "Malik": {
+        "loc": "Malik"
+    },
+    "Malika": {
+        "loc": "Malika"
+    },
+    "Mallard": {
+        "loc": "Mallard"
+    },
     "Mallow": {
         "loc": "Mallow"
+    },
+    "Mamba": {
+        "loc": "Mamba"
+    },
+    "Man With All The Answers": {
+        "loc": "Man With All The Answers"
     },
     "Manda": {
         "loc": "Manda"
@@ -1511,38 +3947,137 @@
     "Mango": {
         "loc": "Mango"
     },
+    "Mangosteen": {
+        "loc": "Mangosteen"
+    },
+    "Mangrove": {
+        "loc": "Mangrove"
+    },
+    "Mani": {
+        "loc": "Mani"
+    },
     "Mantis": {
         "loc": "Mantis"
+    },
+    "Maomao": {
+        "loc": "Maomao"
     },
     "Maple": {
         "loc": "Maple"
     },
+    "Marathon": {
+        "loc": "Marathon"
+    },
+    "Marcel": {
+        "loc": "Marcel"
+    },
     "Marceline": {
         "loc": "Marceline"
+    },
+    "Marcy": {
+        "loc": "Marcy"
+    },
+    "Mare": {
+        "loc": "Mare"
+    },
+    "Marie": {
+        "loc": "Marie"
     },
     "Marigold": {
         "loc": "Marigold"
     },
+    "Marina": {
+        "loc": "Marina"
+    },
+    "Mario": {
+        "loc": "Mario"
+    },
+    "Mariposa": {
+        "loc": "Mariposa"
+    },
+    "Marlin": {
+        "loc": "Marlin"
+    },
+    "Marny": {
+        "loc": "Marny"
+    },
+    "Mars": {
+        "loc": "Mars"
+    },
     "Marsh": {
         "loc": "Marsh"
     },
-    "Marten": {
-        "loc": "Marten"
+    "Marshal": {
+        "loc": "Marshal"
+    },
+    "Martini": {
+        "loc": "Martini"
+    },
+    "Marula": {
+        "loc": "Marula"
+    },
+    "Mason": {
+        "loc": "Mason"
+    },
+    "Matador": {
+        "loc": "Matador"
+    },
+    "Matcha": {
+        "loc": "Matcha"
     },
     "Maverick": {
         "loc": "Maverick"
     },
+    "Mawuli": {
+        "loc": "Mawuli"
+    },
     "Max": {
         "loc": "Max"
+    },
+    "May": {
+        "loc": "May"
+    },
+    "Maya": {
+        "loc": "Maya"
+    },
+    "Mazu": {
+        "loc": "Mazu"
     },
     "McChicken": {
         "loc": "McChicken"
     },
+    "McFlurry": {
+        "loc": "McFlurry"
+    },
+    "McLovin": {
+        "loc": "McLovin"
+    },
     "Meadow": {
         "loc": "Meadow"
     },
-    "Mellow": {
-        "loc": "Mellow"
+    "Meatloaf": {
+        "loc": "Meatloaf"
+    },
+    "Meatlug": {
+        "loc": "Meatlug"
+    },
+    "Medusa": {
+        "loc": "Medusa"
+    },
+    "Meerkat": {
+        "loc": "Meerkat"
+    },
+    "Megabyte": {
+        "loc": "Megabyte"
+    },
+    "Meilin": {
+        "loc": "Meilin"
+    },
+    "Meimei": {
+        "loc": "Meimei"
+    },
+    "Melba": {
+        "loc": "Melba"
     },
     "Melody": {
         "loc": "Melody"
@@ -1550,8 +4085,14 @@
     "Melon": {
         "loc": "Melon"
     },
-    "Meow-meow": {
-        "loc": "Meow-meow"
+    "Melona": {
+        "loc": "Melona"
+    },
+    "Meow-Meow": {
+        "loc": "Meow-Meow"
+    },
+    "Meowth": {
+        "loc": "Meowth"
     },
     "Meowyman": {
         "loc": "Meowyman"
@@ -1559,11 +4100,41 @@
     "Mera": {
         "loc": "Mera"
     },
+    "Mercedes": {
+        "loc": "Mercedes"
+    },
+    "Mercury": {
+        "loc": "Mercury"
+    },
+    "Mercy": {
+        "loc": "Mercy"
+    },
+    "Merengue": {
+        "loc": "Merengue"
+    },
+    "Merlot": {
+        "loc": "Merlot"
+    },
     "Merry": {
         "loc": "Merry"
     },
+    "Mesa": {
+        "loc": "Mesa"
+    },
     "Mew": {
         "loc": "Mew"
+    },
+    "Mica": {
+        "loc": "Mica"
+    },
+    "Michelle": {
+        "loc": "Michelle"
+    },
+    "Michi": {
+        "loc": "Michi"
+    },
+    "Mick": {
+        "loc": "Mick"
     },
     "Midge": {
         "loc": "Midge"
@@ -1571,11 +4142,29 @@
     "Midnight": {
         "loc": "Midnight"
     },
+    "Midnight Goddess": {
+        "loc": "Midnight Goddess"
+    },
+    "Mieke": {
+        "loc": "Mieke"
+    },
+    "Mikumi": {
+        "loc": "Mikumi"
+    },
     "Miles": {
         "loc": "Miles"
     },
+    "Milhouse": {
+        "loc": "Milhouse"
+    },
     "Milk": {
         "loc": "Milk"
+    },
+    "Milkweed": {
+        "loc": "Milkweed"
+    },
+    "Milky Way": {
+        "loc": "Milky Way"
     },
     "Millie": {
         "loc": "Millie"
@@ -1586,11 +4175,20 @@
     "Milque": {
         "loc": "Milque"
     },
+    "Mimas": {
+        "loc": "Mimas"
+    },
     "Mimi": {
         "loc": "Mimi"
     },
+    "Mimikyu": {
+        "loc": "Mimikyu"
+    },
     "Minette": {
         "loc": "Minette"
+    },
+    "Minha": {
+        "loc": "Minha"
     },
     "Mini": {
         "loc": "Mini"
@@ -1610,6 +4208,30 @@
     "Mint": {
         "loc": "Mint"
     },
+    "Minty": {
+        "loc": "Minty"
+    },
+    "Mira": {
+        "loc": "Mira"
+    },
+    "Mirage": {
+        "loc": "Mirage"
+    },
+    "Miranda": {
+        "loc": "Miranda"
+    },
+    "Mire": {
+        "loc": "Mire"
+    },
+    "Miriam": {
+        "loc": "Miriam"
+    },
+    "Miso": {
+        "loc": "Miso"
+    },
+    "Miss Marple": {
+        "loc": "Miss Marple"
+    },
     "Missile Launcher": {
         "loc": "Missile Launcher"
     },
@@ -1622,20 +4244,44 @@
     "Misty": {
         "loc": "Misty"
     },
+    "Mitaine": {
+        "loc": "Mitaine"
+    },
     "Mite": {
         "loc": "Mite"
     },
     "Mitski": {
         "loc": "Mitski"
     },
+    "Mitsubishi": {
+        "loc": "Mitsubishi"
+    },
     "Mittens": {
         "loc": "Mittens"
+    },
+    "Mitzi": {
+        "loc": "Mitzi"
+    },
+    "Mitzy Moo Moo": {
+        "loc": "Mitzy Moo Moo"
+    },
+    "Miyun": {
+        "loc": "Miyun"
+    },
+    "Mizan": {
+        "loc": "Mizan"
+    },
+    "Mizu": {
+        "loc": "Mizu"
     },
     "Mocha": {
         "loc": "Mocha"
     },
-    "Mock": {
-        "loc": "Mock"
+    "Mochi": {
+        "loc": "Mochi"
+    },
+    "Mojito": {
+        "loc": "Mojito"
     },
     "Mojo": {
         "loc": "Mojo"
@@ -1664,17 +4310,59 @@
     "Monzi": {
         "loc": "Monzi"
     },
+    "Moo": {
+        "loc": "Moo"
+    },
     "Moon": {
         "loc": "Moon"
+    },
+    "Mooncake": {
+        "loc": "Mooncake"
     },
     "Moor": {
         "loc": "Moor"
     },
+    "Moorhen": {
+        "loc": "Moorhen"
+    },
+    "Moose": {
+        "loc": "Moose"
+    },
     "Mop": {
         "loc": "Mop"
     },
+    "Mora": {
+        "loc": "Mora"
+    },
+    "Morb": {
+        "loc": "Morb"
+    },
+    "Morbius": {
+        "loc": "Morbius"
+    },
+    "Morel": {
+        "loc": "Morel"
+    },
     "Morning": {
         "loc": "Morning"
+    },
+    "Morpeko": {
+        "loc": "Morpeko"
+    },
+    "Morphius": {
+        "loc": "Morphius"
+    },
+    "Morrhar": {
+        "loc": "Morrhar"
+    },
+    "Morty": {
+        "loc": "Morty"
+    },
+    "Mosaic": {
+        "loc": "Mosaic"
+    },
+    "Mosquito": {
+        "loc": "Mosquito"
     },
     "Moss": {
         "loc": "Moss"
@@ -1691,14 +4379,50 @@
     "Mottled": {
         "loc": "Mottled"
     },
+    "Mountain": {
+        "loc": "Mountain"
+    },
     "Mouse": {
         "loc": "Mouse"
+    },
+    "Mowgli": {
+        "loc": "Mowgli"
     },
     "Moxie": {
         "loc": "Moxie"
     },
+    "Mr. Anderson": {
+        "loc": "Mr. Anderson"
+    },
+    "Mr. Kitty": {
+        "loc": "Mr. Kitty"
+    },
+    "Mr. Kitty Whiskers": {
+        "loc": "Mr. Kitty Whiskers"
+    },
+    "Mr. Midnight": {
+        "loc": "Mr. Midnight"
+    },
+    "Mr. Mistoffolees": {
+        "loc": "Mr. Mistoffolees"
+    },
+    "Mr. Mustard": {
+        "loc": "Mr. Mustard"
+    },
+    "Mr. Oreo": {
+        "loc": "Mr. Oreo"
+    },
+    "Mr. Princess": {
+        "loc": "Mr. Princess"
+    },
+    "Mr. Sir": {
+        "loc": "Mr. Sir"
+    },
     "Mr. Whiskers": {
         "loc": "Mr. Whiskers"
+    },
+    "Mr. Wigglebottom": {
+        "loc": "Mr. Wigglebottom"
     },
     "Mucha": {
         "loc": "Mucha"
@@ -1706,8 +4430,35 @@
     "Mud": {
         "loc": "Mud"
     },
+    "Mudkip": {
+        "loc": "Mudkip"
+    },
+    "Mufasa": {
+        "loc": "Mufasa"
+    },
+    "Muffet": {
+        "loc": "Muffet"
+    },
+    "Muffy": {
+        "loc": "Muffy"
+    },
+    "Mulberry": {
+        "loc": "Mulberry"
+    },
+    "Mullido": {
+        "loc": "Mullido"
+    },
+    "Mumbai": {
+        "loc": "Mumbai"
+    },
     "Mumble": {
         "loc": "Mumble"
+    },
+    "Mungojerrie": {
+        "loc": "Mungojerrie"
+    },
+    "Munkustrap": {
+        "loc": "Munkustrap"
     },
     "Murder": {
         "loc": "Murder"
@@ -1715,20 +4466,62 @@
     "Murk": {
         "loc": "Murk"
     },
-    "Muschi": {
-        "loc": "Muschi"
+    "Mushroom": {
+        "loc": "Mushroom"
+    },
+    "Mustard": {
+        "loc": "Mustard"
+    },
+    "Myko": {
+        "loc": "Myko"
+    },
+    "Myrtle": {
+        "loc": "Myrtle"
+    },
+    "Nabi": {
+        "loc": "Nabi"
     },
     "Nacre": {
         "loc": "Nacre"
     },
+    "Nadia": {
+        "loc": "Nadia"
+    },
+    "Nadja": {
+        "loc": "Nadja"
+    },
     "Nagi": {
         "loc": "Nagi"
+    },
+    "Nagito": {
+        "loc": "Nagito"
+    },
+    "Nakala": {
+        "loc": "Nakala"
     },
     "Nakeena": {
         "loc": "Nakeena"
     },
-    "Narrow": {
-        "loc": "Narrow"
+    "Nala": {
+        "loc": "Nala"
+    },
+    "Namielle": {
+        "loc": "Namielle"
+    },
+    "Namu": {
+        "loc": "Namu"
+    },
+    "Nandor": {
+        "loc": "Nandor"
+    },
+    "Naomi": {
+        "loc": "Naomi"
+    },
+    "Nari": {
+        "loc": "Nari"
+    },
+    "Neapolitan": {
+        "loc": "Neapolitan"
     },
     "Nectar": {
         "loc": "Nectar"
@@ -1736,11 +4529,26 @@
     "Needle": {
         "loc": "Needle"
     },
+    "Neel": {
+        "loc": "Neel"
+    },
     "Neil": {
         "loc": "Neil"
     },
     "Nemo": {
         "loc": "Nemo"
+    },
+    "Neo": {
+        "loc": "Neo"
+    },
+    "Nephrite": {
+        "loc": "Nephrite"
+    },
+    "Neptune": {
+        "loc": "Neptune"
+    },
+    "Ness": {
+        "loc": "Ness"
     },
     "Nessie": {
         "loc": "Nessie"
@@ -1748,8 +4556,23 @@
     "Nettle": {
         "loc": "Nettle"
     },
+    "Neuron": {
+        "loc": "Neuron"
+    },
+    "Nevaeh": {
+        "loc": "Nevaeh"
+    },
     "Newt": {
         "loc": "Newt"
+    },
+    "Neytiri": {
+        "loc": "Neytiri"
+    },
+    "Nezuko": {
+        "loc": "Nezuko"
+    },
+    "Nibbles": {
+        "loc": "Nibbles"
     },
     "Nick": {
         "loc": "Nick"
@@ -1757,14 +4580,35 @@
     "Night": {
         "loc": "Night"
     },
+    "Nightcat": {
+        "loc": "Nightcat"
+    },
+    "Nightingale": {
+        "loc": "Nightingale"
+    },
     "Nightmare": {
         "loc": "Nightmare"
     },
     "Nikki": {
         "loc": "Nikki"
     },
+    "Nile": {
+        "loc": "Nile"
+    },
     "Niles": {
         "loc": "Niles"
+    },
+    "Nimble": {
+        "loc": "Nimble"
+    },
+    "Nimbus": {
+        "loc": "Nimbus"
+    },
+    "Nine": {
+        "loc": "Nine"
+    },
+    "Ninetales": {
+        "loc": "Ninetales"
     },
     "Ninja": {
         "loc": "Ninja"
@@ -1772,26 +4616,86 @@
     "Nintendo": {
         "loc": "Nintendo"
     },
+    "Nirav": {
+        "loc": "Nirav"
+    },
+    "Nirvana": {
+        "loc": "Nirvana"
+    },
     "Nisha": {
         "loc": "Nisha"
+    },
+    "Nissan": {
+        "loc": "Nissan"
     },
     "Nitro": {
         "loc": "Nitro"
     },
+    "Niu": {
+        "loc": "Niu"
+    },
+    "Nix": {
+        "loc": "Nix"
+    },
+    "Nixie": {
+        "loc": "Nixie"
+    },
+    "Noche": {
+        "loc": "Noche"
+    },
+    "Noelle": {
+        "loc": "Noelle"
+    },
+    "Noir": {
+        "loc": "Noir"
+    },
     "Noodle": {
         "loc": "Noodle"
+    },
+    "Noodlefly": {
+        "loc": "Noodlefly"
+    },
+    "Nook": {
+        "loc": "Nook"
+    },
+    "Nori": {
+        "loc": "Nori"
+    },
+    "Norm": {
+        "loc": "Norm"
+    },
+    "Norman": {
+        "loc": "Norman"
+    },
+    "Nottingham": {
+        "loc": "Nottingham"
     },
     "Nova": {
         "loc": "Nova"
     },
+    "Nugget": {
+        "loc": "Nugget"
+    },
+    "Nuggets": {
+        "loc": "Nuggets"
+    },
     "Nuka": {
         "loc": "Nuka"
+    },
+    "Nuri": {
+        "loc": "Nuri"
+    },
+    "Nuru": {
+        "loc": "Nuru"
     },
     "Nut": {
         "loc": "Nut"
     },
     "Nutella": {
         "loc": "Nutella"
+    },
+    "Nutmeg": {
+        "loc": "Nutmeg"
     },
     "O'Leary": {
         "loc": "O'Leary"
@@ -1802,14 +4706,44 @@
     "Oakley": {
         "loc": "Oakley"
     },
+    "Oapie": {
+        "loc": "Oapie"
+    },
+    "Oasis": {
+        "loc": "Oasis"
+    },
     "Oat": {
         "loc": "Oat"
+    },
+    "Oberon": {
+        "loc": "Oberon"
     },
     "Obi Wan": {
         "loc": "Obi Wan"
     },
+    "Obsidian": {
+        "loc": "Obsidian"
+    },
+    "Ocean": {
+        "loc": "Ocean"
+    },
+    "Ochre": {
+        "loc": "Ochre"
+    },
+    "October": {
+        "loc": "October"
+    },
+    "Octopus": {
+        "loc": "Octopus"
+    },
     "Odd": {
         "loc": "Odd"
+    },
+    "Odetta": {
+        "loc": "Odetta"
+    },
+    "Old Deuteronomy": {
+        "loc": "Old Deuteronomy"
     },
     "Old Man Sam": {
         "loc": "Old Man Sam"
@@ -1820,14 +4754,14 @@
     "Olga": {
         "loc": "Olga"
     },
+    "Oliva": {
+        "loc": "Oliva"
+    },
     "Olive": {
         "loc": "Olive"
     },
     "Oliver": {
         "loc": "Oliver"
-    },
-    "Olivia": {
-        "loc": "Olivia"
     },
     "Ollie": {
         "loc": "Ollie"
@@ -1835,8 +4769,14 @@
     "Omelet": {
         "loc": "Omelet"
     },
+    "Omen": {
+        "loc": "Omen"
+    },
     "One": {
         "loc": "One"
+    },
+    "Onion": {
+        "loc": "Onion"
     },
     "Onyx": {
         "loc": "Onyx"
@@ -1844,20 +4784,50 @@
     "Oops": {
         "loc": "Oops"
     },
+    "Oopsy Dazey": {
+        "loc": "Oopsy Dazey"
+    },
+    "Opal": {
+        "loc": "Opal"
+    },
     "Ophelia": {
         "loc": "Ophelia"
     },
     "Orange": {
         "loc": "Orange"
     },
+    "Orchard": {
+        "loc": "Orchard"
+    },
+    "Orchid": {
+        "loc": "Orchid"
+    },
+    "Oregano": {
+        "loc": "Oregano"
+    },
     "Oreo": {
         "loc": "Oreo"
+    },
+    "Oriole": {
+        "loc": "Oriole"
     },
     "Orion": {
         "loc": "Orion"
     },
+    "Oryx": {
+        "loc": "Oryx"
+    },
+    "Orzo": {
+        "loc": "Orzo"
+    },
     "Oscar": {
         "loc": "Oscar"
+    },
+    "Oshawott": {
+        "loc": "Oshawott"
+    },
+    "Osiris": {
+        "loc": "Osiris"
     },
     "Osprey": {
         "loc": "Osprey"
@@ -1865,14 +4835,68 @@
     "Otter": {
         "loc": "Otter"
     },
+    "Otto": {
+        "loc": "Otto"
+    },
+    "Outlaw": {
+        "loc": "Outlaw"
+    },
+    "Outsider": {
+        "loc": "Outsider"
+    },
     "Owen": {
         "loc": "Owen"
     },
     "Owl": {
         "loc": "Owl"
     },
+    "Ox": {
+        "loc": "Ox"
+    },
+    "Pablo": {
+        "loc": "Pablo"
+    },
+    "Pachirisu": {
+        "loc": "Pachirisu"
+    },
+    "Padparadscha": {
+        "loc": "Padparadscha"
+    },
+    "Paella": {
+        "loc": "Paella"
+    },
+    "Paimon": {
+        "loc": "Paimon"
+    },
     "Pale": {
         "loc": "Pale"
+    },
+    "Pallas": {
+        "loc": "Pallas"
+    },
+    "Palm": {
+        "loc": "Palm"
+    },
+    "Paloma": {
+        "loc": "Paloma"
+    },
+    "Pancake": {
+        "loc": "Pancake"
+    },
+    "Pancho": {
+        "loc": "Pancho"
+    },
+    "Pandora": {
+        "loc": "Pandora"
+    },
+    "Pango": {
+        "loc": "Pango"
+    },
+    "Pangur": {
+        "loc": "Pangur"
+    },
+    "Panini": {
+        "loc": "Panini"
     },
     "Pansy": {
         "loc": "Pansy"
@@ -1880,14 +4904,47 @@
     "Panther": {
         "loc": "Panther"
     },
+    "Paprika": {
+        "loc": "Paprika"
+    },
+    "Papyrus": {
+        "loc": "Papyrus"
+    },
+    "Paquito": {
+        "loc": "Paquito"
+    },
     "Parsley": {
         "loc": "Parsley"
     },
     "Partridge": {
         "loc": "Partridge"
     },
+    "Pasta": {
+        "loc": "Pasta"
+    },
     "Patch": {
         "loc": "Patch"
+    },
+    "Patches": {
+        "loc": "Patches"
+    },
+    "Patchouli": {
+        "loc": "Patchouli"
+    },
+    "Patience": {
+        "loc": "Patience"
+    },
+    "Paul": {
+        "loc": "Paul"
+    },
+    "Paulina": {
+        "loc": "Paulina"
+    },
+    "Pawmi": {
+        "loc": "Pawmi"
+    },
+    "Peach": {
+        "loc": "Peach"
     },
     "Peak": {
         "loc": "Peak"
@@ -1904,6 +4961,9 @@
     "Pearl": {
         "loc": "Pearl"
     },
+    "Pearly": {
+        "loc": "Pearly"
+    },
     "Peat": {
         "loc": "Peat"
     },
@@ -1913,32 +4973,101 @@
     "Pecan": {
         "loc": "Pecan"
     },
+    "Pekhult": {
+        "loc": "Pekhult"
+    },
+    "Peko": {
+        "loc": "Peko"
+    },
+    "Pelican": {
+        "loc": "Pelican"
+    },
     "Penny": {
         "loc": "Penny"
     },
     "Peony": {
         "loc": "Peony"
     },
+    "Pepita": {
+        "loc": "Pepita"
+    },
     "Pepper": {
         "loc": "Pepper"
+    },
+    "Pepsi": {
+        "loc": "Pepsi"
+    },
+    "Pequeno": {
+        "loc": "Pequeno"
     },
     "Perch": {
         "loc": "Perch"
     },
+    "Perdito": {
+        "loc": "Perdito"
+    },
+    "Peridot": {
+        "loc": "Peridot"
+    },
+    "Periwinkle": {
+        "loc": "Periwinkle"
+    },
+    "Perrserker": {
+        "loc": "Perrserker"
+    },
+    "Perry": {
+        "loc": "Perry"
+    },
     "Petal": {
         "loc": "Petal"
+    },
+    "Peter": {
+        "loc": "Peter"
+    },
+    "Peter Parker": {
+        "loc": "Peter Parker"
+    },
+    "Petunia": {
+        "loc": "Petunia"
+    },
+    "Petya": {
+        "loc": "Petya"
+    },
+    "Phantom": {
+        "loc": "Phantom"
+    },
+    "Phasmo": {
+        "loc": "Phasmo"
     },
     "Pheasant": {
         "loc": "Pheasant"
     },
+    "Phlox": {
+        "loc": "Phlox"
+    },
+    "Phoenix": {
+        "loc": "Phoenix"
+    },
     "Pichi": {
         "loc": "Pichi"
+    },
+    "Pichu": {
+        "loc": "Pichu"
     },
     "Pickles": {
         "loc": "Pickles"
     },
+    "Pierre": {
+        "loc": "Pierre"
+    },
+    "Pietro": {
+        "loc": "Pietro"
+    },
     "Pigeon": {
         "loc": "Pigeon"
+    },
+    "Piggy": {
+        "loc": "Piggy"
     },
     "Pikachu": {
         "loc": "Pikachu"
@@ -1946,11 +5075,29 @@
     "Pike": {
         "loc": "Pike"
     },
+    "Pillow": {
+        "loc": "Pillow"
+    },
+    "Pina Colada": {
+        "loc": "Pina Colada"
+    },
     "Pine": {
         "loc": "Pine"
     },
     "Ping": {
         "loc": "Ping"
+    },
+    "Ping Pong": {
+        "loc": "Ping Pong"
+    },
+    "Pinkie": {
+        "loc": "Pinkie"
+    },
+    "Pinkie Pie": {
+        "loc": "Pinkie Pie"
+    },
+    "Pinnacle": {
+        "loc": "Pinnacle"
     },
     "Pip": {
         "loc": "Pip"
@@ -1958,8 +5105,38 @@
     "Piper": {
         "loc": "Piper"
     },
+    "Pipit": {
+        "loc": "Pipit"
+    },
+    "Pipkin": {
+        "loc": "Pipkin"
+    },
     "Pipsqueak": {
         "loc": "Pipsqueak"
+    },
+    "Pisces": {
+        "loc": "Pisces"
+    },
+    "Pistol Star": {
+        "loc": "Pistol Star"
+    },
+    "Pitch": {
+        "loc": "Pitch"
+    },
+    "Pixel": {
+        "loc": "Pixel"
+    },
+    "Plato": {
+        "loc": "Plato"
+    },
+    "Playstation": {
+        "loc": "Playstation"
+    },
+    "Plentiful Leaves": {
+        "loc": "Plentiful Leaves"
+    },
+    "Plot Twist": {
+        "loc": "Plot Twist"
     },
     "Plover": {
         "loc": "Plover"
@@ -1967,17 +5144,41 @@
     "Plum": {
         "loc": "Plum"
     },
+    "Plume": {
+        "loc": "Plume"
+    },
+    "Plumeria": {
+        "loc": "Plumeria"
+    },
+    "Pluto": {
+        "loc": "Pluto"
+    },
+    "Pochito": {
+        "loc": "Pochito"
+    },
     "Pocket": {
         "loc": "Pocket"
     },
     "Pod": {
         "loc": "Pod"
     },
+    "Poe": {
+        "loc": "Poe"
+    },
+    "Poison": {
+        "loc": "Poison"
+    },
     "Poki": {
         "loc": "Poki"
     },
+    "Pollen": {
+        "loc": "Pollen"
+    },
     "Polly": {
         "loc": "Polly"
+    },
+    "Pompompurin": {
+        "loc": "Pompompurin"
     },
     "Pond": {
         "loc": "Pond"
@@ -1985,11 +5186,17 @@
     "Pong": {
         "loc": "Pong"
     },
+    "Ponyboy": {
+        "loc": "Ponyboy"
+    },
     "Pool": {
         "loc": "Pool"
     },
     "Poopy": {
         "loc": "Poopy"
+    },
+    "Pop": {
+        "loc": "Pop"
     },
     "Poppy": {
         "loc": "Poppy"
@@ -2006,23 +5213,71 @@
     "Pounce": {
         "loc": "Pounce"
     },
+    "Pouncival": {
+        "loc": "Pouncival"
+    },
+    "Prairie": {
+        "loc": "Prairie"
+    },
     "Prance": {
         "loc": "Prance"
+    },
+    "President": {
+        "loc": "President"
+    },
+    "President Blanket": {
+        "loc": "President Blanket"
     },
     "Prickle": {
         "loc": "Prickle"
     },
+    "Pride": {
+        "loc": "Pride"
+    },
     "Prim": {
         "loc": "Prim"
+    },
+    "Primrose": {
+        "loc": "Primrose"
     },
     "Princess": {
         "loc": "Princess"
     },
+    "Private Eye": {
+        "loc": "Private Eye"
+    },
+    "Privet": {
+        "loc": "Privet"
+    },
+    "Procyon": {
+        "loc": "Procyon"
+    },
+    "Pronghorn": {
+        "loc": "Pronghorn"
+    },
+    "Pudding": {
+        "loc": "Pudding"
+    },
     "Puddle": {
         "loc": "Puddle"
     },
+    "Puddles": {
+        "loc": "Puddles"
+    },
+    "Puma": {
+        "loc": "Puma"
+    },
+    "Pumba": {
+        "loc": "Pumba"
+    },
     "Pumpernickel": {
         "loc": "Pumpernickel"
+    },
+    "Pumpkin": {
+        "loc": "Pumpkin"
+    },
+    "Punchy": {
+        "loc": "Punchy"
     },
     "Punk": {
         "loc": "Punk"
@@ -2030,11 +5285,23 @@
     "Purdy": {
         "loc": "Purdy"
     },
+    "Purri": {
+        "loc": "Purri"
+    },
     "Purry": {
         "loc": "Purry"
     },
+    "Pushee": {
+        "loc": "Pushee"
+    },
+    "Puzzle": {
+        "loc": "Puzzle"
+    },
     "Python": {
         "loc": "Python"
+    },
+    "Qilian": {
+        "loc": "Qilian"
     },
     "Quagmire": {
         "loc": "Quagmire"
@@ -2045,8 +5312,35 @@
     "Quake": {
         "loc": "Quake"
     },
+    "Quarter Pounder": {
+        "loc": "Quarter Pounder"
+    },
+    "Quartermaster": {
+        "loc": "Quartermaster"
+    },
+    "Quartz": {
+        "loc": "Quartz"
+    },
+    "Quasar": {
+        "loc": "Quasar"
+    },
+    "Qubo": {
+        "loc": "Qubo"
+    },
+    "Queen": {
+        "loc": "Queen"
+    },
+    "Queenie": {
+        "loc": "Queenie"
+    },
     "Queeny": {
         "loc": "Queeny"
+    },
+    "Querida": {
+        "loc": "Querida"
+    },
+    "Quesadilla": {
+        "loc": "Quesadilla"
     },
     "Queso": {
         "loc": "Queso"
@@ -2075,17 +5369,32 @@
     "Quinn": {
         "loc": "Quinn"
     },
-    "Quinoa": {
-        "loc": "Quinoa"
+    "Quino": {
+        "loc": "Quino"
     },
     "Quinzee": {
         "loc": "Quinzee"
     },
+    "Quiver": {
+        "loc": "Quiver"
+    },
     "Rabbit": {
         "loc": "Rabbit"
     },
+    "Rabiah": {
+        "loc": "Rabiah"
+    },
     "Raccoon": {
         "loc": "Raccoon"
+    },
+    "Radar": {
+        "loc": "Radar"
+    },
+    "Rafael": {
+        "loc": "Rafael"
+    },
+    "Rafiki": {
+        "loc": "Rafiki"
     },
     "Ragged": {
         "loc": "Ragged"
@@ -2093,14 +5402,38 @@
     "Rain": {
         "loc": "Rain"
     },
+    "Rainbow": {
+        "loc": "Rainbow"
+    },
+    "Raja": {
+        "loc": "Raja"
+    },
+    "Ram": {
+        "loc": "Ram"
+    },
     "Ramble": {
         "loc": "Ramble"
     },
-    "Rambling": {
-        "loc": "Rambling"
+    "Ramen": {
+        "loc": "Ramen"
+    },
+    "Ramon": {
+        "loc": "Ramon"
     },
     "Randy": {
         "loc": "Randy"
+    },
+    "Rani": {
+        "loc": "Rani"
+    },
+    "Rapid": {
+        "loc": "Rapid"
+    },
+    "Raptor": {
+        "loc": "Raptor"
+    },
+    "Rapunzel": {
+        "loc": "Rapunzel"
     },
     "Rarity": {
         "loc": "Rarity"
@@ -2108,11 +5441,32 @@
     "Rat": {
         "loc": "Rat"
     },
+    "Ratau": {
+        "loc": "Ratau"
+    },
+    "Ratoo": {
+        "loc": "Ratoo"
+    },
     "Rattle": {
         "loc": "Rattle"
     },
     "Raven": {
         "loc": "Raven"
+    },
+    "Ravioli": {
+        "loc": "Ravioli"
+    },
+    "Ray": {
+        "loc": "Ray"
+    },
+    "Raymond": {
+        "loc": "Raymond"
+    },
+    "Razzle": {
+        "loc": "Razzle"
+    },
+    "Rebel": {
+        "loc": "Rebel"
     },
     "Red": {
         "loc": "Red"
@@ -2120,8 +5474,32 @@
     "Reed": {
         "loc": "Reed"
     },
+    "Reef": {
+        "loc": "Reef"
+    },
     "Reese": {
         "loc": "Reese"
+    },
+    "Reeses Puff": {
+        "loc": "Reeses Puff"
+    },
+    "Ren": {
+        "loc": "Ren"
+    },
+    "Rhea": {
+        "loc": "Rhea"
+    },
+    "Rhianna": {
+        "loc": "Rhianna"
+    },
+    "Rhubarb": {
+        "loc": "Rhubarb"
+    },
+    "Rice": {
+        "loc": "Rice"
+    },
+    "Rico": {
+        "loc": "Rico"
     },
     "Ridge": {
         "loc": "Ridge"
@@ -2129,8 +5507,29 @@
     "Rift": {
         "loc": "Rift"
     },
+    "Rigatoni": {
+        "loc": "Rigatoni"
+    },
+    "Rigel": {
+        "loc": "Rigel"
+    },
+    "Rime": {
+        "loc": "Rime"
+    },
+    "Rindle": {
+        "loc": "Rindle"
+    },
+    "Ringo": {
+        "loc": "Ringo"
+    },
+    "Ringo Starr": {
+        "loc": "Ringo Starr"
+    },
     "Rio": {
         "loc": "Rio"
+    },
+    "Riolu": {
+        "loc": "Riolu"
     },
     "Riot": {
         "loc": "Riot"
@@ -2138,14 +5537,35 @@
     "Ripple": {
         "loc": "Ripple"
     },
+    "Risa": {
+        "loc": "Risa"
+    },
     "River": {
         "loc": "River"
+    },
+    "Rivulet": {
+        "loc": "Rivulet"
     },
     "Riya": {
         "loc": "Riya"
     },
+    "Rizz": {
+        "loc": "Rizz"
+    },
     "Roach": {
         "loc": "Roach"
+    },
+    "Roald": {
+        "loc": "Roald"
+    },
+    "Roan": {
+        "loc": "Roan"
+    },
+    "Roar": {
+        "loc": "Roar"
+    },
+    "Robbie": {
+        "loc": "Robbie"
     },
     "Robin": {
         "loc": "Robin"
@@ -2156,11 +5576,20 @@
     "Rocket": {
         "loc": "Rocket"
     },
+    "Rocky": {
+        "loc": "Rocky"
+    },
+    "Rodeo": {
+        "loc": "Rodeo"
+    },
     "Rolo": {
         "loc": "Rolo"
     },
     "Roman": {
         "loc": "Roman"
+    },
+    "Romeo": {
+        "loc": "Romeo"
     },
     "Rook": {
         "loc": "Rook"
@@ -2183,14 +5612,20 @@
     "Roselie": {
         "loc": "Roselie"
     },
+    "Rosemary": {
+        "loc": "Rosemary"
+    },
+    "Rosewood": {
+        "loc": "Rosewood"
+    },
     "Rosy": {
         "loc": "Rosy"
     },
-    "Rot": {
-        "loc": "Rot"
-    },
     "Rowan": {
         "loc": "Rowan"
+    },
+    "Rubber Duck": {
+        "loc": "Rubber Duck"
     },
     "Rubble": {
         "loc": "Rubble"
@@ -2201,17 +5636,44 @@
     "Rudolph": {
         "loc": "Rudolph"
     },
+    "Rudy": {
+        "loc": "Rudy"
+    },
     "Rue": {
         "loc": "Rue"
+    },
+    "Ruffnut": {
+        "loc": "Ruffnut"
+    },
+    "Rufus": {
+        "loc": "Rufus"
+    },
+    "Rukiya": {
+        "loc": "Rukiya"
     },
     "Rum": {
         "loc": "Rum"
     },
+    "Rum Tum Tugger": {
+        "loc": "Rum Tum Tugger"
+    },
+    "Rumpleteazer": {
+        "loc": "Rumpleteazer"
+    },
+    "Runnel": {
+        "loc": "Runnel"
+    },
     "Running": {
         "loc": "Running"
     },
+    "Runt": {
+        "loc": "Runt"
+    },
     "Rush": {
         "loc": "Rush"
+    },
+    "Russel": {
+        "loc": "Russel"
     },
     "Russet": {
         "loc": "Russet"
@@ -2219,26 +5681,101 @@
     "Rust": {
         "loc": "Rust"
     },
+    "Rustle": {
+        "loc": "Rustle"
+    },
     "Rye": {
         "loc": "Rye"
+    },
+    "Sable": {
+        "loc": "Sable"
     },
     "Sadie": {
         "loc": "Sadie"
     },
+    "Sadiki": {
+        "loc": "Sadiki"
+    },
+    "Saeko": {
+        "loc": "Saeko"
+    },
+    "Safari": {
+        "loc": "Safari"
+    },
+    "Saffron": {
+        "loc": "Saffron"
+    },
+    "Safi": {
+        "loc": "Safi"
+    },
     "Sage": {
         "loc": "Sage"
+    },
+    "Sage Marro": {
+        "loc": "Sage Marro"
+    },
+    "Sagittarius": {
+        "loc": "Sagittarius"
+    },
+    "Sago": {
+        "loc": "Sago"
+    },
+    "Sagwa": {
+        "loc": "Sagwa"
+    },
+    "Sahara": {
+        "loc": "Sahara"
+    },
+    "Sahel": {
+        "loc": "Sahel"
+    },
+    "Saidah": {
+        "loc": "Saidah"
+    },
+    "Sailor": {
+        "loc": "Sailor"
+    },
+    "Saint": {
+        "loc": "Saint"
+    },
+    "Sakari": {
+        "loc": "Sakari"
     },
     "Saki": {
         "loc": "Saki"
     },
+    "Sakura": {
+        "loc": "Sakura"
+    },
+    "Salamander": {
+        "loc": "Salamander"
+    },
+    "Salem": {
+        "loc": "Salem"
+    },
     "Salmon": {
         "loc": "Salmon"
+    },
+    "Salt": {
+        "loc": "Salt"
+    },
+    "Salvage": {
+        "loc": "Salvage"
     },
     "Sam": {
         "loc": "Sam"
     },
     "Samantha": {
         "loc": "Samantha"
+    },
+    "Sambusa": {
+        "loc": "Sambusa"
+    },
+    "Samus": {
+        "loc": "Samus"
+    },
+    "Sanai": {
+        "loc": "Sanai"
     },
     "Sand": {
         "loc": "Sand"
@@ -2249,20 +5786,125 @@
     "Sandy": {
         "loc": "Sandy"
     },
-    "Scar": {
-        "loc": "Scar"
+    "Sangria": {
+        "loc": "Sangria"
+    },
+    "Sans": {
+        "loc": "Sans"
+    },
+    "Santana": {
+        "loc": "Santana"
+    },
+    "Sanyu": {
+        "loc": "Sanyu"
+    },
+    "Sap": {
+        "loc": "Sap"
+    },
+    "Sapling": {
+        "loc": "Sapling"
+    },
+    "Sapphire": {
+        "loc": "Sapphire"
+    },
+    "Sarabi": {
+        "loc": "Sarabi"
+    },
+    "Sarafina": {
+        "loc": "Sarafina"
+    },
+    "Sardine": {
+        "loc": "Sardine"
+    },
+    "Sarek": {
+        "loc": "Sarek"
+    },
+    "Sarge": {
+        "loc": "Sarge"
+    },
+    "Sarki": {
+        "loc": "Sarki"
+    },
+    "Sasha": {
+        "loc": "Sasha"
+    },
+    "Sashimi": {
+        "loc": "Sashimi"
+    },
+    "Sassy": {
+        "loc": "Sassy"
+    },
+    "Saturn": {
+        "loc": "Saturn"
+    },
+    "Sausage": {
+        "loc": "Sausage"
+    },
+    "Savannah": {
+        "loc": "Savannah"
+    },
+    "Savvy": {
+        "loc": "Savvy"
+    },
+    "Scale": {
+        "loc": "Scale"
+    },
+    "Scarecrow": {
+        "loc": "Scarecrow"
+    },
+    "Scarlet": {
+        "loc": "Scarlet"
+    },
+    "Scavenger": {
+        "loc": "Scavenger"
     },
     "Schmidt": {
         "loc": "Schmidt"
     },
+    "Scholar": {
+        "loc": "Scholar"
+    },
     "Scorch": {
         "loc": "Scorch"
+    },
+    "Scorpio": {
+        "loc": "Scorpio"
+    },
+    "Scorpion": {
+        "loc": "Scorpion"
     },
     "Scotch": {
         "loc": "Scotch"
     },
+    "Scotty": {
+        "loc": "Scotty"
+    },
+    "Scout": {
+        "loc": "Scout"
+    },
+    "Scratch": {
+        "loc": "Scratch"
+    },
+    "Scribble": {
+        "loc": "Scribble"
+    },
+    "Scrooge": {
+        "loc": "Scrooge"
+    },
+    "Scrub": {
+        "loc": "Scrub"
+    },
+    "Scrungle": {
+        "loc": "Scrungle"
+    },
     "Sea": {
         "loc": "Sea"
+    },
+    "Seabass": {
+        "loc": "Seabass"
+    },
+    "Seagull": {
+        "loc": "Seagull"
     },
     "Seamus": {
         "loc": "Seamus"
@@ -2273,23 +5915,86 @@
     "Seed": {
         "loc": "Seed"
     },
+    "Sega": {
+        "loc": "Sega"
+    },
     "Sekhmet": {
         "loc": "Sekhmet"
+    },
+    "Seok": {
+        "loc": "Seok"
+    },
+    "Seoli": {
+        "loc": "Seoli"
+    },
+    "Seoul": {
+        "loc": "Seoul"
+    },
+    "Serengeti": {
+        "loc": "Serengeti"
+    },
+    "Serenity": {
+        "loc": "Serenity"
+    },
+    "Sergei": {
+        "loc": "Sergei"
+    },
+    "Sergio": {
+        "loc": "Sergio"
+    },
+    "Seri": {
+        "loc": "Seri"
+    },
+    "Serpent": {
+        "loc": "Serpent"
+    },
+    "Seven": {
+        "loc": "Seven"
+    },
+    "Seven Of Nine": {
+        "loc": "Seven Of Nine"
     },
     "Shade": {
         "loc": "Shade"
     },
+    "Shaded": {
+        "loc": "Shaded"
+    },
     "Shadow": {
         "loc": "Shadow"
+    },
+    "Shaka": {
+        "loc": "Shaka"
+    },
+    "Shale": {
+        "loc": "Shale"
+    },
+    "Shamash": {
+        "loc": "Shamash"
     },
     "Shampoo": {
         "loc": "Shampoo"
     },
+    "Shamwow": {
+        "loc": "Shamwow"
+    },
+    "Shani": {
+        "loc": "Shani"
+    },
     "Shard": {
         "loc": "Shard"
     },
+    "Shari": {
+        "loc": "Shari"
+    },
+    "Shark": {
+        "loc": "Shark"
+    },
     "Sharp": {
         "loc": "Sharp"
+    },
+    "Shatter": {
+        "loc": "Shatter"
     },
     "Shay": {
         "loc": "Shay"
@@ -2300,8 +6005,47 @@
     "Shell": {
         "loc": "Shell"
     },
+    "Shenzi": {
+        "loc": "Shenzi"
+    },
+    "Shep": {
+        "loc": "Shep"
+    },
+    "Sherb": {
+        "loc": "Sherb"
+    },
+    "Sherman": {
+        "loc": "Sherman"
+    },
+    "Shilin": {
+        "loc": "Shilin"
+    },
+    "Shiloh": {
+        "loc": "Shiloh"
+    },
     "Shimmer": {
         "loc": "Shimmer"
+    },
+    "Shine": {
+        "loc": "Shine"
+    },
+    "Shining": {
+        "loc": "Shining"
+    },
+    "Shino": {
+        "loc": "Shino"
+    },
+    "Shinx": {
+        "loc": "Shinx"
+    },
+    "Shiver": {
+        "loc": "Shiver"
+    },
+    "Shivering": {
+        "loc": "Shivering"
+    },
+    "Shore": {
+        "loc": "Shore"
     },
     "Short": {
         "loc": "Short"
@@ -2309,11 +6053,38 @@
     "Shrew": {
         "loc": "Shrew"
     },
+    "Shrike": {
+        "loc": "Shrike"
+    },
+    "Shrimp": {
+        "loc": "Shrimp"
+    },
+    "Shrimp Fried Rice": {
+        "loc": "Shrimp Fried Rice"
+    },
+    "Shrub": {
+        "loc": "Shrub"
+    },
+    "Shukura": {
+        "loc": "Shukura"
+    },
+    "Shuvai": {
+        "loc": "Shuvai"
+    },
     "Shy": {
         "loc": "Shy"
     },
+    "Silent": {
+        "loc": "Silent"
+    },
     "Silk": {
         "loc": "Silk"
+    },
+    "Sillabub": {
+        "loc": "Sillabub"
+    },
+    "Silly": {
+        "loc": "Silly"
     },
     "Silt": {
         "loc": "Silt"
@@ -2321,17 +6092,62 @@
     "Silva": {
         "loc": "Silva"
     },
+    "Silvally": {
+        "loc": "Silvally"
+    },
     "Silver": {
         "loc": "Silver"
+    },
+    "Sim": {
+        "loc": "Sim"
+    },
+    "Simba": {
+        "loc": "Simba"
+    },
+    "Simone": {
+        "loc": "Simone"
+    },
+    "Siri": {
+        "loc": "Siri"
+    },
+    "Sirius": {
+        "loc": "Sirius"
+    },
+    "Six Grains of Gravel": {
+        "loc": "Six Grains of Gravel"
+    },
+    "Skimbleshanks": {
+        "loc": "Skimbleshanks"
+    },
+    "Skink": {
+        "loc": "Skink"
     },
     "Skip": {
         "loc": "Skip"
     },
+    "Skittles": {
+        "loc": "Skittles"
+    },
+    "Skitty": {
+        "loc": "Skitty"
+    },
     "Skrunkly": {
         "loc": "Skrunkly"
     },
+    "Skull": {
+        "loc": "Skull"
+    },
+    "Skunk": {
+        "loc": "Skunk"
+    },
     "Sky": {
         "loc": "Sky"
+    },
+    "Skylar": {
+        "loc": "Skylar"
+    },
+    "Skyrim": {
+        "loc": "Skyrim"
     },
     "Slate": {
         "loc": "Slate"
@@ -2339,11 +6155,20 @@
     "Sleek": {
         "loc": "Sleek"
     },
+    "Sleepy": {
+        "loc": "Sleepy"
+    },
     "Sleet": {
         "loc": "Sleet"
     },
     "Slight": {
         "loc": "Slight"
+    },
+    "Slinky": {
+        "loc": "Slinky"
+    },
+    "Slip": {
+        "loc": "Slip"
     },
     "Sloane": {
         "loc": "Sloane"
@@ -2354,17 +6179,47 @@
     "Slope": {
         "loc": "Slope"
     },
+    "Sloth": {
+        "loc": "Sloth"
+    },
     "Slug": {
         "loc": "Slug"
+    },
+    "Slumber": {
+        "loc": "Slumber"
+    },
+    "Slurpuff": {
+        "loc": "Slurpuff"
+    },
+    "Slushie": {
+        "loc": "Slushie"
     },
     "Small": {
         "loc": "Small"
     },
+    "Smarty Pants": {
+        "loc": "Smarty Pants"
+    },
+    "Smile": {
+        "loc": "Smile"
+    },
+    "Smiley": {
+        "loc": "Smiley"
+    },
     "Smoke": {
         "loc": "Smoke"
     },
+    "Smokey": {
+        "loc": "Smokey"
+    },
     "Smoky": {
         "loc": "Smoky"
+    },
+    "Smolder": {
+        "loc": "Smolder"
+    },
+    "Smoothie": {
+        "loc": "Smoothie"
     },
     "Smores": {
         "loc": "Smores"
@@ -2378,6 +6233,9 @@
     "Snap": {
         "loc": "Snap"
     },
+    "Snapdragon": {
+        "loc": "Snapdragon"
+    },
     "Sneakers": {
         "loc": "Sneakers"
     },
@@ -2387,17 +6245,62 @@
     "Snek": {
         "loc": "Snek"
     },
+    "Snickers": {
+        "loc": "Snickers"
+    },
     "Snip": {
         "loc": "Snip"
+    },
+    "Snom": {
+        "loc": "Snom"
+    },
+    "Snook": {
+        "loc": "Snook"
+    },
+    "Snoots": {
+        "loc": "Snoots"
+    },
+    "Snotlout": {
+        "loc": "Snotlout"
     },
     "Snow": {
         "loc": "Snow"
     },
+    "Snowball": {
+        "loc": "Snowball"
+    },
+    "Snowbell": {
+        "loc": "Snowbell"
+    },
+    "Snowy": {
+        "loc": "Snowy"
+    },
+    "Snuttig": {
+        "loc": "Snuttig"
+    },
+    "Soap": {
+        "loc": "Soap"
+    },
+    "Soap Bubbles": {
+        "loc": "Soap Bubbles"
+    },
+    "Soccer Ball": {
+        "loc": "Soccer Ball"
+    },
     "Socks": {
         "loc": "Socks"
     },
+    "Soda Pop": {
+        "loc": "Soda Pop"
+    },
     "Sofa": {
         "loc": "Sofa"
+    },
+    "Sofanthiel": {
+        "loc": "Sofanthiel"
+    },
+    "Sofrito": {
+        "loc": "Sofrito"
     },
     "Soft": {
         "loc": "Soft"
@@ -2405,11 +6308,29 @@
     "Sol": {
         "loc": "Sol"
     },
+    "Soleil": {
+        "loc": "Soleil"
+    },
+    "Sona": {
+        "loc": "Sona"
+    },
+    "Sonata": {
+        "loc": "Sonata"
+    },
     "Song": {
         "loc": "Song"
     },
     "Sonic": {
         "loc": "Sonic"
+    },
+    "Sonnet": {
+        "loc": "Sonnet"
+    },
+    "Sookie": {
+        "loc": "Sookie"
+    },
+    "Soos": {
+        "loc": "Soos"
     },
     "Soot": {
         "loc": "Soot"
@@ -2422,6 +6343,9 @@
     },
     "Sorrel": {
         "loc": "Sorrel"
+    },
+    "Sotast": {
+        "loc": "Sotast"
     },
     "Sox": {
         "loc": "Sox"
@@ -2438,8 +6362,17 @@
     "Sparrow": {
         "loc": "Sparrow"
     },
+    "Spatula": {
+        "loc": "Spatula"
+    },
     "Speckle": {
         "loc": "Speckle"
+    },
+    "Speedwell": {
+        "loc": "Speedwell"
+    },
+    "Spicy": {
+        "loc": "Spicy"
     },
     "Spider": {
         "loc": "Spider"
@@ -2447,11 +6380,38 @@
     "Spike": {
         "loc": "Spike"
     },
+    "Spinach": {
+        "loc": "Spinach"
+    },
+    "Spindle": {
+        "loc": "Spindle"
+    },
+    "Spinel": {
+        "loc": "Spinel"
+    },
     "Spire": {
         "loc": "Spire"
     },
     "Splash": {
         "loc": "Splash"
+    },
+    "Splinter": {
+        "loc": "Splinter"
+    },
+    "Spock": {
+        "loc": "Spock"
+    },
+    "Spoon": {
+        "loc": "Spoon"
+    },
+    "Spoonbill": {
+        "loc": "Spoonbill"
+    },
+    "Spore": {
+        "loc": "Spore"
+    },
+    "Spot": {
+        "loc": "Spot"
     },
     "Spots": {
         "loc": "Spots"
@@ -2459,14 +6419,29 @@
     "Spotted": {
         "loc": "Spotted"
     },
+    "Sprig": {
+        "loc": "Sprig"
+    },
+    "Sprigatito": {
+        "loc": "Sprigatito"
+    },
     "Spring": {
         "loc": "Spring"
+    },
+    "Sprout": {
+        "loc": "Sprout"
     },
     "Spruce": {
         "loc": "Spruce"
     },
+    "Squid": {
+        "loc": "Squid"
+    },
     "Squirrel": {
         "loc": "Squirrel"
+    },
+    "Sriracha": {
+        "loc": "Sriracha"
     },
     "Stag": {
         "loc": "Stag"
@@ -2474,20 +6449,32 @@
     "Stan": {
         "loc": "Stan"
     },
+    "Stanley": {
+        "loc": "Stanley"
+    },
     "Star": {
         "loc": "Star"
     },
     "Starfish": {
         "loc": "Starfish"
     },
+    "Stargazer": {
+        "loc": "Stargazer"
+    },
     "Starling": {
         "loc": "Starling"
     },
-    "Steam": {
-        "loc": "Steam"
+    "Static": {
+        "loc": "Static"
     },
     "Stella": {
         "loc": "Stella"
+    },
+    "Stem": {
+        "loc": "Stem"
+    },
+    "Steppe": {
+        "loc": "Steppe"
     },
     "Steve": {
         "loc": "Steve"
@@ -2495,8 +6482,20 @@
     "Steven": {
         "loc": "Steven"
     },
+    "Stick": {
+        "loc": "Stick"
+    },
+    "Stink Mink": {
+        "loc": "Stink Mink"
+    },
+    "Stinkbutt": {
+        "loc": "Stinkbutt"
+    },
     "Stinky": {
         "loc": "Stinky"
+    },
+    "Stitches": {
+        "loc": "Stitches"
     },
     "Stoat": {
         "loc": "Stoat"
@@ -2513,6 +6512,15 @@
     "Storm": {
         "loc": "Storm"
     },
+    "Straw": {
+        "loc": "Straw"
+    },
+    "Strawberry": {
+        "loc": "Strawberry"
+    },
+    "Streak": {
+        "loc": "Streak"
+    },
     "Stream": {
         "loc": "Stream"
     },
@@ -2522,11 +6530,47 @@
     "Stripes": {
         "loc": "Stripes"
     },
+    "Stuffie": {
+        "loc": "Stuffie"
+    },
     "Stump": {
         "loc": "Stump"
     },
+    "Stumpy": {
+        "loc": "Stumpy"
+    },
+    "Styx": {
+        "loc": "Styx"
+    },
+    "Subaru": {
+        "loc": "Subaru"
+    },
+    "Sucrose": {
+        "loc": "Sucrose"
+    },
+    "Sueno": {
+        "loc": "Sueno"
+    },
+    "Sugar": {
+        "loc": "Sugar"
+    },
+    "Suhailah": {
+        "loc": "Suhailah"
+    },
+    "Summit": {
+        "loc": "Summit"
+    },
     "Sun": {
         "loc": "Sun"
+    },
+    "Sundae": {
+        "loc": "Sundae"
+    },
+    "Sunflower": {
+        "loc": "Sunflower"
+    },
+    "Sungrazer": {
+        "loc": "Sungrazer"
     },
     "Sunny": {
         "loc": "Sunny"
@@ -2534,8 +6578,20 @@
     "Sunset": {
         "loc": "Sunset"
     },
+    "Survivor": {
+        "loc": "Survivor"
+    },
+    "Sushi": {
+        "loc": "Sushi"
+    },
+    "Suya": {
+        "loc": "Suya"
+    },
     "Swallow": {
         "loc": "Swallow"
+    },
+    "Swam": {
+        "loc": "Swam"
     },
     "Swamp": {
         "loc": "Swamp"
@@ -2543,11 +6599,53 @@
     "Swan": {
         "loc": "Swan"
     },
+    "Swarm": {
+        "loc": "Swarm"
+    },
     "Sweet": {
         "loc": "Sweet"
     },
+    "Sweet Creature": {
+        "loc": "Sweet Creature"
+    },
+    "Sweet Leon": {
+        "loc": "Sweet Leon"
+    },
+    "Sweet Marmalade": {
+        "loc": "Sweet Marmalade"
+    },
+    "Sweetie": {
+        "loc": "Sweetie"
+    },
     "Swift": {
         "loc": "Swift"
+    },
+    "Swish": {
+        "loc": "Swish"
+    },
+    "Sybil": {
+        "loc": "Sybil"
+    },
+    "Sycamore": {
+        "loc": "Sycamore"
+    },
+    "Sylvana": {
+        "loc": "Sylvana"
+    },
+    "Sylveon": {
+        "loc": "Sylveon"
+    },
+    "Sylvester": {
+        "loc": "Sylvester"
+    },
+    "Synth": {
+        "loc": "Synth"
+    },
+    "T-rex": {
+        "loc": "T-rex"
+    },
+    "Tabasco": {
+        "loc": "Tabasco"
     },
     "Tabatha": {
         "loc": "Tabatha"
@@ -2564,35 +6662,146 @@
     "Taco Bell": {
         "loc": "Taco Bell"
     },
+    "Tadpole": {
+        "loc": "Tadpole"
+    },
+    "Taffy": {
+        "loc": "Taffy"
+    },
+    "Tahini": {
+        "loc": "Tahini"
+    },
+    "Tahir": {
+        "loc": "Tahir"
+    },
+    "Taihu": {
+        "loc": "Taihu"
+    },
+    "Talia": {
+        "loc": "Talia"
+    },
     "Tall": {
         "loc": "Tall"
     },
     "Talon": {
         "loc": "Talon"
     },
+    "Tamagotchi": {
+        "loc": "Tamagotchi"
+    },
+    "Tamale": {
+        "loc": "Tamale"
+    },
+    "Tamarack": {
+        "loc": "Tamarack"
+    },
+    "Tammy": {
+        "loc": "Tammy"
+    },
+    "Tangle": {
+        "loc": "Tangle"
+    },
+    "Tangy": {
+        "loc": "Tangy"
+    },
+    "Tansy": {
+        "loc": "Tansy"
+    },
+    "Tantomile": {
+        "loc": "Tantomile"
+    },
+    "Tara": {
+        "loc": "Tara"
+    },
+    "Tarantula": {
+        "loc": "Tarantula"
+    },
     "Tasha": {
         "loc": "Tasha"
+    },
+    "Tater Tot": {
+        "loc": "Tater Tot"
+    },
+    "Taurus": {
+        "loc": "Taurus"
     },
     "Tawny": {
         "loc": "Tawny"
     },
+    "Tay": {
+        "loc": "Tay"
+    },
+    "Tayo": {
+        "loc": "Tayo"
+    },
+    "Tazama": {
+        "loc": "Tazama"
+    },
+    "Teacup": {
+        "loc": "Teacup"
+    },
+    "Teasel": {
+        "loc": "Teasel"
+    },
+    "Techno": {
+        "loc": "Techno"
+    },
+    "Teddie": {
+        "loc": "Teddie"
+    },
+    "Teddy": {
+        "loc": "Teddy"
+    },
     "Tempest": {
         "loc": "Tempest"
+    },
+    "Terabyte": {
+        "loc": "Terabyte"
+    },
+    "Tesla": {
+        "loc": "Tesla"
+    },
+    "Tesora": {
+        "loc": "Tesora"
     },
     "Tetris": {
         "loc": "Tetris"
     },
+    "Tetromino": {
+        "loc": "Tetromino"
+    },
     "Teufel": {
         "loc": "Teufel"
+    },
+    "Theo": {
+        "loc": "Theo"
+    },
+    "Thicket": {
+        "loc": "Thicket"
     },
     "Thistle": {
         "loc": "Thistle"
     },
+    "Thoko": {
+        "loc": "Thoko"
+    },
+    "Thor": {
+        "loc": "Thor"
+    },
     "Thorn": {
         "loc": "Thorn"
     },
+    "Thrasher": {
+        "loc": "Thrasher"
+    },
     "Thrift": {
         "loc": "Thrift"
+    },
+    "Thrush": {
+        "loc": "Thrush"
+    },
+    "Thumbelina": {
+        "loc": "Thumbelina"
     },
     "Thunder": {
         "loc": "Thunder"
@@ -2600,17 +6809,56 @@
     "Thyme": {
         "loc": "Thyme"
     },
+    "Tia": {
+        "loc": "Tia"
+    },
+    "Tiana": {
+        "loc": "Tiana"
+    },
+    "Tiapan": {
+        "loc": "Tiapan"
+    },
+    "Tidal": {
+        "loc": "Tidal"
+    },
+    "Tide": {
+        "loc": "Tide"
+    },
     "Tiger": {
         "loc": "Tiger"
+    },
+    "Tigger": {
+        "loc": "Tigger"
+    },
+    "Tikka": {
+        "loc": "Tikka"
+    },
+    "Tilin": {
+        "loc": "Tilin"
     },
     "Timber": {
         "loc": "Timber"
     },
+    "Timmy": {
+        "loc": "Timmy"
+    },
+    "Timon": {
+        "loc": "Timon"
+    },
+    "Tin Man": {
+        "loc": "Tin Man"
+    },
     "Tiny": {
         "loc": "Tiny"
     },
-    "Tip": {
-        "loc": "Tip"
+    "Tipsy": {
+        "loc": "Tipsy"
+    },
+    "Titan": {
+        "loc": "Titan"
+    },
+    "Titania": {
+        "loc": "Titania"
     },
     "Toad": {
         "loc": "Toad"
@@ -2618,20 +6866,128 @@
     "Toast": {
         "loc": "Toast"
     },
+    "Toastee": {
+        "loc": "Toastee"
+    },
+    "Todd": {
+        "loc": "Todd"
+    },
+    "Todd Howard": {
+        "loc": "Todd Howard"
+    },
+    "Toffee": {
+        "loc": "Toffee"
+    },
+    "Tofu": {
+        "loc": "Tofu"
+    },
+    "Togepi": {
+        "loc": "Togepi"
+    },
     "Tom": {
         "loc": "Tom"
+    },
+    "Tomato": {
+        "loc": "Tomato"
+    },
+    "Tomato Soup": {
+        "loc": "Tomato Soup"
     },
     "Toni": {
         "loc": "Toni"
     },
+    "Tonka": {
+        "loc": "Tonka"
+    },
+    "Toothless": {
+        "loc": "Toothless"
+    },
+    "Top Hat": {
+        "loc": "Top Hat"
+    },
+    "Topaz": {
+        "loc": "Topaz"
+    },
+    "Toph": {
+        "loc": "Toph"
+    },
+    "Topi": {
+        "loc": "Topi"
+    },
+    "Torchic": {
+        "loc": "Torchic"
+    },
+    "Toriel": {
+        "loc": "Toriel"
+    },
     "Torn": {
         "loc": "Torn"
+    },
+    "Toro": {
+        "loc": "Toro"
     },
     "Torque": {
         "loc": "Torque"
     },
+    "Torrent": {
+        "loc": "Torrent"
+    },
+    "Tortellini": {
+        "loc": "Tortellini"
+    },
+    "Tortilla": {
+        "loc": "Tortilla"
+    },
+    "Totoro": {
+        "loc": "Totoro"
+    },
+    "Toulouse": {
+        "loc": "Toulouse"
+    },
+    "Toxel": {
+        "loc": "Toxel"
+    },
+    "Toyota": {
+        "loc": "Toyota"
+    },
+    "Tractor": {
+        "loc": "Tractor"
+    },
+    "Traveler": {
+        "loc": "Traveler"
+    },
+    "Treasure": {
+        "loc": "Treasure"
+    },
+    "Tree": {
+        "loc": "Tree"
+    },
+    "Tremble": {
+        "loc": "Tremble"
+    },
+    "Tribble": {
+        "loc": "Tribble"
+    },
+    "Trick": {
+        "loc": "Trick"
+    },
+    "Trickle": {
+        "loc": "Trickle"
+    },
+    "Trinity": {
+        "loc": "Trinity"
+    },
+    "Trinket": {
+        "loc": "Trinket"
+    },
+    "Trip": {
+        "loc": "Trip"
+    },
     "Triscuit": {
         "loc": "Triscuit"
+    },
+    "Triton": {
+        "loc": "Triton"
     },
     "Trixie": {
         "loc": "Trixie"
@@ -2639,20 +6995,44 @@
     "Trouble": {
         "loc": "Trouble"
     },
+    "Trouble Nuggets": {
+        "loc": "Trouble Nuggets"
+    },
+    "Troublemaker": {
+        "loc": "Troublemaker"
+    },
     "Trout": {
         "loc": "Trout"
+    },
+    "Trumpet": {
+        "loc": "Trumpet"
     },
     "Tucker": {
         "loc": "Tucker"
     },
+    "Tuffnut": {
+        "loc": "Tuffnut"
+    },
     "Tuft": {
         "loc": "Tuft"
+    },
+    "Tufted": {
+        "loc": "Tufted"
     },
     "Tulip": {
         "loc": "Tulip"
     },
     "Tumble": {
         "loc": "Tumble"
+    },
+    "Tumblebrutus": {
+        "loc": "Tumblebrutus"
+    },
+    "Tumo": {
+        "loc": "Tumo"
+    },
+    "Tunnel": {
+        "loc": "Tunnel"
     },
     "Turbo": {
         "loc": "Turbo"
@@ -2663,8 +7043,14 @@
     "Twig": {
         "loc": "Twig"
     },
+    "Twiggy": {
+        "loc": "Twiggy"
+    },
     "Twilight": {
         "loc": "Twilight"
+    },
+    "Twinkle Lights": {
+        "loc": "Twinkle Lights"
     },
     "Twister": {
         "loc": "Twister"
@@ -2672,8 +7058,32 @@
     "Twix": {
         "loc": "Twix"
     },
+    "Two Sprouts": {
+        "loc": "Two Sprouts"
+    },
+    "Uba": {
+        "loc": "Uba"
+    },
     "Ula": {
         "loc": "Ula"
+    },
+    "Ulyssa": {
+        "loc": "Ulyssa"
+    },
+    "Umber": {
+        "loc": "Umber"
+    },
+    "Umbreon": {
+        "loc": "Umbreon"
+    },
+    "Umbriel": {
+        "loc": "Umbriel"
+    },
+    "Uncle Butter": {
+        "loc": "Uncle Butter"
+    },
+    "Undyne": {
+        "loc": "Undyne"
     },
     "Union": {
         "loc": "Union"
@@ -2681,17 +7091,77 @@
     "Uriel": {
         "loc": "Uriel"
     },
+    "Ursala": {
+        "loc": "Ursala"
+    },
+    "Valente": {
+        "loc": "Valente"
+    },
+    "Valentina": {
+        "loc": "Valentina"
+    },
+    "Valentino": {
+        "loc": "Valentino"
+    },
+    "Valley": {
+        "loc": "Valley"
+    },
+    "Van Pelt": {
+        "loc": "Van Pelt"
+    },
     "Vanilla": {
         "loc": "Vanilla"
     },
     "Vaxx": {
         "loc": "Vaxx"
     },
+    "Vega": {
+        "loc": "Vega"
+    },
+    "Veil": {
+        "loc": "Veil"
+    },
+    "Velociraptor": {
+        "loc": "Velociraptor"
+    },
+    "Velvet": {
+        "loc": "Velvet"
+    },
+    "Venom": {
+        "loc": "Venom"
+    },
+    "Venti": {
+        "loc": "Venti"
+    },
     "Venture": {
         "loc": "Venture"
     },
+    "Venus": {
+        "loc": "Venus"
+    },
+    "Verbena": {
+        "loc": "Verbena"
+    },
+    "Vervain": {
+        "loc": "Vervain"
+    },
+    "Vesper": {
+        "loc": "Vesper"
+    },
+    "Vesta": {
+        "loc": "Vesta"
+    },
     "Via": {
         "loc": "Via"
+    },
+    "Victini": {
+        "loc": "Victini"
+    },
+    "Victor": {
+        "loc": "Victor"
+    },
+    "Victoria": {
+        "loc": "Victoria"
     },
     "Vida": {
         "loc": "Vida"
@@ -2711,6 +7181,15 @@
     "Violet": {
         "loc": "Violet"
     },
+    "Viper": {
+        "loc": "Viper"
+    },
+    "Virgo": {
+        "loc": "Virgo"
+    },
+    "Vivian": {
+        "loc": "Vivian"
+    },
     "Vivienne": {
         "loc": "Vivienne"
     },
@@ -2720,8 +7199,17 @@
     "Void": {
         "loc": "Void"
     },
+    "Void Worm": {
+        "loc": "Void Worm"
+    },
+    "Volcano": {
+        "loc": "Volcano"
+    },
     "Vole": {
         "loc": "Vole"
+    },
+    "Volkswagen": {
+        "loc": "Volkswagen"
     },
     "Voltage": {
         "loc": "Voltage"
@@ -2729,8 +7217,44 @@
     "Vox": {
         "loc": "Vox"
     },
+    "Vulpix": {
+        "loc": "Vulpix"
+    },
+    "Vulture": {
+        "loc": "Vulture"
+    },
+    "Wade": {
+        "loc": "Wade"
+    },
+    "Waffle": {
+        "loc": "Waffle"
+    },
+    "Wagyu": {
+        "loc": "Wagyu"
+    },
+    "Wally": {
+        "loc": "Wally"
+    },
+    "Walnut": {
+        "loc": "Walnut"
+    },
+    "Wanda": {
+        "loc": "Wanda"
+    },
+    "Wanderer": {
+        "loc": "Wanderer"
+    },
+    "Warbler": {
+        "loc": "Warbler"
+    },
     "Warm": {
         "loc": "Warm"
+    },
+    "Warren Peace": {
+        "loc": "Warren Peace"
+    },
+    "Wasabi": {
+        "loc": "Wasabi"
     },
     "Wasp": {
         "loc": "Wasp"
@@ -2738,20 +7262,44 @@
     "Water": {
         "loc": "Water"
     },
+    "Wave": {
+        "loc": "Wave"
+    },
+    "Wax": {
+        "loc": "Wax"
+    },
     "Weasel": {
         "loc": "Weasel"
     },
     "Web": {
         "loc": "Web"
     },
+    "Webby": {
+        "loc": "Webby"
+    },
+    "Wednesday": {
+        "loc": "Wednesday"
+    },
     "Weed": {
         "loc": "Weed"
+    },
+    "Weevil": {
+        "loc": "Weevil"
+    },
+    "Wendy": {
+        "loc": "Wendy"
     },
     "Wet": {
         "loc": "Wet"
     },
+    "Whale": {
+        "loc": "Whale"
+    },
     "Wheat": {
         "loc": "Wheat"
+    },
+    "Whimsy": {
+        "loc": "Whimsy"
     },
     "Whirl": {
         "loc": "Whirl"
@@ -2762,11 +7310,32 @@
     "Whiskers": {
         "loc": "Whiskers"
     },
+    "Whiskey": {
+        "loc": "Whiskey"
+    },
     "Whisper": {
         "loc": "Whisper"
     },
+    "Whispering": {
+        "loc": "Whispering"
+    },
+    "Whistle": {
+        "loc": "Whistle"
+    },
     "White": {
         "loc": "White"
+    },
+    "Whitney": {
+        "loc": "Whitney"
+    },
+    "Whiz Kid": {
+        "loc": "Whiz Kid"
+    },
+    "Whorl": {
+        "loc": "Whorl"
+    },
+    "Wiggity Wacks": {
+        "loc": "Wiggity Wacks"
     },
     "Wigglebutt": {
         "loc": "Wigglebutt"
@@ -2783,6 +7352,15 @@
     "Windy": {
         "loc": "Windy"
     },
+    "Wing": {
+        "loc": "Wing"
+    },
+    "Winry": {
+        "loc": "Winry"
+    },
+    "Wish": {
+        "loc": "Wish"
+    },
     "Wishbone": {
         "loc": "Wishbone"
     },
@@ -2792,14 +7370,35 @@
     "Wisteria": {
         "loc": "Wisteria"
     },
+    "Wizard": {
+        "loc": "Wizard"
+    },
     "Wolf": {
         "loc": "Wolf"
+    },
+    "Wolfgang": {
+        "loc": "Wolfgang"
+    },
+    "Wolverine": {
+        "loc": "Wolverine"
+    },
+    "Wonder": {
+        "loc": "Wonder"
     },
     "Wood": {
         "loc": "Wood"
     },
+    "Wool": {
+        "loc": "Wool"
+    },
+    "Woolly": {
+        "loc": "Woolly"
+    },
     "Worm": {
         "loc": "Worm"
+    },
+    "Wrath": {
+        "loc": "Wrath"
     },
     "Wren": {
         "loc": "Wren"
@@ -2807,26 +7406,182 @@
     "X'ek": {
         "loc": "X'ek"
     },
+    "Xelle": {
+        "loc": "Xelle"
+    },
+    "Xhosa": {
+        "loc": "Xhosa"
+    },
+    "Xiao": {
+        "loc": "Xiao"
+    },
+    "Xola": {
+        "loc": "Xola"
+    },
+    "Yaoyao": {
+        "loc": "Yaoyao"
+    },
     "Yarrow": {
         "loc": "Yarrow"
+    },
+    "Yazhu": {
+        "loc": "Yazhu"
+    },
+    "Yeet": {
+        "loc": "Yeet"
+    },
+    "Yeeted": {
+        "loc": "Yeeted"
     },
     "Yellow": {
         "loc": "Yellow"
     },
+    "Yen": {
+        "loc": "Yen"
+    },
+    "Yeobo": {
+        "loc": "Yeobo"
+    },
     "Yew": {
         "loc": "Yew"
+    },
+    "Yeza": {
+        "loc": "Yeza"
+    },
+    "Yinuo": {
+        "loc": "Yinuo"
+    },
+    "Yokai": {
+        "loc": "Yokai"
+    },
+    "Yoonmin": {
+        "loc": "Yoonmin"
+    },
+    "Yooted": {
+        "loc": "Yooted"
+    },
+    "Yoshi": {
+        "loc": "Yoshi"
+    },
+    "Yote": {
+        "loc": "Yote"
+    },
+    "Yuca": {
+        "loc": "Yuca"
+    },
+    "Yucca": {
+        "loc": "Yucca"
+    },
+    "Yuka": {
+        "loc": "Yuka"
+    },
+    "Yuki": {
+        "loc": "Yuki"
+    },
+    "Yumeko": {
+        "loc": "Yumeko"
+    },
+    "Yusuke": {
+        "loc": "Yusuke"
+    },
+    "Yuzu": {
+        "loc": "Yuzu"
+    },
+    "Yvaine": {
+        "loc": "Yvaine"
+    },
+    "Zahra": {
+        "loc": "Zahra"
+    },
+    "Zambezi": {
+        "loc": "Zambezi"
+    },
+    "Zambia": {
+        "loc": "Zambia"
+    },
+    "Zaniah": {
+        "loc": "Zaniah"
+    },
+    "Zari": {
+        "loc": "Zari"
+    },
+    "Zariah": {
+        "loc": "Zariah"
+    },
+    "Zazu": {
+        "loc": "Zazu"
+    },
+    "Zebra": {
+        "loc": "Zebra"
+    },
+    "Zekrom": {
+        "loc": "Zekrom"
     },
     "Zelda": {
         "loc": "Zelda"
     },
+    "Zell": {
+        "loc": "Zell"
+    },
+    "Zendaya": {
+        "loc": "Zendaya"
+    },
+    "Zeraora": {
+        "loc": "Zeraora"
+    },
+    "Zikomo": {
+        "loc": "Zikomo"
+    },
     "Zim": {
         "loc": "Zim"
+    },
+    "Zinnia": {
+        "loc": "Zinnia"
+    },
+    "Zion": {
+        "loc": "Zion"
+    },
+    "Zira": {
+        "loc": "Zira"
+    },
+    "Ziti": {
+        "loc": "Ziti"
     },
     "Zoe": {
         "loc": "Zoe"
     },
+    "Zorro": {
+        "loc": "Zorro"
+    },
+    "Zorua": {
+        "loc": "Zorua"
+    },
+    "Zuberi": {
+        "loc": "Zuberi"
+    },
+    "Zuko": {
+        "loc": "Zuko"
+    },
+    "Zuma": {
+        "loc": "Zuma"
+    },
+    "Zuna": {
+        "loc": "Zuna"
+    },
+    "Zuva": {
+        "loc": "Zuva"
+    },
     "acorn": {
         "loc": "acorn"
+    },
+    "aloe": {
+        "loc": "aloe"
+    },
+    "antler": {
+        "loc": "antler"
+    },
+    "arch": {
+        "loc": "arch"
     },
     "ash": {
         "loc": "ash"
@@ -2837,17 +7592,41 @@
     "back": {
         "loc": "back"
     },
+    "badger": {
+        "loc": "badger"
+    },
+    "bark": {
+        "loc": "bark"
+    },
+    "bat": {
+        "loc": "bat"
+    },
+    "beak": {
+        "loc": "beak"
+    },
     "beam": {
         "loc": "beam"
     },
+    "bear": {
+        "loc": "bear"
+    },
     "bee": {
         "loc": "bee"
+    },
+    "beetle": {
+        "loc": "beetle"
+    },
+    "bellow": {
+        "loc": "bellow"
     },
     "belly": {
         "loc": "belly"
     },
     "berry": {
         "loc": "berry"
+    },
+    "billow": {
+        "loc": "billow"
     },
     "bird": {
         "loc": "bird"
@@ -2870,11 +7649,29 @@
     "blotch": {
         "loc": "blotch"
     },
+    "blur": {
+        "loc": "blur"
+    },
+    "bog": {
+        "loc": "bog"
+    },
+    "bone": {
+        "loc": "bone"
+    },
     "bounce": {
         "loc": "bounce"
     },
+    "bracken": {
+        "loc": "bracken"
+    },
+    "bramble": {
+        "loc": "bramble"
+    },
     "branch": {
         "loc": "branch"
+    },
+    "break": {
+        "loc": "break"
     },
     "breeze": {
         "loc": "breeze"
@@ -2888,47 +7685,194 @@
     "brook": {
         "loc": "brook"
     },
+    "brush": {
+        "loc": "brush"
+    },
+    "bubble": {
+        "loc": "bubble"
+    },
+    "bud": {
+        "loc": "bud"
+    },
+    "bug": {
+        "loc": "bug"
+    },
+    "bull": {
+        "loc": "bull"
+    },
+    "bumble": {
+        "loc": "bumble"
+    },
+    "burn": {
+        "loc": "burn"
+    },
     "burr": {
         "loc": "burr"
+    },
+    "burrow": {
+        "loc": "burrow"
+    },
+    "burst": {
+        "loc": "burst"
     },
     "bush": {
         "loc": "bush"
     },
+    "buzz": {
+        "loc": "buzz"
+    },
     "call": {
         "loc": "call"
+    },
+    "canyon": {
+        "loc": "canyon"
+    },
+    "catcher": {
+        "loc": "catcher"
+    },
+    "cave": {
+        "loc": "cave"
+    },
+    "caw": {
+        "loc": "caw"
+    },
+    "chase": {
+        "loc": "chase"
+    },
+    "chaser": {
+        "loc": "chaser"
+    },
+    "chasm": {
+        "loc": "chasm"
+    },
+    "chest": {
+        "loc": "chest"
+    },
+    "chill": {
+        "loc": "chill"
+    },
+    "chirp": {
+        "loc": "chirp"
+    },
+    "chomp": {
+        "loc": "chomp"
+    },
+    "cinder": {
+        "loc": "cinder"
+    },
+    "clash": {
+        "loc": "clash"
     },
     "claw": {
         "loc": "claw"
     },
+    "cliff": {
+        "loc": "cliff"
+    },
     "cloud": {
         "loc": "cloud"
+    },
+    "clove": {
+        "loc": "clove"
     },
     "clover": {
         "loc": "clover"
     },
+    "coast": {
+        "loc": "coast"
+    },
+    "cone": {
+        "loc": "cone"
+    },
     "coral": {
         "loc": "coral"
+    },
+    "cove": {
+        "loc": "cove"
+    },
+    "crackle": {
+        "loc": "crackle"
+    },
+    "crag": {
+        "loc": "crag"
+    },
+    "crash": {
+        "loc": "crash"
+    },
+    "crawl": {
+        "loc": "crawl"
     },
     "creek": {
         "loc": "creek"
     },
+    "crest": {
+        "loc": "crest"
+    },
+    "cricket": {
+        "loc": "cricket"
+    },
+    "croak": {
+        "loc": "croak"
+    },
     "cry": {
         "loc": "cry"
+    },
+    "curl": {
+        "loc": "curl"
+    },
+    "current": {
+        "loc": "current"
     },
     "daisy": {
         "loc": "daisy"
     },
+    "dance": {
+        "loc": "dance"
+    },
     "dapple": {
         "loc": "dapple"
+    },
+    "dart": {
+        "loc": "dart"
+    },
+    "dash": {
+        "loc": "dash"
     },
     "dawn": {
         "loc": "dawn"
     },
+    "daze": {
+        "loc": "daze"
+    },
+    "dazzle": {
+        "loc": "dazzle"
+    },
+    "deer": {
+        "loc": "deer"
+    },
+    "dew": {
+        "loc": "dew"
+    },
+    "dream": {
+        "loc": "dream"
+    },
     "drift": {
         "loc": "drift"
     },
+    "drip": {
+        "loc": "drip"
+    },
+    "drizzle": {
+        "loc": "drizzle"
+    },
     "drop": {
         "loc": "drop"
+    },
+    "duck": {
+        "loc": "duck"
+    },
+    "dune": {
+        "loc": "dune"
     },
     "dusk": {
         "loc": "dusk"
@@ -2936,11 +7880,26 @@
     "dust": {
         "loc": "dust"
     },
+    "eagle": {
+        "loc": "eagle"
+    },
     "ear": {
         "loc": "ear"
     },
     "ears": {
         "loc": "ears"
+    },
+    "echo": {
+        "loc": "echo"
+    },
+    "egg": {
+        "loc": "egg"
+    },
+    "elk": {
+        "loc": "elk"
+    },
+    "ember": {
+        "loc": "ember"
     },
     "eye": {
         "loc": "eye"
@@ -2954,17 +7913,26 @@
     "fade": {
         "loc": "fade"
     },
+    "falcon": {
+        "loc": "falcon"
+    },
     "fall": {
         "loc": "fall"
     },
     "fang": {
         "loc": "fang"
     },
+    "fawn": {
+        "loc": "fawn"
+    },
     "feather": {
         "loc": "feather"
     },
     "fern": {
         "loc": "fern"
+    },
+    "field": {
+        "loc": "field"
     },
     "fin": {
         "loc": "fin"
@@ -2975,32 +7943,119 @@
     "fish": {
         "loc": "fish"
     },
+    "flake": {
+        "loc": "flake"
+    },
     "flame": {
         "loc": "flame"
+    },
+    "flare": {
+        "loc": "flare"
+    },
+    "flash": {
+        "loc": "flash"
+    },
+    "fleck": {
+        "loc": "fleck"
+    },
+    "flick": {
+        "loc": "flick"
+    },
+    "flicker": {
+        "loc": "flicker"
     },
     "flight": {
         "loc": "flight"
     },
+    "flip": {
+        "loc": "flip"
+    },
+    "flit": {
+        "loc": "flit"
+    },
     "flood": {
         "loc": "flood"
+    },
+    "flow": {
+        "loc": "flow"
     },
     "flower": {
         "loc": "flower"
     },
+    "fluff": {
+        "loc": "fluff"
+    },
+    "flutter": {
+        "loc": "flutter"
+    },
+    "fly": {
+        "loc": "fly"
+    },
+    "foam": {
+        "loc": "foam"
+    },
+    "fog": {
+        "loc": "fog"
+    },
     "foot": {
         "loc": "foot"
+    },
+    "fox": {
+        "loc": "fox"
     },
     "freckle": {
         "loc": "freckle"
     },
+    "freeze": {
+        "loc": "freeze"
+    },
+    "frond": {
+        "loc": "frond"
+    },
     "frost": {
         "loc": "frost"
+    },
+    "fruit": {
+        "loc": "fruit"
     },
     "fur": {
         "loc": "fur"
     },
+    "fuzz": {
+        "loc": "fuzz"
+    },
+    "gale": {
+        "loc": "gale"
+    },
     "gaze": {
         "loc": "gaze"
+    },
+    "ghost": {
+        "loc": "ghost"
+    },
+    "gill": {
+        "loc": "gill"
+    },
+    "glade": {
+        "loc": "glade"
+    },
+    "glare": {
+        "loc": "glare"
+    },
+    "gleam": {
+        "loc": "gleam"
+    },
+    "glide": {
+        "loc": "glide"
+    },
+    "glint": {
+        "loc": "glint"
+    },
+    "glow": {
+        "loc": "glow"
+    },
+    "goat": {
+        "loc": "goat"
     },
     "goose": {
         "loc": "goose"
@@ -3011,11 +8066,20 @@
     "grass": {
         "loc": "grass"
     },
+    "grove": {
+        "loc": "grove"
+    },
+    "growl": {
+        "loc": "growl"
+    },
     "hail": {
         "loc": "hail"
     },
     "hare": {
         "loc": "hare"
+    },
+    "haven": {
+        "loc": "haven"
     },
     "hawk": {
         "loc": "hawk"
@@ -3029,11 +8093,38 @@
     "heather": {
         "loc": "heather"
     },
+    "hiss": {
+        "loc": "hiss"
+    },
     "hollow": {
         "loc": "hollow"
     },
     "holly": {
         "loc": "holly"
+    },
+    "honey": {
+        "loc": "honey"
+    },
+    "hope": {
+        "loc": "hope"
+    },
+    "horn": {
+        "loc": "horn"
+    },
+    "horse": {
+        "loc": "horse"
+    },
+    "howl": {
+        "loc": "howl"
+    },
+    "husk": {
+        "loc": "husk"
+    },
+    "ice": {
+        "loc": "ice"
+    },
+    "iris": {
+        "loc": "iris"
     },
     "ivy": {
         "loc": "ivy"
@@ -3044,17 +8135,38 @@
     "jay": {
         "loc": "jay"
     },
+    "joy": {
+        "loc": "joy"
+    },
+    "jumble": {
+        "loc": "jumble"
+    },
     "jump": {
         "loc": "jump"
+    },
+    "kestrel": {
+        "loc": "kestrel"
+    },
+    "kick": {
+        "loc": "kick"
     },
     "kite": {
         "loc": "kite"
     },
+    "knoll": {
+        "loc": "knoll"
+    },
     "lake": {
         "loc": "lake"
     },
+    "lamb": {
+        "loc": "lamb"
+    },
     "larch": {
         "loc": "larch"
+    },
+    "laurel": {
+        "loc": "laurel"
     },
     "leaf": {
         "loc": "leaf"
@@ -3065,8 +8177,17 @@
     "leg": {
         "loc": "leg"
     },
+    "leopard": {
+        "loc": "leopard"
+    },
+    "lichen": {
+        "loc": "lichen"
+    },
     "light": {
         "loc": "light"
+    },
+    "lightning": {
+        "loc": "lightning"
     },
     "lilac": {
         "loc": "lilac"
@@ -3074,11 +8195,35 @@
     "lily": {
         "loc": "lily"
     },
+    "lion": {
+        "loc": "lion"
+    },
     "lotus": {
         "loc": "lotus"
     },
+    "mallow": {
+        "loc": "mallow"
+    },
+    "mane": {
+        "loc": "mane"
+    },
+    "mark": {
+        "loc": "mark"
+    },
     "mask": {
         "loc": "mask"
+    },
+    "meadow": {
+        "loc": "meadow"
+    },
+    "mimic": {
+        "loc": "mimic"
+    },
+    "minnow": {
+        "loc": "minnow"
+    },
+    "mire": {
+        "loc": "mire"
     },
     "mist": {
         "loc": "mist"
@@ -3086,20 +8231,53 @@
     "moon": {
         "loc": "moon"
     },
+    "moor": {
+        "loc": "moor"
+    },
+    "moss": {
+        "loc": "moss"
+    },
     "moth": {
         "loc": "moth"
+    },
+    "mound": {
+        "loc": "mound"
     },
     "mouse": {
         "loc": "mouse"
     },
+    "mud": {
+        "loc": "mud"
+    },
+    "munch": {
+        "loc": "munch"
+    },
+    "murk": {
+        "loc": "murk"
+    },
+    "muzzle": {
+        "loc": "muzzle"
+    },
     "needle": {
         "loc": "needle"
+    },
+    "nest": {
+        "loc": "nest"
     },
     "nettle": {
         "loc": "nettle"
     },
+    "newt": {
+        "loc": "newt"
+    },
+    "nibble": {
+        "loc": "nibble"
+    },
     "night": {
         "loc": "night"
+    },
+    "nip": {
+        "loc": "nip"
     },
     "noise": {
         "loc": "noise"
@@ -3107,8 +8285,17 @@
     "nose": {
         "loc": "nose"
     },
+    "nudge": {
+        "loc": "nudge"
+    },
     "nut": {
         "loc": "nut"
+    },
+    "oat": {
+        "loc": "oat"
+    },
+    "ocean": {
+        "loc": "ocean"
     },
     "pad": {
         "loc": "pad"
@@ -3119,11 +8306,26 @@
     "path": {
         "loc": "path"
     },
+    "peak": {
+        "loc": "peak"
+    },
+    "pearl": {
+        "loc": "pearl"
+    },
     "pelt": {
         "loc": "pelt"
     },
     "petal": {
         "loc": "petal"
+    },
+    "plume": {
+        "loc": "plume"
+    },
+    "point": {
+        "loc": "point"
+    },
+    "pollen": {
+        "loc": "pollen"
     },
     "pond": {
         "loc": "pond"
@@ -3137,14 +8339,74 @@
     "pounce": {
         "loc": "pounce"
     },
+    "prance": {
+        "loc": "prance"
+    },
+    "prickle": {
+        "loc": "prickle"
+    },
     "puddle": {
         "loc": "puddle"
+    },
+    "purr": {
+        "loc": "purr"
+    },
+    "quake": {
+        "loc": "quake"
+    },
+    "quill": {
+        "loc": "quill"
+    },
+    "quiver": {
+        "loc": "quiver"
+    },
+    "rain": {
+        "loc": "rain"
+    },
+    "ram": {
+        "loc": "ram"
     },
     "rapid": {
         "loc": "rapid"
     },
+    "rattle": {
+        "loc": "rattle"
+    },
+    "raven": {
+        "loc": "raven"
+    },
+    "reed": {
+        "loc": "reed"
+    },
+    "rip": {
+        "loc": "rip"
+    },
+    "ripple": {
+        "loc": "ripple"
+    },
+    "rise": {
+        "loc": "rise"
+    },
+    "river": {
+        "loc": "river"
+    },
+    "roach": {
+        "loc": "roach"
+    },
+    "roar": {
+        "loc": "roar"
+    },
+    "rock": {
+        "loc": "rock"
+    },
+    "root": {
+        "loc": "root"
+    },
     "rose": {
         "loc": "rose"
+    },
+    "rumble": {
+        "loc": "rumble"
     },
     "rump": {
         "loc": "rump"
@@ -3155,11 +8417,38 @@
     "runner": {
         "loc": "runner"
     },
+    "rush": {
+        "loc": "rush"
+    },
+    "rustle": {
+        "loc": "rustle"
+    },
+    "sand": {
+        "loc": "sand"
+    },
+    "sap": {
+        "loc": "sap"
+    },
     "scar": {
         "loc": "scar"
     },
+    "scorpion": {
+        "loc": "scorpion"
+    },
+    "scratch": {
+        "loc": "scratch"
+    },
+    "screech": {
+        "loc": "screech"
+    },
+    "sea": {
+        "loc": "sea"
+    },
     "seed": {
         "loc": "seed"
+    },
+    "seeker": {
+        "loc": "seeker"
     },
     "shade": {
         "loc": "shade"
@@ -3167,20 +8456,56 @@
     "shadow": {
         "loc": "shadow"
     },
+    "shard": {
+        "loc": "shard"
+    },
+    "shatter": {
+        "loc": "shatter"
+    },
+    "sheep": {
+        "loc": "sheep"
+    },
     "shell": {
         "loc": "shell"
+    },
+    "shimmer": {
+        "loc": "shimmer"
     },
     "shine": {
         "loc": "shine"
     },
+    "shiver": {
+        "loc": "shiver"
+    },
+    "shock": {
+        "loc": "shock"
+    },
+    "shore": {
+        "loc": "shore"
+    },
+    "shriek": {
+        "loc": "shriek"
+    },
     "sight": {
         "loc": "sight"
+    },
+    "silk": {
+        "loc": "silk"
     },
     "skip": {
         "loc": "skip"
     },
+    "skipper": {
+        "loc": "skipper"
+    },
+    "skitter": {
+        "loc": "skitter"
+    },
     "sky": {
         "loc": "sky"
+    },
+    "slash": {
+        "loc": "slash"
     },
     "slip": {
         "loc": "slip"
@@ -3188,8 +8513,23 @@
     "smoke": {
         "loc": "smoke"
     },
+    "snake": {
+        "loc": "snake"
+    },
+    "snap": {
+        "loc": "snap"
+    },
+    "snarl": {
+        "loc": "snarl"
+    },
+    "snout": {
+        "loc": "snout"
+    },
     "snow": {
         "loc": "snow"
+    },
+    "soar": {
+        "loc": "soar"
     },
     "song": {
         "loc": "song"
@@ -3203,11 +8543,23 @@
     "speckle": {
         "loc": "speckle"
     },
+    "spider": {
+        "loc": "spider"
+    },
+    "spike": {
+        "loc": "spike"
+    },
     "spirit": {
         "loc": "spirit"
     },
     "splash": {
         "loc": "splash"
+    },
+    "splinter": {
+        "loc": "splinter"
+    },
+    "spore": {
+        "loc": "spore"
     },
     "spot": {
         "loc": "spot"
@@ -3218,14 +8570,26 @@
     "spring": {
         "loc": "spring"
     },
+    "sprout": {
+        "loc": "sprout"
+    },
+    "squid": {
+        "loc": "squid"
+    },
     "stalk": {
         "loc": "stalk"
+    },
+    "steep": {
+        "loc": "steep"
     },
     "stem": {
         "loc": "stem"
     },
     "step": {
         "loc": "step"
+    },
+    "sting": {
+        "loc": "sting"
     },
     "stone": {
         "loc": "stone"
@@ -3245,11 +8609,29 @@
     "stripe": {
         "loc": "stripe"
     },
+    "summit": {
+        "loc": "summit"
+    },
     "sun": {
         "loc": "sun"
     },
+    "surf": {
+        "loc": "surf"
+    },
+    "swamp": {
+        "loc": "swamp"
+    },
+    "swan": {
+        "loc": "swan"
+    },
+    "swarm": {
+        "loc": "swarm"
+    },
     "swipe": {
         "loc": "swipe"
+    },
+    "swish": {
+        "loc": "swish"
     },
     "swoop": {
         "loc": "swoop"
@@ -3257,14 +8639,86 @@
     "tail": {
         "loc": "tail"
     },
+    "talon": {
+        "loc": "talon"
+    },
+    "tangle": {
+        "loc": "tangle"
+    },
+    "thicket": {
+        "loc": "thicket"
+    },
+    "thistle": {
+        "loc": "thistle"
+    },
+    "thorn": {
+        "loc": "thorn"
+    },
+    "thrift": {
+        "loc": "thrift"
+    },
     "throat": {
         "loc": "throat"
+    },
+    "thrush": {
+        "loc": "thrush"
+    },
+    "thud": {
+        "loc": "thud"
+    },
+    "thunder": {
+        "loc": "thunder"
+    },
+    "tide": {
+        "loc": "tide"
+    },
+    "tiger": {
+        "loc": "tiger"
+    },
+    "timber": {
+        "loc": "timber"
+    },
+    "toe": {
+        "loc": "toe"
+    },
+    "tooth": {
+        "loc": "tooth"
+    },
+    "torrent": {
+        "loc": "torrent"
+    },
+    "trail": {
+        "loc": "trail"
     },
     "tree": {
         "loc": "tree"
     },
+    "trot": {
+        "loc": "trot"
+    },
     "tuft": {
         "loc": "tuft"
+    },
+    "tumble": {
+        "loc": "tumble"
+    },
+    "tunnel": {
+        "loc": "tunnel"
+    },
+    "turtle": {
+        "loc": "turtle"
+    },
+    "twig": {
+        "loc": "twig"
+    },
+    "twist": {
+        "loc": "twist"
+    },
+    "valley": {
+        "loc": "valley"
+    },
+    "wade": {
+        "loc": "wade"
     },
     "watcher": {
         "loc": "watcher"
@@ -3272,11 +8726,20 @@
     "water": {
         "loc": "water"
     },
+    "wave": {
+        "loc": "wave"
+    },
+    "web": {
+        "loc": "web"
+    },
     "whisker": {
         "loc": "whisker"
     },
     "whisper": {
         "loc": "whisper"
+    },
+    "whistle": {
+        "loc": "whistle"
     },
     "willow": {
         "loc": "willow"
@@ -3289,5 +8752,17 @@
     },
     "wish": {
         "loc": "wish"
+    },
+    "wisp": {
+        "loc": "wisp"
+    },
+    "wood": {
+        "loc": "wood"
+    },
+    "wool": {
+        "loc": "wool"
+    },
+    "zoom": {
+        "loc": "zoom"
     }
 }

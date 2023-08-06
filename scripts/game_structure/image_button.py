@@ -3,7 +3,7 @@ import pygame_gui
 from pygame_gui.core.text.html_parser import HTMLParser
 from pygame_gui.core.text.text_box_layout import TextBoxLayout
 from pygame_gui.core.utility import translate
-import scripts.game_structure.image_cache as image_cache
+from scripts.game_structure import image_cache
 import html
 
 
@@ -12,7 +12,6 @@ class UIImageButton(pygame_gui.elements.UIButton):
         button image."""
 
     def _set_any_images_from_theme(self):
-
         changed = False
         normal_image = None
         try:
@@ -65,17 +64,21 @@ class UIImageButton(pygame_gui.elements.UIButton):
 
 
 class UISpriteButton():
-    '''This is for use with the cat sprites. It wraps together a UIImage and Transparent Button.
-        For most functions, this can be used exactly like other pygame_gui elements. '''
+    """This is for use with the cat sprites. It wraps together a UIImage and Transparent Button.
+        For most functions, this can be used exactly like other pygame_gui elements. """
 
-    def __init__(self, relative_rect, sprite, cat_id=None, visible=1, cat_object=None, starting_height=1):
+    def __init__(self, relative_rect, sprite, cat_id=None, visible=1, cat_object=None, starting_height=1,
+                 manager=None, container=None, tool_tip_text=None):
 
         # We have to scale the image before putting it into the image object. Otherwise, the method of upscaling that UIImage uses will make the pixel art fuzzy
         self.image = pygame_gui.elements.UIImage(relative_rect, pygame.transform.scale(sprite, relative_rect.size),
-                                                 visible=visible)
-        # The transparent button. This a subclass that UIButton that aslo hold the cat_id.
+                                                 visible=visible, manager=manager, container=container,
+                                                 )
+        self.image.disable()
+        # The transparent button. This a subclass that UIButton that also hold the cat_id.
         self.button = CatButton(relative_rect, visible=visible, cat_id=cat_id, cat_object=cat_object,
-                                starting_height=starting_height)
+                                starting_height=starting_height, manager=manager, tool_tip_text=tool_tip_text,
+                                container=container)
 
     def return_cat_id(self):
         return self.button.return_cat_id()
@@ -118,13 +121,14 @@ class UISpriteButton():
 
 
 class CatButton(pygame_gui.elements.UIButton):
-    '''Basic UIButton subclass for at sprite buttons. It stores the cat ID. '''
+    """Basic UIButton subclass for at sprite buttons. It stores the cat ID. """
 
-    def __init__(self, relative_rect, cat_id=None, visible=True, cat_object=None, starting_height=1):
+    def __init__(self, relative_rect, cat_id=None, visible=True, cat_object=None, starting_height=1, manager=None, tool_tip_text=None,
+                 container=None):
         self.cat_id = cat_id
         self.cat_object = cat_object
-        super().__init__(relative_rect, "", object_id="#image_button", visible=visible,
-                         starting_height=starting_height)
+        super().__init__(relative_rect, "", object_id="#cat_button", visible=visible,
+                         starting_height=starting_height, manager=manager, tool_tip_text=tool_tip_text, container=container)
 
     def return_cat_id(self):
         return self.cat_id
@@ -147,7 +151,7 @@ class UITextBoxTweaked(pygame_gui.elements.UITextBox):
                  manager = None,
                  line_spacing = 1,
                  wrap_to_height: bool = False,
-                 layer_starting_height: int = 1,
+                 starting_height: int = 1,
                  container=None,
                  parent_element=None,
                  object_id=None,
@@ -161,7 +165,7 @@ class UITextBoxTweaked(pygame_gui.elements.UITextBox):
         self.line_spaceing = line_spacing
 
         super().__init__(html_text, relative_rect, manager=manager, container=container,
-                         layer_starting_height=layer_starting_height,
+                         starting_height=starting_height,
                          wrap_to_height=wrap_to_height,
                          parent_element=parent_element,
                          anchors=anchors,
@@ -227,7 +231,7 @@ class UIImageTextBox():
                  manager=None,
                  line_spacing=1.25,
                  wrap_to_height: bool = False,
-                 layer_starting_height: int = 1,
+                 starting_height: int = 1,
                  container=None,
                  object_id=None,
                  anchors=None,
@@ -237,22 +241,21 @@ class UIImageTextBox():
                  text_kwargs=None,
                  allow_split_dashes: bool = True) -> None:
         # FIXME: layer_starting_height throws a TypeError, not sure if this is a valid argument.
-        try:
-            self.image = pygame_gui.elements.UIImage(relative_rect,
-                                                     image,
-                                                     layer_starting_height=layer_starting_height,
-                                                     container=container,
-                                                     anchors=anchors,
-                                                     visible=visible)
-        except TypeError:
-            self.image = pygame_gui.elements.UIImage(relative_rect,
-                                                     image,
-                                                     container=container,
-                                                     anchors=anchors,
-                                                     visible=visible)
+        #self.image = pygame_gui.elements.UIImage(relative_rect,
+        #                                         image,
+        #                                         layer_starting_height=layer_starting_height,
+        #                                         container=container,
+        #                                         anchors=anchors,
+        #                                         visible=visible)
+        # FIXME: This doesn't work as intended.
+        self.image = pygame_gui.elements.UIImage(relative_rect,
+                                                 image,
+                                                 container=container,
+                                                 anchors=anchors,
+                                                 visible=visible)
             
         self.text_box = UITextBoxTweaked(html_text, relative_rect, object_id=object_id,
-                                         layer_starting_height=layer_starting_height,
+                                         starting_height=starting_height,
                                          container=container, anchors=anchors, visible=visible, text_kwargs=text_kwargs,
                                          allow_split_dashes=allow_split_dashes, wrap_to_height=wrap_to_height,
                                          line_spacing=line_spacing,
@@ -274,7 +277,6 @@ class UIImageTextBox():
     def set_image(self, new_image):
         self.image.set_image(new_image)
 
-
 class UIRelationStatusBar():
     """ Wraps together a status bar """
 
@@ -283,6 +285,7 @@ class UIRelationStatusBar():
                  percent_full=0,
                  positive_trait=True,
                  dark_mode=False,
+                 manager=None,
                  style="bars"):
 
         # Change the color of the bar depending on the value and if it's a negative or positive trait
@@ -298,7 +301,7 @@ class UIRelationStatusBar():
         if dark_mode:
             theme += "_dark"
 
-        self.status_bar = pygame_gui.elements.UIStatusBar(relative_rect, object_id=theme)
+        self.status_bar = pygame_gui.elements.UIStatusBar(relative_rect, object_id=theme, manager=manager)
         self.status_bar.percent_full = percent_full / 100
 
         # Now to make the overlay
@@ -314,7 +317,9 @@ class UIRelationStatusBar():
             else:
                 overlay_path += "relations_border_dots.png"
 
-        self.overlay = pygame_gui.elements.UIImage(relative_rect, image_cache.load_image(overlay_path).convert_alpha())
+        image = pygame.transform.scale(image_cache.load_image(overlay_path).convert_alpha(), (relative_rect[2], relative_rect[3]))
+
+        self.overlay = pygame_gui.elements.UIImage(relative_rect, image, manager=manager)
 
     def kill(self):
         self.status_bar.kill()
@@ -331,6 +336,7 @@ class IDImageButton(UIImageButton):
                  ids=None,
                  object_id=None,
                  container=None,
+                 manager=None,
                  layer_starting_height=1):
 
         if ids:
@@ -339,7 +345,7 @@ class IDImageButton(UIImageButton):
             self.ids = None
 
         super().__init__(relative_rect, text, object_id=object_id, container=container,
-                         starting_height=layer_starting_height)
+                         starting_height=layer_starting_height, manager=manager)
         # This button will auto-disable if no ids are entered.
         if not self.ids:
             self.disable()

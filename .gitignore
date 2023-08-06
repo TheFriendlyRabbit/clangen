@@ -94,6 +94,17 @@ saves\
 saves\clanlist.txt
 saves\settings.txt
 
+# Logs
+logs/
+
+# Temp
+~temp/
+~temp\
+
+# Saved Images
+saved_images/
+saved_images\
+
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
 #   intended to run in multiple environments; otherwise, check them in:
@@ -151,9 +162,18 @@ cython_debug/
 
 /saves/**
 *.png~
-.vscode/settings.json
 scripts/__pycache__/**
 /__pycache__/
-.vscode/**
+.idea/
 
-.vscode/launch.json
+
+saves/currentclan.txt
+
+tests/testSaves
+cache/
+
+# Update system
+
+download.tmp
+version.ini
+*.xml

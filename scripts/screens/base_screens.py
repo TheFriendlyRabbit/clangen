@@ -1,12 +1,14 @@
-from scripts.utility import update_sprite
+import pygame
+
+from scripts.utility import update_sprite, scale, scale_dimentions
 from scripts.cat.cats import Cat
-from scripts.game_structure.game_essentials import *
-from scripts.clan import map_available
-# from scripts.game_structure.text import *
-import scripts.game_structure.image_cache as image_cache
+from scripts.clan import Clan
+from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
+from scripts.game_structure import image_cache
 from scripts.game_structure.image_button import UIImageButton
 import pygame_gui
-
+from scripts.game_structure.windows import SaveCheck, EventLoading
+from scripts.game_structure.propagating_thread import PropagatingThread
 
 class Screens():
     game_screen = screen
@@ -17,56 +19,71 @@ class Screens():
     # menu buttons are used very often, so they are generated here.
     menu_buttons = {
         "events_screen": UIImageButton(
-            pygame.Rect((246, 60), (82, 30)),
+            scale(pygame.Rect((492, 120), (164, 60))),
             "",
             visible=False,
+            manager=MANAGER,
             object_id="#events_menu_button"
         ),
-        "clan_screen": UIImageButton(
-            pygame.Rect((328, 60), (58, 30)),
+        "camp_screen": UIImageButton(
+            scale(pygame.Rect((656, 120), (116, 60))),
             "",
             visible=False,
-            object_id="#clan_menu_button"),
-        "starclan_screen": UIImageButton(
-            pygame.Rect((386, 60), (88, 30)),
+            manager=MANAGER,
+            object_id="#camp_menu_button"),
+        "catlist_screen": UIImageButton(
+            scale(pygame.Rect((772, 120), (176, 60))),
             "",
             visible=False,
-            object_id="#starclan_menu_button"),
+            object_id="#catlist_menu_button"),
         "patrol_screen": UIImageButton(
-            pygame.Rect((474, 60), (80, 30)),
+            scale(pygame.Rect((948, 120), (160, 60))),
             "",
             visible=False,
+            manager=MANAGER,
             object_id="#patrol_menu_button"),
         "main_menu": UIImageButton(
-            pygame.Rect((25, 25), (153, 30)),
+            scale(pygame.Rect((50, 50), (306, 60))),
             "",
             visible=False,
+            manager=MANAGER,
             object_id="#main_menu_button"),
-        "list_screen": UIImageButton(
-            pygame.Rect((676, 60), (99, 30)),
-            "",
-            visible=False,
-            object_id="#list_button"),
         "allegiances": UIImageButton(
-            pygame.Rect((657, 25), (118, 30)),
+            scale(pygame.Rect((1314, 50), (236, 60))),
             "",
             visible=False,
+            manager=MANAGER,
             object_id="#allegiances_button"),
         "stats": UIImageButton(
-            pygame.Rect((25, 60), (81, 30)),
+            scale(pygame.Rect((1388, 120), (162, 60))),
             "",
             visible=False,
+            manager=MANAGER,
             object_id="#stats_button"),
         "name_background": pygame_gui.elements.UIImage(
-            pygame.Rect((310, 25), (180, 35)),
-            image_cache.load_image(
-                "resources/images/clan_name_bg.png").convert_alpha(),
-            visible=False),
+            scale(pygame.Rect((610, 50), (380, 70))),
+            pygame.transform.scale(
+                image_cache.load_image(
+                    "resources/images/clan_name_bg.png").convert_alpha(),
+                (380, 70)),
+            visible=False,
+            manager=MANAGER),
+        "moons_n_seasons": pygame_gui.elements.UIScrollingContainer(
+            scale(pygame.Rect((50, 120), (306, 150))),
+            visible = False,
+            manager=MANAGER),
+        "moons_n_seasons_arrow": UIImageButton(
+            scale(pygame.Rect((349, 161), (44, 68))),
+            "",
+            visible = False,
+            manager=MANAGER,
+            object_id="#arrow_mns_button"),
         "heading": pygame_gui.elements.UITextBox(
             "",
-            pygame.Rect((310, 27), (180, 35)),
+            scale(pygame.Rect((620, 54), (360, 70))),
             visible=False,
-            object_id="#menu_header_text_box")
+            manager=MANAGER,
+            object_id="#text_box_34_horizcenter_light")
     }
 
     def change_screen(self, new_screen):
@@ -77,18 +94,77 @@ class Screens():
         game.last_screen_forupdate = self.name
 
         # This keeps track of the last list-like screen for the back button on cat profiles
-        if self.name in ['clan screen', 'list screen', 'starclan screen', 'dark forest screen', 'events screen',
+        if self.name in ['camp screen', 'list screen', 'starclan screen', 'dark forest screen', 'events screen',
                          'med den screen']:
             game.last_screen_forProfile = self.name
 
         game.switches['cur_screen'] = new_screen
         game.switch_screens = True
+        game.rpc.update_rpc.set()
+        
 
     def __init__(self, name=None):
         self.name = name
         if name is not None:
             game.all_screens[name] = self
+        
+        # Place to store the loading window
+        self.loading_window = None
+        self.work_done = False
+        
 
+    def loading_screen_start_work(self,
+                                  target) -> PropagatingThread:
+        """Creates and starts the work_thread. 
+            Returns the started thread. """
+
+        work_thread = PropagatingThread(target=self._work_target, args=(target,), daemon=True)
+        game.switches['window_open'] = True
+        work_thread.start()
+        
+        return work_thread
+        
+    
+    def _work_target(self, target):
+        
+        try:
+            target()
+        except:
+            raise
+        finally:
+            self.work_done = True
+
+    def loading_screen_on_use(self, 
+                              work_thread:PropagatingThread,
+                              final_actions,
+                              loading_screen_pos:tuple=None, 
+                              delay:float=0.7) -> bool:
+        """Handles all actions that must be run every frame for the loading window to work. 
+        Also handles creating and killing the loading window. 
+         """
+        
+        # Handled the loading animation, both creating and killing it. 
+        if not self.loading_window and work_thread.is_alive() \
+                and work_thread.get_time_from_start() > delay:
+            self.loading_window = EventLoading(loading_screen_pos)
+        elif self.loading_window and not work_thread.is_alive():
+            self.loading_window.kill()
+            self.loading_window = None
+        
+        # Handles displaying the events once timeskip is done. 
+        if self.work_done:
+            # By this time, the thread should have already finished.
+            # This line allows exceptions in the work thread to be 
+            # passed to the main thread, so issues in the work thread are not
+            # silent failures. 
+            work_thread.join()
+            
+            final_actions()
+            game.switches['window_open'] = False
+            self.work_done = False
+            
+        return self.work_done
+        
     def fill(self, tuple):
         pygame.Surface.fill(color=tuple)
 
@@ -122,8 +198,13 @@ class Screens():
 
     def show_menu_buttons(self):
         """This shows all menu buttons, and makes them interact-able. """
+        # Check if the setting for moons and seasons UI is on so stats button can be moved
+        self.update_mns()
         for button in self.menu_buttons:
-            self.menu_buttons[button].show()
+            if button in ['moons_n_seasons', 'moons_n_seasons_arrow']:
+                continue
+            else:
+                self.menu_buttons[button].show()
 
     # Enables all menu buttons but the ones passed in.
     # Sloppy, but works. Consider making it nicer.
@@ -139,33 +220,156 @@ class Screens():
     def menu_button_pressed(self, event):
         """This is a short-up to deal with menu button presses.
             This will fail if event.type != pygame_gui.UI_BUTTON_START_PRESS"""
-        if event.ui_element == self.menu_buttons["events_screen"]:
+        if game.switches['window_open']:
+            pass
+        elif event.ui_element == self.menu_buttons["events_screen"]:
             self.change_screen('events screen')
-        elif event.ui_element == self.menu_buttons["clan_screen"]:
-            self.change_screen('clan screen')
-        elif event.ui_element == self.menu_buttons["starclan_screen"]:
-            self.change_screen('starclan screen')
+        elif event.ui_element == self.menu_buttons["camp_screen"]:
+            self.change_screen('camp screen')
+        elif event.ui_element == self.menu_buttons["catlist_screen"]:
+            self.change_screen('list screen')
         elif event.ui_element == self.menu_buttons["patrol_screen"]:
             self.change_screen('patrol screen')
         elif event.ui_element == self.menu_buttons["main_menu"]:
-            # save on return to menu
-            if game.clan is not None:
-                game.save_cats()
-                game.clan.save_clan()
-                game.clan.save_pregnancy(game.clan)
-                # if map_available:
-                #    save_map(game.map_info, game.clan.name)
-            self.change_screen('start screen')
-        elif event.ui_element == self.menu_buttons["list_screen"]:
-            self.change_screen('list screen')
+            SaveCheck(game.switches['cur_screen'], True, self.menu_buttons["main_menu"])
         elif event.ui_element == self.menu_buttons["allegiances"]:
             self.change_screen('allegiances screen')
         elif event.ui_element == self.menu_buttons["stats"]:
             self.change_screen('stats screen')
+        elif event.ui_element == self.menu_buttons["moons_n_seasons_arrow"]:
+            if game.settings['mns open']:
+                game.settings['mns open'] = False
+            else:
+                game.settings['mns open'] = True
+            self.update_mns()
 
     def update_heading_text(self, text):
         """Updates the menu heading text"""
-        self.menu_buttons['heading'].set_text(text)
+        self.menu_buttons['heading'].set_text(text)        
+    
+    # Update if moons and seasons UI is on
+    def update_mns(self):
+        if game.settings["moons and seasons"]:
+            self.menu_buttons['moons_n_seasons_arrow'].kill()
+            self.menu_buttons['moons_n_seasons'].kill()
+            if game.settings['mns open']:
+                if self.name == 'events screen':
+                    self.mns_close()
+                else:
+                    self.mns_open()
+            else:
+                self.mns_close()
+        else:
+            self.menu_buttons['moons_n_seasons'].hide()
+            self.menu_buttons['moons_n_seasons_arrow'].hide()
+    
+    # open moons and seasons UI (AKA wide version)    
+    def mns_open(self):
+        self.menu_buttons['moons_n_seasons_arrow'] = UIImageButton(
+            scale(pygame.Rect((349, 161), (44, 68))),
+            "",
+            manager=MANAGER,
+            object_id="#arrow_mns_button")
+        self.menu_buttons['moons_n_seasons'] = pygame_gui.elements.UIScrollingContainer(
+            scale(pygame.Rect((50, 120), (306, 150))),
+            manager=MANAGER)
+        self.moons_n_seasons_bg = UIImageButton(
+            scale(pygame.Rect((0, 0), (306, 150))),
+            "",
+            manager=MANAGER,
+            object_id="#mns_bg",
+            container = self.menu_buttons['moons_n_seasons'])
+        
+        if game.clan.age == 1:
+            moons_text = "moon"
+        else:
+            moons_text = "moons"
+            
+        self.moons_n_seasons_moon = UIImageButton(
+            scale(pygame.Rect((28, 21), (48, 48))),
+            "",
+            manager=MANAGER,
+            object_id="#mns_image_moon",
+            container = self.menu_buttons['moons_n_seasons'])
+        self.moons_n_seasons_text = pygame_gui.elements.UITextBox(
+            f'{game.clan.age} {moons_text}',
+            scale(pygame.Rect((85, 13), (200, 60))),
+            container = self.menu_buttons['moons_n_seasons'],
+            manager=MANAGER,
+            object_id="#text_box_30_horizleft_light")
+            
+        if game.clan.current_season == 'Newleaf':
+            season_image_id = '#mns_image_newleaf'
+        elif game.clan.current_season == 'Greenleaf':
+            season_image_id = '#mns_image_greenleaf'
+        elif game.clan.current_season == 'Leaf-bare':
+            season_image_id = '#mns_image_leafbare'
+        elif game.clan.current_season == 'Leaf-fall':
+            season_image_id = '#mns_image_leaffall'
+        
+        self.moons_n_seasons_season = UIImageButton(
+            scale(pygame.Rect((28, 82), (48, 48))),
+            "",
+            manager=MANAGER,
+            object_id= season_image_id,
+            container = self.menu_buttons['moons_n_seasons'])
+        self.moons_n_seasons_text2 = pygame_gui.elements.UITextBox(
+            f'{game.clan.current_season}',
+            scale(pygame.Rect((85, 72), (200, 60))),
+            container = self.menu_buttons['moons_n_seasons'],
+            manager=MANAGER,
+            object_id="#text_box_30_horizleft_dark")
+    
+    # close moons and seasons UI (AKA narrow version)
+    def mns_close(self):
+        self.menu_buttons['moons_n_seasons_arrow'] = UIImageButton(
+            scale(pygame.Rect((143, 161), (44, 68))),
+            "",
+            object_id="#arrow_mns_closed_button")
+        if self.name == 'events screen':
+            self.menu_buttons['moons_n_seasons_arrow'].kill()
+        
+        self.menu_buttons['moons_n_seasons'] = pygame_gui.elements.UIScrollingContainer(
+            scale(pygame.Rect((50, 120), (100, 150))),
+            manager=MANAGER)
+        self.moons_n_seasons_bg = UIImageButton(
+            scale(pygame.Rect((0, 0), (100, 150))),
+            "",
+            manager=MANAGER,
+            object_id="#mns_bg_closed",
+            container = self.menu_buttons['moons_n_seasons'])
+            
+        if game.clan.age == 1:
+            moons_text = "moon"
+        else:
+            moons_text = "moons"
+        
+        self.moons_n_seasons_moon = UIImageButton(
+            scale(pygame.Rect((28, 21), (48, 48))),
+            "",
+            manager=MANAGER,
+            object_id="#mns_image_moon",
+            container = self.menu_buttons['moons_n_seasons'],
+            starting_height=2,
+            tool_tip_text= f'{game.clan.age} {moons_text}')
+            
+        if game.clan.current_season == 'Newleaf':
+            season_image_id = '#mns_image_newleaf'
+        elif game.clan.current_season == 'Greenleaf':
+            season_image_id = '#mns_image_greenleaf'
+        elif game.clan.current_season == 'Leaf-bare':
+            season_image_id = '#mns_image_leafbare'
+        elif game.clan.current_season == 'Leaf-fall':
+            season_image_id = '#mns_image_leaffall'
+        
+        self.moons_n_seasons_season = UIImageButton(
+            scale(pygame.Rect((28, 82), (48, 48))),
+            "",
+            manager=MANAGER,
+            object_id= season_image_id,
+            container = self.menu_buttons['moons_n_seasons'],
+            starting_height=2,
+            tool_tip_text= f'{game.clan.current_season}')
 
 
 # CAT PROFILES
@@ -175,5 +379,3 @@ def cat_profiles():
 
     for x in Cat.all_cats:
         update_sprite(Cat.all_cats[x])
-
-
