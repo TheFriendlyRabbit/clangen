@@ -153,7 +153,7 @@ class Name():
         else:
             if game.langman:
                 self.last_lang = game.langman.current_lang
-                if self.status not in ["deputy", "warrior", "medicine cat", "elder", "mediator"] and not self.specsuffix_hidden:
+                if self.status not in ["deputy", "warrior", "medicine cat", "elder", "mediator", "mediator apprentice"] and not self.specsuffix_hidden:
                     if self.status in EQUIAVLENCIES:
                         return game.langman.fetch_localized_name(self.prefix, self.suffix, EQUIAVLENCIES[self.status])
                     return game.langman.fetch_localized_name(self.prefix, self.suffix, self.status)

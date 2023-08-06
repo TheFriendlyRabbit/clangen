@@ -6,7 +6,7 @@ TODO: Docs
 
 """  # pylint: enable=line-too-long
 
-from random import choice, choices, randint, random, sample
+from random import choice, choices, randint, random, sample, getrandbits
 import re
 import pygame
 
@@ -40,26 +40,17 @@ def get_alive_clan_queens(cat_cls):
     """
     queens = []
     for inter_cat in cat_cls.all_cats.values():
-        if inter_cat.dead or inter_cat.outside:
-            continue
-        if str(inter_cat.status) != 'kitten' or inter_cat.parent1 is None:
-            continue
-
-        
-        alive_parents = [cat_cls.fetch_cat(i) for i in inter_cat.get_parents() if 
-                   isinstance(cat_cls.fetch_cat(i), cat_cls) and not 
-                   (cat_cls.fetch_cat(i).dead or cat_cls.fetch_cat(i).outside)]
-
-        if len(alive_parents) == 1:
-            queens.append(alive_parents[0])
-        elif len(alive_parents) == 2:
-            if alive_parents[0].gender == "female":
-                queens.append(alive_parents[0])
-            elif alive_parents[1].gender == "female":
-                queens.append(alive_parents[1])
-            else:
-                queens.append(alive_parents[0])
-                
+        if inter_cat.status in ['kitten', 'newborn'] and inter_cat.parent1 and not (inter_cat.dead or inter_cat.outside):
+            parents = [cat_cls.fetch_cat(i) for i in inter_cat.get_parents()]
+            filter(None, parents)
+            if parents:
+                parents = [par for par in parents if not par.dead or par.outside]
+                if parents:
+                    try:
+                        gender_idx = [par.gender for par in parents].index("female")
+                        queens.append(parents[gender_idx])
+                    except:
+                        queens.append(parents[0])
     return queens
 
 
@@ -79,8 +70,7 @@ def get_med_cats(Cat, working=True):
 
     set working to False if you want all meds and med apps regardless of their work status
     """
-    all_cats = Cat.all_cats.values()
-    possible_med_cats = [i for i in all_cats if
+    possible_med_cats = [i for i in Cat.all_cats.values() if
                          i.status in ['medicine cat apprentice', 'medicine cat'] and not (i.dead or i.outside)]
 
     if working:
@@ -93,69 +83,34 @@ def get_med_cats(Cat, working=True):
 
 
 def get_living_cat_count(Cat):
-    """
-    TODO: DOCS
-    """
-    count = 0
-    for the_cat in Cat.all_cats.values():
-        if the_cat.dead:
-            continue
-        count += 1
-    return count
+    """Counts all living cats, regardless of clan status."""
+    return len([cat for cat in Cat.all_cats.values() if not cat.dead])
 
 
 def get_living_clan_cat_count(Cat):
-    """
-    TODO: DOCS
-    """
-    count = 0
-    for the_cat in Cat.all_cats.values():
-        if the_cat.dead or the_cat.exiled or the_cat.outside:
-            continue
-        count += 1
-    return count
+    """Counts only clan cats."""
+    return len([cat for cat in Cat.all_cats.values() if not (cat.dead or cat.exiled or cat.outside)])
 
+
+def build_relationships(link_cats, src_cat):
+    """Generic relationship tree constructor for both the age grouping and mate-finding methods"""
+    for inter_cat in link_cats:
+        if inter_cat.ID not in src_cat.relationships:
+            src_cat.create_one_relationship(inter_cat)
+            if src_cat.ID not in inter_cat.relationships:
+                inter_cat.create_one_relationship(src_cat)
 
 def get_cats_same_age(cat, Relationship, range=10):  # pylint: disable=redefined-builtin
     """Look for all cats in the Clan and returns a list of cats, which are in the same age range as the given cat."""
-    cats = []
-    for inter_cat in cat.all_cats.values():
-        if inter_cat.dead or inter_cat.outside or inter_cat.exiled:
-            continue
-        if inter_cat.ID == cat.ID:
-            continue
-
-        if inter_cat.ID not in cat.relationships:
-            cat.create_one_relationship(inter_cat)
-            if cat.ID not in inter_cat.relationships:
-                inter_cat.create_one_relationship(cat)
-            continue
-
-        if inter_cat.moons <= cat.moons + range and inter_cat.moons <= cat.moons - range:
-            cats.append(inter_cat)
-
+    cats = [icat for icat in cat.all_cats.values() if not (icat.dead or icat.outside or icat.exiled) and icat.ID != cat.ID and abs(icat.moons - cat.moons) <= range]
+    build_relationships(cats, cat)
     return cats
-
 
 def get_free_possible_mates(cat, Relationship):
     """Returns a list of available cats, which are possible mates for the given cat."""
-    cats = []
-    for inter_cat in cat.all_cats.values():
-        if inter_cat.dead or inter_cat.outside or inter_cat.exiled:
-            continue
-        if inter_cat.ID == cat.ID:
-            continue
-
-        if inter_cat.ID not in cat.relationships:
-            cat.create_one_relationship(inter_cat)
-            if cat.ID not in inter_cat.relationships:
-                inter_cat.create_one_relationship(cat)
-            continue
-
-        if inter_cat.is_potential_mate(cat, for_love_interest=True) and cat.is_potential_mate(inter_cat,
-                                                                                              for_love_interest=True):
-            cats.append(inter_cat)
-    return cats
+    cats = [icat for icat in cat.all_cats.values() if not (icat.dead or icat.outside or icat.exiled) and icat.ID != cat.ID]
+    build_relationships(cats, cat)
+    return [icat for icat in cats if icat.is_potential_mate(cat, for_love_interest=True) and cat.is_potential_mate(icat, for_love_interest=True)]
 
 
 # ---------------------------------------------------------------------------- #
@@ -179,8 +134,7 @@ def get_current_season():
     }
     index = game.clan.age % 12 + modifiers[game.clan.starting_season]
 
-    if index > 11:
-        index = index - 12
+    if index > 11: index = index - 12
 
     game.clan.current_season = game.clan.seasons[index]
 
@@ -188,29 +142,18 @@ def get_current_season():
 
 def change_clan_reputation(difference):
     """
-    will change the Clan's reputation with outsider cats according to the difference parameter.
+    Changes the Clan's reputation with outsider cats according to the difference parameter.
     """
     game.clan.reputation += difference
 
 
 def change_clan_relations(other_clan, difference):
     """
-    will change the Clan's relation with other clans according to the difference parameter.
+    Changes the Clan's relation with other clans according to the difference parameter.
     """
-    # grab the clan that has been indicated
-    other_clan = other_clan
-    # grab the relation value for that clan
-    y = game.clan.all_clans.index(other_clan)
-    clan_relations = int(game.clan.all_clans[y].relations)
-    # change the value
-    clan_relations += difference
-    # making sure it doesn't exceed the bounds
-    if clan_relations > 30:
-        clan_relations = 30
-    elif clan_relations < 0:
-        clan_relations = 0
-    # setting it in the Clan save
-    game.clan.all_clans[y].relations = clan_relations
+    target_idx = game.clan.all_clans.index(other_clan)
+    # clamp modified value within 0-30 legal value range
+    game.clan.all_clans[target_idx].relations = min(max(game.clan.all_clans[target_idx].relations + difference, 0), 30)
 
 def create_new_cat(Cat,
                    Relationship,
@@ -246,101 +189,78 @@ def create_new_cat(Cat,
     :param alive: set this as False to generate the cat as already dead - default: True (alive)
     :param outside: set this as True to generate the cat as an outsider instead of as part of the Clan - default: False (Clan cat)
     """
+    
+    AGE_RANGES = {\
+                "kit": [0, 5],\
+                "apprentice": [6, 11],\
+                "warrior": [23, 120],\
+                "medicine cat": [23, 140],\
+                "default": [6, 120]
+                }
+    
+    AGE_CUTOFFS = [(0, "newborn"), (6, "kitten"),  (11, "apprentice"), (12, "warrior")]
+                
     accessory = None
     if isinstance(backstory, list):
         backstory = choice(backstory)
 
-    if backstory in (
-            BACKSTORIES["backstory_categories"]["former_clancat_backstories"] or BACKSTORIES["backstory_categories"]["otherclan_categories"]):
-        other_clan = True
+    other_clan = backstory in (BACKSTORIES["backstory_categories"]["former_clancat_backstories"] or BACKSTORIES["backstory_categories"]["otherclan_categories"])
 
     created_cats = []
 
-    if not litter:
-        number_of_cats = 1
-    else:
-        number_of_cats = choices([2, 3, 4, 5], [5, 4, 1, 1], k=1)
-        number_of_cats = number_of_cats[0]
-    # setting age
-    if not age and age != 0:
+    number_of_cats = choices([2, 3, 4, 5], [5, 4, 1, 1], k=1)[0] if litter else 1
+    # Use ranges to randomize age based on status
+    if not age:
         if litter or kit:
-            age = randint(0, 5)
-        elif status == 'apprentice':
-            age = randint(6, 11)
-        elif status == 'warrior':
-            age = randint(23, 120)
-        elif status == 'medicine cat':
-            age = randint(23, 140)
+            age = randint(AGE_RANGES["kit"][0], AGE_RANGES["kit"][1])
+        elif status in AGE_RANGES:
+            age = randint(AGE_RANGES[status][0], AGE_RANGES[status][1])
         else:
-            age = randint(6, 120)
-    else:
-        age = age
-    # setting status
+            age = randint(AGE_RANGES["default"][0], AGE_RANGES["default"][1])
+    # Sets status based on age, if status was not previously defined
     if not status:
-        if age == 0:
-            status = "newborn"
-        elif age < 6:
-            status = "kitten"
-        elif 6 <= age <= 11:
-            status = "apprentice"
-        elif age >= 12:
-            status = "warrior"
+        for step in AGE_CUTOFFS:
+            if age >= step[0]:
+                status = step[1]
 
-    # cat creation and naming time
+    # Define names and create Cat objects
     for index in range(number_of_cats):
-        # setting gender
         if not gender:
-            _gender = choice(['female', 'male'])
-        else:
-            _gender = gender
+            gender = choice(['female', 'male'])
+            
+        new_pref = None
+        new_suf = None
 
-        # other Clan cats, apps, and kittens (kittens and apps get indoctrinated lmao no old names for them)
-        if other_clan or kit or litter or age < 12:
-            new_cat = Cat(moons=age,
-                          status=status,
-                          gender=_gender,
-                          backstory=backstory)
-        else:
-            # grab starting names and accs for loners/kittypets
+        # Separate prefix/suffix handling is necessary for older loners/kittypets due to atypical name structure
+        if (not other_clan) or age > 12:
             game.langman.load_name_db()
             if kittypet:
-                name = names.query_category("lon_prb")
-                if choice([1, 2]) == 1:
+                name = names.query_category("lon_prb") # Kittypets are guaranteed a "human" name
+                if bool(getrandbits(1)):
                     accessory = choice(Pelt.collars)
-            elif loner and choice([1, 2]) == 1:  # try to give name from full loner name list
+            elif loner and bool(getrandbits(1)):  # 50% change to query loner name list
                 name = names.query_category("lon_prb") 
             else:
-                name = names.query_category("std_pre_prb")  # otherwise give name from prefix list (more nature-y names)
+                name = names.query_category("std_pre_prb")  # Otherwise query standard prefixes
             game.langman.close_name_db()
-
-            # now we make the cats
-            if new_name:  # these cats get new names
-                if choice([1, 2]) == 1:  # adding suffix to OG name
-                    spaces = name.count(" ")
-                    if spaces > 0:
-                        # make a list of the words within the name, then add the OG name back in the list
-                        words = name.split(" ")
-                        words.append(name)
-                        new_prefix = choice(words)  # pick new prefix from that list
-                        name = new_prefix
-                    new_cat = Cat(moons=age,
-                                  prefix=name,
-                                  status=status,
-                                  gender=_gender,
-                                  backstory=backstory)
-                else:  # completely new name
-                    new_cat = Cat(moons=age,
-                                  status=status,
-                                  gender=_gender,
-                                  backstory=backstory)
-            # these cats keep their old names
+            
+            # Suffix handling, if necessary
+            if new_name:
+                if bool(getrandbits(1)):  # 50% chance old name is kept in some fashion
+                    if name.count(" "):
+                        # Cats with a name that includes spaces may keep their full name as a prefix, or choose just one word from that name
+                        name = choice(name.split(" ").append(name))
+                    new_pref = name
             else:
-                new_cat = Cat(moons=age,
-                              prefix=name,
-                              suffix="",
-                              status=status,
-                              gender=_gender,
-                              backstory=backstory)
+                new_pref = name
+                new_suf = ""
+        
+        new_cat = Cat(moons=age,
+                      prefix=new_pref,
+                      suffix=new_suf,
+                      status=status,
+                      gender=gender,
+                      backstory=backstory)
 
         # give em a collar if they got one
         if accessory:
@@ -354,8 +274,7 @@ def create_new_cat(Cat,
         not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 
                        'LEFTBLIND', 'BRIGHTHEART', 'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
         for scar in new_cat.pelt.scars:
-            if scar in not_allowed:
-                new_cat.pelt.scars.remove(scar)
+            if scar in not_allowed: new_cat.pelt.scars.remove(scar)
 
         # chance to give the new cat a permanent condition, higher chance for found kits and litters
         if game.clan.game_mode != 'classic':
@@ -366,35 +285,28 @@ def create_new_cat(Cat,
             if not int(random() * chance):
                 possible_conditions = []
                 for condition in PERMANENT:
-                    if (kit or litter) and PERMANENT[condition]['congenital'] not in ['always', 'sometimes']:
-                        continue
-                    # next part ensures that a kit won't get a condition that takes too long to reveal
-                    age = new_cat.moons
-                    leeway = 5 - (PERMANENT[condition]['moons_until'] + 1)
-                    if age > leeway:
-                        continue
-                    possible_conditions.append(condition)
+                    if not (kit or litter) and PERMANENT[condition]['congenital'] in ['always', 'sometimes']:
+                        # next part ensures that a kit won't get a condition that takes too long to reveal
+                        age = new_cat.moons
+                        leeway = 5 - (PERMANENT[condition]['moons_until'] + 1)
+                        if age < leeway:
+                            possible_conditions.append(condition)
                     
                 if possible_conditions:
                     chosen_condition = choice(possible_conditions)
-                    born_with = False
-                    if PERMANENT[chosen_condition]['congenital'] in ['always', 'sometimes']:
-                        born_with = True
-
-                    new_cat.get_permanent_condition(chosen_condition, born_with)
+                    new_cat.get_permanent_condition(chosen_condition, PERMANENT[chosen_condition]['congenital'] in ['always', 'sometimes'])
                     if new_cat.permanent_condition[chosen_condition]["moons_until"] == 0:
                         new_cat.permanent_condition[chosen_condition]["moons_until"] = -2
 
+                    #TODO: this should be moved to a generic lookup table
                     # assign scars
                     if chosen_condition in ['lost a leg', 'born without a leg']:
                         new_cat.pelt.scars.append('NOPAW')
                     elif chosen_condition in ['lost their tail', 'born without a tail']:
                         new_cat.pelt.scars.append("NOTAIL")
 
-        if outside:
-            new_cat.outside = True
-        if not alive:
-            new_cat.dead = True
+        new_cat.outside = outside
+        new_cat.dead = not alive
 
         # newbie thought
         new_cat.thought = thought
@@ -488,6 +400,15 @@ def get_highest_romantic_relation(relationships, exclude_mate=False, potential_m
 
     return current_max_relationship
 
+RELATIONS_LOOKUP = {\
+                    "romantic": "romantic_love",\
+                    "platonic": "platonic_like",\
+                    "dislike": "dislike",\
+                    "admiration": "admiration",\
+                    "comfortable": "comfortable",\
+                    "jealousy": "jealousy",\
+                    "trust": "trust"\
+                   }
 
 def check_relationship_value(cat_from, cat_to, rel_value=None):
     """
@@ -502,20 +423,7 @@ def check_relationship_value(cat_from, cat_to, rel_value=None):
     else:
         relationship = cat_from.create_one_relationship(cat_to)
 
-    if rel_value == "romantic":
-        return relationship.romantic_love
-    elif rel_value == "platonic":
-        return relationship.platonic_like
-    elif rel_value == "dislike":
-        return relationship.dislike
-    elif rel_value == "admiration":
-        return relationship.admiration
-    elif rel_value == "comfortable":
-        return relationship.comfortable
-    elif rel_value == "jealousy":
-        return relationship.jealousy
-    elif rel_value == "trust":
-        return relationship.trust
+    return getattr(relationship, RELATIONS_LOOKUP[rel_value])
 
 
 def get_personality_compatibility(cat1, cat2):
