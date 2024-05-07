@@ -229,15 +229,21 @@ class ProfileScreen(Screens):
                 pass
 
             elif event.key == pygame.K_LEFT:
-                self.clear_profile()
-                game.switches['cat'] = self.previous_cat
-                self.build_profile()
-                self.update_disabled_buttons_and_text()
+                if isinstance(Cat.fetch_cat(self.previous_cat), Cat):
+                    self.clear_profile()
+                    game.switches['cat'] = self.previous_cat
+                    self.build_profile()
+                    self.update_disabled_buttons_and_text()
+                else:
+                    print("invalid previous cat", self.previous_cat)
             elif event.key == pygame.K_RIGHT:
-                self.clear_profile()
-                game.switches['cat'] = self.next_cat
-                self.build_profile()
-                self.update_disabled_buttons_and_text()
+                if isinstance(Cat.fetch_cat(self.next_cat), Cat):
+                    self.clear_profile()
+                    game.switches['cat'] = self.next_cat
+                    self.build_profile()
+                    self.update_disabled_buttons_and_text()
+                else:
+                    print("invalid next cat", self.previous_cat)
             
             elif event.key == pygame.K_ESCAPE:
                 self.close_current_tab()
@@ -330,6 +336,11 @@ class ProfileScreen(Screens):
                 self.clear_profile()
                 self.build_profile()
                 self.update_disabled_buttons_and_text()
+            elif event.ui_element == self.destroy_accessory_button:
+                self.the_cat.pelt.accessory = None
+                self.clear_profile()
+                self.build_profile()
+                self.update_disabled_buttons_and_text()
         # History Tab
         elif self.open_tab == 'history':
             if event.ui_element == self.sub_tab_1:
@@ -357,7 +368,7 @@ class ProfileScreen(Screens):
                 self.fav_tab.show()
                 self.not_fav_tab.hide()
             elif event.ui_element == self.save_text:
-                self.user_notes = sub(r"[^A-Za-z0-9<->/.()*'&#!?,| ]+", "", self.notes_entry.get_text())
+                self.user_notes = sub(r"[^A-Za-z0-9<->/.()*'&#!?,| _+=@~:;[]{}%$^`]+", "", self.notes_entry.get_text())
                 self.save_user_notes()
                 self.editing_notes = False
                 self.update_disabled_buttons_and_text()
@@ -558,7 +569,7 @@ class ProfileScreen(Screens):
         self.profile_elements["favourite_button"] = UIImageButton(scale(pygame.Rect
                                                                         ((x_pos, 287), (56, 56))),
                                                                   "",
-                                                                  object_id="#fav_cat",
+                                                                  object_id="#fav_star",
                                                                   manager=MANAGER,
                                                                   tool_tip_text='Remove favorite status',
                                                                   starting_height=2)
@@ -567,7 +578,7 @@ class ProfileScreen(Screens):
                                                                             ((x_pos, 287),
                                                                              (56, 56))),
                                                                       "",
-                                                                      object_id="#not_fav_cat",
+                                                                      object_id="#not_fav_star",
                                                                       manager=MANAGER,
                                                                       tool_tip_text='Mark as favorite',
                                                                       starting_height=2)
@@ -629,7 +640,10 @@ class ProfileScreen(Screens):
         if is_instructor:
             current_cat_found = 1
 
-        for check_cat in Cat.all_cats_list:
+        if len(Cat.ordered_cat_list) == 0:
+            Cat.ordered_cat_list = Cat.all_cats_list
+
+        for check_cat in Cat.ordered_cat_list:
             if check_cat.ID == self.the_cat.ID:
                 current_cat_found = 1
             else:
@@ -876,13 +890,18 @@ class ProfileScreen(Screens):
 
         # NUTRITION INFO (if the game is in the correct mode)
         if game.clan.game_mode in ["expanded", "cruel season"] and the_cat.is_alive() and FRESHKILL_ACTIVE:
-            nutr = None
-            if the_cat.ID in game.clan.freshkill_pile.nutrition_info:
-                nutr = game.clan.freshkill_pile.nutrition_info[the_cat.ID]
-            if nutr:
-                output += f"nutrition status: {round(nutr.percentage, 1)}%\n"
-            else:
-                output += f"nutrition status: 100%\n"
+            # Check to only show nutrition for clan cats
+            if str(the_cat.status) not in ["loner", "kittypet", "rogue", "former Clancat", "exiled"]:
+                nutr = None
+                if the_cat.ID in game.clan.freshkill_pile.nutrition_info:
+                    nutr = game.clan.freshkill_pile.nutrition_info[the_cat.ID]
+                if not nutr:
+                    game.clan.freshkill_pile.add_cat_to_nutrition(the_cat)
+                    nutr = game.clan.freshkill_pile.nutrition_info[the_cat.ID]
+                output += "nutrition: " + nutr.nutrition_text 
+                if game.clan.clan_settings['showxp']:
+                    output += ' (' + str(int(nutr.percentage)) + ')'
+                output += "\n"
 
         if the_cat.is_disabled():
             for condition in the_cat.permanent_condition:
@@ -1444,7 +1463,7 @@ class ProfileScreen(Screens):
                     if not moons:
                         name_list.append(name)
                     else:
-                        name_list.append(name + f" (Moon {', '.join(victim_names[name])})")
+                        name_list.append(f"{name} (Moon {victim_names[name][0]})")
 
                 if len(name_list) == 1:
                     victim_text = f"{self.the_cat.name} murdered {name_list[0]}."
@@ -1737,6 +1756,13 @@ class ProfileScreen(Screens):
                 tool_tip_text='This will open a confirmation window and allow you to input a death reason',
                 starting_height=2, manager=MANAGER
             )
+            self.destroy_accessory_button = UIImageButton(
+                scale(pygame.Rect((1156, 1044), (344, 72))),
+                "",
+                object_id="#destroy_accessory_button",
+                tool_tip_text="This will permanently remove this cat's current accessory",
+                starting_height=2, manager=MANAGER
+            )
 
             # These are a placeholders, to be killed and recreated in self.update_disabled_buttons_and_text().
             #   This it due to the image switch depending on the cat's status, and the location switch the close button
@@ -1857,6 +1883,11 @@ class ProfileScreen(Screens):
                 self.kill_cat_button.enable()
             else:
                 self.kill_cat_button.disable()
+
+            if self.the_cat.pelt.accessory:
+                self.destroy_accessory_button.enable()
+            else:
+                self.destroy_accessory_button.disable()
         # History Tab:
         elif self.open_tab == 'history':
             # show/hide fav tab star
@@ -1980,6 +2011,7 @@ class ProfileScreen(Screens):
         elif self.open_tab == 'dangerous':
             self.kill_cat_button.kill()
             self.exile_cat_button.kill()
+            self.destroy_accessory_button.kill()
         elif self.open_tab == 'history':
             self.backstory_background.kill()
             self.sub_tab_1.kill()

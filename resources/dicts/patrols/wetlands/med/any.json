@@ -102,7 +102,7 @@
                 ]
             },
             {
-                "text": "As p_l is explaining why and where the herbs are growing app1 lets out a shout. To p_l's surprise they have found a previously unknown patch of a uncommon herb. Stunned and filled with pride that they found and recognized the herb, p_l promises them the first pick of fresh-kill.",
+                "text": "As p_l is explaining why and where the herbs are growing app1 lets out a shout. To p_l's surprise they have found a previously unknown patch of an uncommon herb. Stunned and filled with pride that they found and recognized the herb, p_l promises them the first pick of fresh-kill.",
                 "exp": 10,
                 "weight": 5,
                 "relationships": [
@@ -430,6 +430,7 @@
                 "text": "It takes them all day, but eventually, finally, p_l spots the speckled leaves they've been looking for, so crucial to replenishing the Clan's stores after the long leaf-bare. For just a second, they feel the weight of their responsibilities lift, the strength of that relief catching them off guard.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["lungwort"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -444,7 +445,7 @@
                 "text": "Not only is the lungwort intact and growing nicely, but there's also a nice patch of plantain growing just nearby. p_l loads up their mostly-obliging escort and carries the extensive harvest home, tail waving jovially with their good mood.",
                 "exp": 20,
                 "weight": 5,
-                "herbs": ["many_herbs"],
+                "herbs": ["many_herbs", "lungwort", "plantain"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -459,6 +460,7 @@
                 "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders, the medicine cat visiting each likely nook and cranny in a carefully planned search pattern until finally those telltale speckled leaves are found.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["many_herbs", "lungwort"],
                 "stat_skill": ["SENSE,2", "CLEVER,3"],
                 "relationships": [
                     {
@@ -474,6 +476,7 @@
                 "text": "Night falls, and still s_c insists they keep going - they just can't let c_n go without. Exhausted but determined, the medicine cat persists patiently until they find those precious speckled leaves.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["many_herbs", "lungwort"],
                 "stat_trait": ["patient"],
                 "relationships": [
                     {
@@ -782,6 +785,7 @@
                 "text": "It takes them all day, but eventually, finally, p_l spots the speckled leaves they've been looking for, so crucial to harvest while the growing season is upon them. For just a second, they feel the weight of their responsibilities lift, the strength of that relief catching them off guard.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["lungwort"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -796,7 +800,7 @@
                 "text": "Not only is the lungwort intact and growing nicely, but there's also a nice patch of plantain growing just nearby. p_l loads up their mostly-obliging escort and carries the extensive harvest home, tail waving jovially with their good mood.",
                 "exp": 20,
                 "weight": 5,
-                "herbs": ["many_herbs"],
+                "herbs": ["many_herbs", "lungwort", "plantain"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -811,6 +815,7 @@
                 "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders, the medicine cat visiting each likely nook and cranny in a carefully planned search pattern until finally those telltale speckled leaves are found.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["many_herbs", "lungwort"],
                 "stat_skill": ["SENSE,2", "CLEVER,3"],
                 "relationships": [
                     {
@@ -826,6 +831,7 @@
                 "text": "Night falls, and still s_c insists they keep going - they just can't let c_n go without. Exhausted but determined, the medicine cat persists patiently until they find those precious speckled leaves.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["many_herbs", "lungwort"],
                 "stat_trait": ["patient"],
                 "relationships": [
                     {
@@ -1134,6 +1140,7 @@
                 "text": "It takes them all day, but eventually, finally, p_l spots the speckled leaves they've been looking for, so crucial to harvest before the plant dies back in leaf-bare. For just a second, they feel the weight of their responsibilities lift, the strength of that relief catching them off guard.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["lungwort"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -1148,7 +1155,7 @@
                 "text": "Not only is the lungwort intact and growing nicely, but there's also a nice patch of plantain growing just nearby. p_l loads up their mostly-obliging escort and carries the extensive harvest home, tail waving jovially with their good mood.",
                 "exp": 20,
                 "weight": 5,
-                "herbs": ["many_herbs"],
+                "herbs": ["many_herbs", "lungwort", "plantain"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -1163,6 +1170,7 @@
                 "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders, the medicine cat visiting each likely nook and cranny in a carefully planned search pattern until finally those telltale speckled leaves are found.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["many_herbs", "lungwort"],
                 "stat_skill": ["SENSE,2", "CLEVER,3"],
                 "relationships": [
                     {
@@ -1178,6 +1186,7 @@
                 "text": "Night falls, and still s_c insists they keep going - they just can't let c_n go without. Exhausted but determined, the medicine cat persists patiently until they find those precious speckled leaves.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["many_herbs", "lungwort"],
                 "stat_trait": ["patient"],
                 "relationships": [
                     {
@@ -1486,6 +1495,7 @@
                 "text": "It takes them all day, checking spots where they've seen lungwort growing before, but finally when p_l sweeps back the snow covering they find a plant with leaves still green, if looking a little wilted. For just a second, they feel the weight of their responsibilities lift, the strength of that relief catching them off guard.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["lungwort"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -1500,7 +1510,7 @@
                 "text": "Not only is the lungwort intact and still fresh, but there's also a nice patch of plantain nearby. p_l loads up their mostly-obliging escort and carries the extensive harvest home, tail waving jovially with their good mood.",
                 "exp": 20,
                 "weight": 5,
-                "herbs": ["many_herbs"],
+                "herbs": ["many_herbs", "lungwort", "plantain"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -1515,6 +1525,7 @@
                 "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders, the medicine cat visiting each likely nook and cranny in a carefully planned search pattern until finally those telltale speckled leaves are found under the blanketing snow.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["many_herbs", "lungwort"],
                 "stat_skill": ["SENSE,2", "CLEVER,3"],
                 "relationships": [
                     {
@@ -1530,6 +1541,7 @@
                 "text": "Night falls, and still s_c insists they keep going - they just can't let c_n go without. Exhausted but determined, the medicine cat persists patiently until they find those precious speckled leaves, wilted but still valuable.",
                 "exp": 20,
                 "weight": 20,
+                "herbs": ["many_herbs", "lungwort"],
                 "stat_trait": ["patient"],
                 "relationships": [
                     {
@@ -1661,7 +1673,7 @@
                 ]
             },
             {
-                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just a herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
+                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just an herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["MEDIATOR,1"],
@@ -1693,7 +1705,7 @@
                 ]
             },
             {
-                "text": "Not only do they not find anything, p_l wants to murder s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
+                "text": "Not only do they not find anything, but p_l is <i>this</i> close to murdering s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": ["troublesome", "childish"],
@@ -1745,7 +1757,7 @@
                 ]
             },
             {
-                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just a herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
+                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just an herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["MEDIATOR,1"],
@@ -1777,7 +1789,7 @@
                 ]
             },
             {
-                "text": "Not only do they not find anything, p_l wants to murder s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
+                "text": "Not only do they not find anything, but p_l is <i>this</i> close to murdering s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": ["troublesome", "childish"],
@@ -1828,7 +1840,7 @@
                 ]
             },
             {
-                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just a herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
+                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just an herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["MEDIATOR,1"],
@@ -1859,7 +1871,7 @@
                 ]
             },
             {
-                "text": "Not only do they not find anything, p_l wants to murder s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
+                "text": "Not only do they not find anything, but p_l is <i>this</i> close to murdering s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": ["troublesome", "childish"],
@@ -1910,7 +1922,7 @@
                 ]
             },
             {
-                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just a herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
+                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just an herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["MEDIATOR,1"],
@@ -1941,7 +1953,7 @@
                 ]
             },
             {
-                "text": "Not only do they not find anything, p_l wants to murder s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
+                "text": "Not only do they not find anything, but p_l is <i>this</i> close to murdering s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": ["troublesome", "childish"],
@@ -1991,7 +2003,7 @@
                 ]
             },
             {
-                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just a herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
+                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just an herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["MEDIATOR,1"],
@@ -2022,7 +2034,7 @@
                 ]
             },
             {
-                "text": "Not only do they not find anything, p_l wants to murder s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
+                "text": "Not only do they not find anything, but p_l is <i>this</i> close to murdering s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": ["troublesome", "childish"],
@@ -2073,7 +2085,7 @@
                 ]
             },
             {
-                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just a herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
+                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just an herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["MEDIATOR,1"],
@@ -2104,7 +2116,7 @@
                 ]
             },
             {
-                "text": "Not only do they not find anything, p_l wants to murder s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
+                "text": "Not only do they not find anything, but p_l is <i>this</i> close to murdering s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": ["troublesome", "childish"],
@@ -2154,7 +2166,7 @@
                 ]
             },
             {
-                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just a herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
+                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just an herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["MEDIATOR,1"],
@@ -2185,7 +2197,7 @@
                 ]
             },
             {
-                "text": "Not only do they not find anything, p_l wants to murder s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
+                "text": "Not only do they not find anything, but p_l is <i>this</i> close to murdering s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": ["troublesome", "childish"],
@@ -2236,7 +2248,7 @@
                 ]
             },
             {
-                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just a herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
+                "text": "s_c has always been good at talking, but chatting with r_c they feel like they don't have to be. It's just an herb gathering patrol, but s_c feels more relaxed than they've felt in moons when they come back to camp, smiling softly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["MEDIATOR,1"],
@@ -2267,7 +2279,7 @@
                 ]
             },
             {
-                "text": "Not only do they not find anything, p_l wants to murder s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
+                "text": "Not only do they not find anything, but p_l is <i>this</i> close to murdering s_c. They're obnoxious and troublesome and childish, and simply not someone p_l enjoys interacting with.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": ["troublesome", "childish"],
@@ -2301,7 +2313,7 @@
         },
         "weight": 20,
         "intro_text": "p_l is out to gather a few herbs at the behest of their mentor. The wind is gently rustling the vegetation as they pad along.",
-        "decline_text": "Just before the apprentice can leave, their mentor calls for their attention. Apparently they have a different task that's more pressing.",
+        "decline_text": "Just before the apprentice can leave, their mentor calls for their attention. Apparently, they have a different task that's more pressing.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
@@ -2493,6 +2505,260 @@
                         "amount": 5
                     }
                 ]
+            }
+        ]
+    },
+	{
+        "patrol_id": "wtlnd_med_soloripples1",
+        "biome": ["wetlands"],
+        "season": ["Any"],
+        "types": ["herb_gathering"],
+        "tags": [],
+        "patrol_art": "med_general_intro",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {
+            "apprentice": [-1, -1],
+            "medicine cat": [1, 6],
+            "healer cats": [1, 6],
+            "normal adult": [-1, -1]
+        },
+        "weight": 20,
+        "intro_text": "p_l sees weird ripples on the water of a puddle while gathering fresh water.",
+        "decline_text": "p_l is in a hurry and does not stop to look at the ripples.",
+        "chance_of_success": 45,
+        "success_outcomes": [
+            {
+                "text": "As p_l looks into the puddle they are greeted by an intense vision. They drop what they are doing and race back to the camp to tell and consult with their leader.",
+                "exp": 10,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["respect", "comfort", "trust"],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "They are greeted with the vision of a cat they had failed to save looking content and happy in StarClan saying that they were not at fault for their death. They feel unburdened and at peace after receiving that vision.",
+                "exp": 10,
+                "weight": 5,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["respect", "comfort", "trust"],
+                        "amount": 5
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "They gaze into the puddle only to see the weird ripples were caused by a feather falling on the puddle. p_l feels disappointed because they really could have used some guidance from StarClan.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["respect", "comfort", "trust"],
+                        "amount": -5
+                    }
+                ]
+            }
+        ]
+    },
+	{
+        "patrol_id": "wtlnd_med_herblocation1",
+        "biome": ["wetlands"],
+        "season": ["Any"],
+        "types": ["herb_gathering"],
+        "tags": [],
+        "patrol_art": "med_general_intro",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {
+            "apprentice": [-1, -1],
+            "medicine cat": [1, 6],
+            "medicine cat apprentice": [1, 6],
+            "healer cats": [1, 6],
+            "normal adult": [-1, -1]
+        },
+        "weight": 20,
+        "intro_text": "p_l decides it's a good opportunity to show app1 where the most commonly needed herbs are in the territory, both on even and uneven ground.",
+        "decline_text": "As they see app1's absent minded gaze they change their mind. Maybe another day when app1 is more focused and less liable to slip and fall off the mountain.",
+        "chance_of_success": 65,
+        "success_outcomes": [
+            {
+                "text": "app1 is focused and attentive. p_l is confident that next time there is an emergency, app1 will be able to find those herbs both on even and uneven ground without them if needed.",
+                "exp": 10,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["respect", "trust"],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "As p_l is explaining why and where the herbs are growing app1 lets out a shout. To p_l's surprise they have found a previously unknown patch of an uncommon herb. Stunned and filled with pride that they found and recognized the herb, p_l promises them the first pick of fresh-kill.",
+                "exp": 10,
+                "weight": 5,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["respect", "trust"],
+                        "amount": 5
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "app1 is constantly distracted and running ahead much to the frustration of p_l. Evidently no new knowledge will be learned that day.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["respect", "trust"],
+                        "amount": -5
+                    }
+                ]
+            }
+        ]
+    },
+	{
+        "patrol_id": "wtlnd_med_herblocation2",
+        "biome": ["wetlands"],
+        "season": ["Any"],
+        "types": ["herb_gathering"],
+        "tags": [],
+        "patrol_art": "med_general_intro",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {
+            "apprentice": [-1, -1],
+            "medicine cat": [1, 6],
+            "medicine cat apprentice": [1, 6],
+            "healer cats": [1, 6],
+            "normal adult": [-1, -1]
+        },
+        "weight": 20,
+        "intro_text": "app1 has been sent out into the swamps to try to find herbs alone.",
+        "decline_text": "Nervous and with an eerie sound on the wind scaring them, they decide to go back to camp with their tail dragging behind them and try again another day.",
+        "chance_of_success": 65,
+        "success_outcomes": [
+            {
+                "text": "app1 is focused and determined to prove their independence. They find the herbs easily, and bring them back to camp with their head held up high, no sweat, no stress, no fuss.",
+                "exp": 10,
+                "weight": 20
+            },
+            {
+                "text": "app1 goes to a known herb patch - but the plant has died! They don't give up, hunting around in the area until they find a smaller overlooked bush that still has leaves on it.",
+                "exp": 10,
+                "weight": 5
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "app1 goes to a known herb patch - but the plant has died! They give up and return to camp, feeling terrible.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+	{
+        "patrol_id": "wtlnd_med_rescue1",
+        "biome": ["wetlands"],
+        "season": ["Any"],
+        "types": ["herb_gathering"],
+        "tags": ["new_cat"],
+        "patrol_art": "med_general_intro",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {
+            "apprentice": [-1, -1],
+            "medicine cat": [1, 6],
+            "healer cats": [1, 6],
+            "normal adult": [-1, -1]
+        },
+        "weight": 20,
+        "intro_text": "p_l while searching for some specific herbs is startled by weird sounds and whispers on the wind.",
+        "decline_text": "Unnerved and unable to discern if it is a sign from StarClan or nothing, they go back to c_n to ask for help and guidance.",
+        "chance_of_success": 35,
+        "success_outcomes": [
+            {
+                "text": "p_l sure that it is a sign of StarClan follows the sounds and whispers on the wind and finds a queen who lost their life in a harsh kitting, their newborn kits clinging to a body that will never move again. p_l instantly wraps themselves around the kits and orders r_c back to camp to find help and a queen willing to nurse them.",
+                "exp": 10,
+                "weight": 20
+            },
+            {
+                "text": "p_l follows the strange sounds on the wind and finds a struggling queen with their newborn kits clinging to them. r_c sprints back to camp to find help while p_l tries to make the queen eat some strengthening herbs. Thankful for the help the queen joins c_n with their kits.",
+                "exp": 10,
+                "weight": 5
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "p_l follows the strange sounds on the wind and finds the bodies of a(n) unknown queen with their kits slowly going cold. r_c goes back to camp to find help to bring their bodies back to camp to pay respects and bury them.",
+                "exp": 0,
+                "weight": 20,
+                "outsider_rep": -1
+            }
+        ],
+        "antag_fail_outcomes": [
+            { "text": "null, ", "exp": 0, "weight": 20, "outsider_rep": -1 }
+        ],
+        "antag_success_outcomes": [
+            { "text": "null, ", "exp": 10, "weight": 20, "outsider_rep": -2 }
+        ]
+    },
+	{
+        "patrol_id": "wtlnd_med_appfirstsign1",
+        "biome": ["wetlands"],
+        "season": ["Any"],
+        "types": ["herb_gathering"],
+        "tags": [],
+        "patrol_art": "med_general_intro",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {
+            "apprentice": [-1, -1],
+            "medicine cat": [1, 6],
+            "medicine cat apprentice": [1, 6],
+            "healer cats": [1, 6],
+            "normal adult": [-1, -1]
+        },
+        "weight": 20,
+        "intro_text": "p_l is out to gather a few herbs at the behest of their mentor. The wind is gently rustling the vegetation as they pad along.",
+        "decline_text": "Just before the apprentice can leave, their mentor calls for their attention. Apparently they have a different task that's more pressing.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "p_l is plucking some horsetail when their attention is suddenly grabbed by omen_list_sight. At the sight, the fur on their back prickles slightly and they can hear their thundering heartbeat. They have to tell their mentor about this sign right away!",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "p_l feels a pit of dread beginning to form in their belly. They forgot where to find the herb that their mentor wanted. They scent the air hopefully, but it's useless. They'll have to swallow their shame and return to ask for directions.",
+                "exp": 0,
+                "weight": 20
             }
         ]
     }

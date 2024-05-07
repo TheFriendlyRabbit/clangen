@@ -219,7 +219,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c misstepped and slipped from a rock, but landed on {PRONOUN/m_c/poss} feet nimbly, {PRONOUN/m_c/poss} clanmates commenting on the show of dexterity."
+        "event_text": "m_c misstepped and slipped from a rock, but landed on {PRONOUN/m_c/poss} feet nimbly, {PRONOUN/m_c/poss} Clanmates commenting on the show of dexterity."
     },
     {
         "camp": "any",
@@ -293,6 +293,7 @@
             "Greenleaf",
             "Leaf-fall",
             "Leaf-bare",
+            "other_clan",
             "war"
         ],
         "event_text": "The tension between c_n and o_c is palpable, with even the smallest actions potentially leading to violence."
@@ -304,6 +305,7 @@
             "Greenleaf",
             "Leaf-fall",
             "Leaf-bare",
+            "other_clan",
             "war"
         ],
         "event_text": "The war with o_c is beginning to disrupt the daily lives of c_n, forcing them to adapt to new routines and living situations in order to better defend themselves."
@@ -453,6 +455,7 @@
             "Greenleaf",
             "Leaf-fall",
             "Leaf-bare",
+            "rc_to_mc",
             "comfort",
             "respect",
             "clan_kits"
@@ -565,7 +568,7 @@
             "murder_reveal",
             "other_cat"
         ],
-        "event_text": "m_c can't keep this secret anymore. When {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/self} alone with r_c, {PRONOUN/m_c/subject} tell the story of mur_c's death."
+        "event_text": "m_c can't keep this secret anymore. When {PRONOUN/m_c/subject} {VERB/m_c/find/finds} {PRONOUN/m_c/self} alone with r_c, {PRONOUN/m_c/subject} {VERB/m_c/tell/tells} the story of mur_c's death."
     },
     {
         "camp": "any",
@@ -650,6 +653,7 @@
             "Leaf-bare",
             "Leaf-fall",
             "murder_reveal",
+	    "clan_discovery",
             "other_cat"
         ],
         "event_text": "m_c boldly confesses to the entire Clan that {PRONOUN/m_c/subject} killed mur_c. m_c claims that mur_c deserved to pay for what {PRONOUN/mur_c/subject} did.",
@@ -685,6 +689,23 @@
         "event_text": "r_c is stunned when {PRONOUN/r_c/subject} {VERB/r_c/discover/discovers} m_c carelessly bragging about killing mur_c to a wandering loner.",
         "cat_trait": [
             "oblivious"
+        ]
+    },
+    {
+        "camp": "any",
+        "tags": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-bare",
+            "Leaf-fall",
+            "murder_reveal",
+            "other_cat"
+        ],
+        "event_text": "m_c can't keep this secret anymore. {PRONOUN/m_c/subject/CAP} {VERB/m_c/request/requests} a Clan meeting, where {PRONOUN/m_c/subject} {VERB/m_c/reveal/reveals} the terrible secret {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} kept.",
+        "cat_trait": [
+            "righteous",
+            "bold",
+            "strict"
         ]
     }
 ]

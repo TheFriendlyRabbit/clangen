@@ -11,7 +11,7 @@ from scripts.cat.names import names
 from re import sub
 from scripts.game_structure import image_cache
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton
-from scripts.game_structure.game_essentials import game, MANAGER
+from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
 from scripts.patrol.patrol import Patrol
 
 
@@ -39,10 +39,10 @@ class MakeClanScreen(Screens):
 
     expanded_mode_text = "A more hands-on experience. " \
                          "This mode has everything in Classic Mode as well as more management-focused features.<br><br>" \
-                         "New features include:<br>" \
+                         "Additional include:<br>" \
                          "- Illnesses, Injuries, and Permanent Conditions<br>" \
                          "- Herb gathering and treatment<br>" \
-                         "- Ability to choose patrol type<br><br>" \
+                         "- Fresh-kill pile and nutrition system<br><br>" \
                          "With this mode you'll be making the important Clan-life decisions."
 
     cruel_mode_text = "This mode has all the features of Expanded mode, but is significantly more difficult. If " \
@@ -147,7 +147,7 @@ class MakeClanScreen(Screens):
             self.game_mode = 'expanded'
             self.refresh_text_and_buttons()
         elif event.ui_element == self.elements['cruel_mode_button']:
-            self.game_mode = 'cruel'
+            self.game_mode = 'cruel season'
             self.refresh_text_and_buttons()
         # When the next_step button is pressed, go to the Clan naming page.
         elif event.ui_element == self.elements['next_step']:
@@ -161,10 +161,10 @@ class MakeClanScreen(Screens):
             if self.game_mode == 'classic':
                 self.game_mode = 'expanded'
             elif self.game_mode == 'expanded':
-                self.game_mode = 'cruel'
+                self.game_mode = 'cruel season'
             self.refresh_text_and_buttons()
         elif event.key == pygame.K_UP:
-            if self.game_mode == 'cruel':
+            if self.game_mode == 'cruel season':
                 self.game_mode = 'expanded'
             elif self.game_mode == 'expanded':
                 self.game_mode = 'classic'
@@ -371,6 +371,9 @@ class MakeClanScreen(Screens):
         elif event.ui_element == self.tabs["tab3"]:
             self.selected_camp_tab = 3
             self.refresh_selected_camp()
+        elif event.ui_element == self.tabs["tab4"]:
+            self.selected_camp_tab = 4
+            self.refresh_selected_camp()
         elif event.ui_element == self.tabs["newleaf_tab"]:
             self.selected_season = "Newleaf"
             self.refresh_text_and_buttons()
@@ -391,10 +394,10 @@ class MakeClanScreen(Screens):
             if old_biome is not None:
                 possible_biomes.remove(old_biome)
             self.biome_selected = choice(possible_biomes)
-            if self.biome_selected != 'Plains':
-                self.selected_camp_tab = randrange(1, 4)
+            if self.biome_selected == 'Forest':
+                self.selected_camp_tab = randrange (1, 5)
             else:
-                self.selected_camp_tab = randrange(1, 3)
+                self.selected_camp_tab = randrange(1, 4)
             self.refresh_selected_camp()
             self.refresh_text_and_buttons()
         elif event.ui_element == self.elements['done_button']:
@@ -429,10 +432,7 @@ class MakeClanScreen(Screens):
                 self.selected_camp_tab -= 1
                 self.refresh_selected_camp()
         elif event.key == pygame.K_DOWN and self.biome_selected is not None:
-            if self.biome_selected != 'Plains' and self.selected_camp_tab < 3:
-                self.selected_camp_tab += 1
-                self.refresh_selected_camp()
-            elif self.biome_selected == 'Plains' and self.selected_camp_tab < 2:
+            if self.selected_camp_tab < 4:
                 self.selected_camp_tab += 1
                 self.refresh_selected_camp()
         elif event.key == pygame.K_RETURN:
@@ -465,10 +465,12 @@ class MakeClanScreen(Screens):
                 self.elements["error"].set_text("A Clan with that name already exists.")
                 self.elements["error"].show()
                 self.elements['next_step'].disable()
-                return
             else:
                 self.elements["error"].hide()
                 self.elements['next_step'].enable()
+            
+            # Set the background for the name clan page - done here to avoid GUI layering issues
+            screen.blit(pygame.transform.scale(MakeClanScreen.name_clan_img, (screen_x, screen_y)), (0,0))
 
     def clear_all_page(self):
         """Clears the entire page, including layout images"""
@@ -488,7 +490,7 @@ class MakeClanScreen(Screens):
             elif self.game_mode == 'expanded':
                 display_text = self.expanded_mode_text
                 display_name = "Expanded Mode"
-            elif self.game_mode == 'cruel':
+            elif self.game_mode == 'cruel season':
                 display_text = self.cruel_mode_text
                 display_name = "Cruel Season"
             else:
@@ -508,7 +510,7 @@ class MakeClanScreen(Screens):
                 self.elements['classic_mode_button'].enable()
                 self.elements['expanded_mode_button'].disable()
                 self.elements['cruel_mode_button'].enable()
-            elif self.game_mode == 'cruel':
+            elif self.game_mode == 'cruel season':
                 self.elements['classic_mode_button'].enable()
                 self.elements['expanded_mode_button'].enable()
                 self.elements['cruel_mode_button'].disable()
@@ -518,7 +520,7 @@ class MakeClanScreen(Screens):
                 self.elements['cruel_mode_button'].enable()
 
             # Don't let the player go forwards with cruel mode, it's not done yet.
-            if self.game_mode == 'cruel':
+            if self.game_mode == 'cruel season':
                 self.elements['next_step'].disable()
             else:
                 self.elements['next_step'].enable()
@@ -634,12 +636,16 @@ class MakeClanScreen(Screens):
         self.tabs["tab1"].kill()
         self.tabs["tab2"].kill()
         self.tabs["tab3"].kill()
+        self.tabs["tab4"].kill()
+
         if self.biome_selected == 'Forest':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((190, 360), (308, 60))), "", object_id="#classic_tab"
                                               , manager=MANAGER)
             self.tabs["tab2"] = UIImageButton(scale(pygame.Rect((216, 430), (308, 60))), "", object_id="#gully_tab"
                                               , manager=MANAGER)
             self.tabs["tab3"] = UIImageButton(scale(pygame.Rect((190, 500), (308, 60))), "", object_id="#grotto_tab"
+                                              , manager=MANAGER)
+            self.tabs["tab4"] = UIImageButton(scale(pygame.Rect((170, 570), (308, 60))), "", object_id="#lakeside_tab"
                                               , manager=MANAGER)
         elif self.biome_selected == 'Mountainous':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((222, 360), (308, 60))), "", object_id="#cliff_tab"
@@ -653,6 +659,8 @@ class MakeClanScreen(Screens):
                                               , manager=MANAGER, )
             self.tabs["tab2"] = UIImageButton(scale(pygame.Rect((178, 430), (308, 60))), "", object_id="#tunnel_tab"
                                               , manager=MANAGER)
+            self.tabs["tab3"] = UIImageButton(scale(pygame.Rect((128, 500), (308, 60))), "", object_id="#wasteland_tab"
+                                              , manager=MANAGER)
         elif self.biome_selected == 'Beach':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((152, 360), (308, 60))), "", object_id="#tidepool_tab"
                                               , manager=MANAGER)
@@ -665,18 +673,27 @@ class MakeClanScreen(Screens):
             self.tabs["tab1"].disable()
             self.tabs["tab2"].enable()
             self.tabs["tab3"].enable()
+            self.tabs["tab4"].enable()
         elif self.selected_camp_tab == 2:
             self.tabs["tab1"].enable()
             self.tabs["tab2"].disable()
             self.tabs["tab3"].enable()
+            self.tabs["tab4"].enable()
         elif self.selected_camp_tab == 3:
             self.tabs["tab1"].enable()
             self.tabs["tab2"].enable()
             self.tabs["tab3"].disable()
+            self.tabs["tab4"].enable()
+        elif self.selected_camp_tab == 4:
+            self.tabs["tab1"].enable()
+            self.tabs["tab2"].enable()
+            self.tabs["tab3"].enable()
+            self.tabs["tab4"].disable()
         else:
             self.tabs["tab1"].enable()
             self.tabs["tab2"].enable()
             self.tabs["tab3"].enable()
+            self.tabs["tab4"].enable()
 
         # I have to do this for proper layering.
         if "camp_art" in self.elements:
@@ -822,11 +839,6 @@ class MakeClanScreen(Screens):
         self.sub_screen = 'name clan'
 
         # Create all the elements.
-        self.elements["background"] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 0), (1600, 1400))),
-                                                                  pygame.transform.scale(MakeClanScreen.name_clan_img,
-                                                                                         (1600, 1400))
-                                                                  , manager=MANAGER)
-        self.elements['background'].disable()
         self.elements["random"] = UIImageButton(scale(pygame.Rect((448, 1190), (68, 68))), "",
                                                 object_id="#random_dice_button"
                                                 , manager=MANAGER)
@@ -1111,6 +1123,8 @@ class MakeClanScreen(Screens):
                                           visible=False, manager=MANAGER)
         self.tabs["tab3"] = UIImageButton(scale(pygame.Rect((0, 0), (0, 0))), "",
                                           visible=False, manager=MANAGER)
+        self.tabs["tab4"] = UIImageButton(scale(pygame.Rect((0, 0), (0, 0))), "",
+                                          visible=False, manager=MANAGER)
 
         y_pos = 550
         self.tabs["newleaf_tab"] = UIImageButton(scale(pygame.Rect((1250, y_pos), (78, 68))), "",
@@ -1173,7 +1187,7 @@ class MakeClanScreen(Screens):
         game.cat_to_fade.clear()
         Cat.outside_cats.clear()
         Patrol.used_patrols.clear()
-        convert_camp = {1: 'camp1', 2: 'camp2', 3: 'camp3'}
+        convert_camp = {1: 'camp1', 2: 'camp2', 3: 'camp3', 4: 'camp4'}
         game.clan = Clan(self.clan_name,
                          self.leader,
                          self.deputy,

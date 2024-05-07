@@ -7,6 +7,8 @@ TODO: Docs
 """
 
 # pylint: enable=line-too-long
+import re
+from collections import Counter
 import random
 import traceback
 
@@ -29,7 +31,7 @@ from scripts.events_module.freshkill_pile_events import Freshkill_Events
 from scripts.events_module.outsider_events import OutsiderEvents
 from scripts.event_class import Single_Event
 from scripts.game_structure.game_essentials import game
-from scripts.utility import get_alive_kits, get_med_cats, ceremony_text_adjust, \
+from scripts.utility import change_clan_relations, change_clan_reputation, get_alive_kits, get_med_cats, ceremony_text_adjust, \
     get_current_season, adjust_list_text, ongoing_event_text_adjust, event_text_adjust
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
@@ -52,10 +54,11 @@ class Events:
 
     def one_moon(self):
         """
-        TODO: DOCS
+        Handles the moon skipping of the whole Clan.
         """
         game.cur_events_list = []
         game.herb_events_list = []
+        game.freshkill_events_list = []
         game.mediated = []
         game.switches['saved_clan'] = False
         self.new_cat_invited = False
@@ -77,39 +80,26 @@ class Events:
         # age up the clan, set current season
         game.clan.age += 1
         get_current_season()
-        # print(game.clan.current_season)
         Pregnancy_Events.handle_pregnancy_age(game.clan)
         self.check_war()
 
-        if game.clan.game_mode in ['expanded', 'cruel season'
-                                   ] and game.clan.freshkill_pile:
-            needed_amount = game.clan.freshkill_pile.amount_food_needed()
-            if FRESHKILL_ACTIVE:
-                print(f" -- FRESHKILL: prey amount before feeding {game.clan.freshkill_pile.total_amount}") # pylint: disable=line-too-long
-                print(f" -- FRESHKILL: Clan needs {needed_amount} prey")
+        if game.clan.game_mode in ['expanded', 'cruel season'] and game.clan.freshkill_pile:
             # feed the cats and update the nutrient status
             relevant_cats = list(
-                filter(
-                    lambda _cat: _cat.is_alive() and not _cat.exiled and
+                filter(lambda _cat: _cat.is_alive() and not _cat.exiled and
                                  not _cat.outside, Cat.all_cats.values()))
-            game.clan.freshkill_pile.time_skip(relevant_cats)
-            self.get_moon_freshkill()
+            game.clan.freshkill_pile.time_skip(relevant_cats, game.freshkill_event_list)
             # handle freshkill pile events, after feeding
             # first 5 moons there will not be any freshkill pile event
             if game.clan.age >= 5:
-                Freshkill_Events.handle_amount_freshkill_pile(
-                    game.clan.freshkill_pile, relevant_cats)
+                Freshkill_Events.handle_amount_freshkill_pile(game.clan.freshkill_pile, relevant_cats)
+            self.get_moon_freshkill()
             # make a notification if the Clan has not enough prey
-            if not game.clan.freshkill_pile.clan_has_enough_food(
-            ) and FRESHKILL_EVENT_ACTIVE:
-                game.cur_events_list.insert(
-                    0,
-                    Single_Event(
-                        f"{game.clan.name}Clan doesn't have enough prey for next moon!"
-                    ))
-            if FRESHKILL_ACTIVE:
-                print(f" -- FRESHKILL: prey amount after feeding {game.clan.freshkill_pile.total_amount}")
-        
+            if FRESHKILL_EVENT_ACTIVE and not game.clan.freshkill_pile.clan_has_enough_food():
+                event_string = f"{game.clan.name}Clan doesn't have enough prey for next moon!"
+                game.cur_events_list.insert(0, Single_Event(event_string))
+                game.freshkill_event_list.append(event_string)
+
         rejoin_upperbound = game.config["lost_cat"]["rejoin_chance"]
         if random.randint(1, rejoin_upperbound) == 1:
             self.handle_lost_cats_return()
@@ -206,6 +196,7 @@ class Events:
 
         self.herb_destruction()
         self.herb_gather()
+        self.handle_focus()
 
         if game.clan.game_mode in ["expanded", "cruel season"]:
             amount_per_med = get_amount_cat_for_one_medic(game.clan)
@@ -298,17 +289,14 @@ class Events:
 
         prey_amount = 0
         for cat in healthy_hunter:
-            lower_value = game.config["freshkill"]["auto_warrior_prey"][0]
-            upper_value = game.config["freshkill"]["auto_warrior_prey"][1]
+            lower_value = game.prey_config["auto_warrior_prey"][0]
+            upper_value = game.prey_config["auto_warrior_prey"][1]
             if cat.status == "apprentice":
-                lower_value = game.config["freshkill"]["auto_apprentice_prey"][
-                    0]
-                upper_value = game.config["freshkill"]["auto_apprentice_prey"][
-                    1]
+                lower_value = game.prey_config["auto_apprentice_prey"][0]
+                upper_value = game.prey_config["auto_apprentice_prey"][1]
 
             prey_amount += random.randint(lower_value, upper_value)
-        if FRESHKILL_ACTIVE:
-            print(f" -- FRESHKILL: added {prey_amount} monthly prey")
+        game.freshkill_event_list.append(f"The clan managed to catch {prey_amount} pieces of prey in this moon.")
         game.clan.freshkill_pile.add_freshkill(prey_amount)
 
     def herb_gather(self):
@@ -591,6 +579,251 @@ class Events:
             game.cur_events_list.append(Single_Event(chosen_event, "health"))
             game.herb_events_list.append(chosen_event)
 
+    def handle_focus(self):
+        """
+        This function should be called late in the 'one_moon' function and handles all focuses which are possible to handle here:
+            - business as usual
+            - hunting
+            - herb gathering
+            - threaten outsiders
+            - seek outsiders
+            - sabotage other clans
+            - aid other clans
+            - raid other clans
+            - hoarding
+        Focus which are not able to be handled here: 
+            rest and recover - handled in:
+                - 'self.handle_outbreaks'
+                - 'condition_events.handle_injuries'
+                - 'condition_events.handle_illnesses'
+                - 'cat.moon_skip_illness'
+                - 'cat.moon_skip_injury'
+        """
+        # if no focus is selected, skip all other
+        focus_text = "This shouldn't show up, report a bug for the focus feature."
+        if game.clan.clan_settings.get("business as usual") or game.clan.clan_settings.get("rest and recover"):
+            return
+        elif game.clan.clan_settings.get("hunting"):
+            # handle warrior
+            healthy_warriors = list(filter(
+                lambda c: c.status in ["warrior", "leader", "deputy"] and not c.dead
+                and not c.outside and not c.exiled and not c.not_working(),
+                Cat.all_cats.values()
+            ))
+            warrior_amount = len(healthy_warriors) * game.config["focus"]["hunting"]["warrior"]
+
+            # handle apprentices
+            healthy_apprentices = list(filter(
+                lambda c: c.status == "apprentice" and not c.dead
+                and not c.outside and not c.exiled and not c.not_working(),
+                Cat.all_cats.values()
+            ))
+            app_amount = len(healthy_apprentices) * game.config["focus"]["hunting"]["apprentice"]
+            
+            # finish
+            total_amount = warrior_amount + app_amount
+            game.clan.freshkill_pile.add_freshkill(total_amount)
+            if total_amount > 1:
+                focus_text = f"With the heightened focus of the Clan, {total_amount} additional pieces of prey were gathered."
+            elif total_amount == 1:
+                focus_text = f"With the heightened focus of the Clan, {total_amount} additional piece of prey was gathered."
+            else:
+                focus_text = "Despite the additional focus of the Clan, no prey could be gathered."
+            game.freshkill_event_list.append(focus_text)
+
+        elif game.clan.clan_settings.get("herb gathering"):
+            herbs_found = []
+
+            # handle medicine cats
+            healthy_meds = list(filter(
+                lambda c: c.status == "medicine cat" and not c.dead
+                and not c.outside and not c.exiled and not c.not_working(),
+                Cat.all_cats.values()
+            ))
+            med_amount = game.config["focus"]["herb gathering"]["med"]
+            for med in healthy_meds:
+                herbs_found.extend(random.sample(HERBS, k=med_amount))
+
+            # handle medicine cat apprentices
+            healthy_med_apps = list(filter(
+                lambda c: c.status == "medicine cat apprentice" and not c.dead
+                and not c.outside and not c.exiled and not c.not_working(),
+                Cat.all_cats.values()
+            ))
+            med_amount = game.config["focus"]["herb gathering"]["med_apprentice"]
+            for med in healthy_med_apps:
+                herbs_found.extend(random.sample(HERBS, k=med_amount))
+            
+            # finish
+            herb_amount = len(herbs_found)
+            herb_counter = Counter(herbs_found)
+            game.clan.herbs.update(herb_counter)
+            if herb_amount > 1:
+                focus_text = f"With the additional focus of the Clan, {herb_amount} herbs were gathered."
+            elif herb_amount == 1:
+                focus_text = f"With the additional focus of the Clan, {herb_amount} herb was gathered."
+            else:
+                focus_text = f"Despite the additional focus of the Clan, no herbs could be gathered."
+
+            log_text = "With the additional focus of the Clan, following herbs were gathered: "
+            idx = 0
+            for herb, amount in herb_counter.items():
+                log_text += str(amount) + " " + herb.replace("_", " ")
+                idx += 1
+                if idx < len(herb_counter) - 1:
+                    log_text += ", "
+                elif idx < len(herb_counter):
+                    log_text += " and "
+            log_text += "."
+            game.herb_events_list.append(log_text)
+
+        elif game.clan.clan_settings.get("threaten outsiders"):
+            amount = game.config["focus"]["outsiders"]["reputation"]
+            change_clan_reputation(-amount)
+            focus_text = None
+
+        elif game.clan.clan_settings.get("seek outsiders"):
+            amount = game.config["focus"]["outsiders"]["reputation"]
+            change_clan_reputation(amount)
+            focus_text = None
+
+        elif game.clan.clan_settings.get("sabotage other clans") or game.clan.clan_settings.get("aid other clans"):
+            amount = game.config["focus"]["other clans"]["relation"]
+            if game.clan.clan_settings.get("sabotage other clans"):
+                amount = amount * -1
+            for name in game.clan.clans_in_focus:
+                clan = [clan for clan in game.clan.all_clans if clan.name  == name][0]
+                sabotage = game.clan.clan_settings.get("sabotage other clans")
+                change_clan_relations(clan, amount)
+            focus_text = None
+
+        elif game.clan.clan_settings.get("hoarding") or game.clan.clan_settings.get("raid other clans"):
+            info_dict = game.config["focus"]["hoarding"]
+            if game.clan.clan_settings.get("raid other clans"):
+                info_dict = game.config["focus"]["raid other clans"]
+
+            involved_cats = {
+                "injured" : [],
+                "sick" : []
+            }
+            # handle prey 
+            healthy_warriors = list(filter(
+                lambda c: c.status in ["warrior", "leader", "deputy"] and not c.dead
+                and not c.outside and not c.exiled and not c.not_working(),
+                Cat.all_cats.values()
+            ))
+            warrior_amount = len(healthy_warriors) * info_dict["prey_warrior"]
+            game.clan.freshkill_pile.add_freshkill(warrior_amount)
+            if warrior_amount > 1:
+                game.freshkill_event_list.append(f"With the additional focus of the Clan, {warrior_amount} prey pieces were caught.")
+            else:
+                game.freshkill_event_list.append(f"With the additional focus of the Clan, {warrior_amount} prey piece was caught.")
+
+            # handle herbs
+            herbs_found = []
+            healthy_meds = list(filter(
+                lambda c: c.status == "medicine cat" and not c.dead
+                and not c.outside and not c.exiled and not c.not_working(),
+                Cat.all_cats.values()
+            ))
+            med_amount = info_dict["herb_medicine"]
+            for med in healthy_meds:
+                herbs_found.extend(random.sample(HERBS, k=med_amount))
+            herb_amount = len(herbs_found)
+            if herb_amount > 0:
+                herb_counter = Counter(herbs_found)
+                game.clan.herbs.update(herb_counter)
+                log_text = "With the additional focus of the Clan, following herbs were gathered: "
+                idx = 0
+                for herb, amount in herb_counter.items():
+                    log_text += str(amount) + " " + herb.replace("_", " ")
+                    idx += 1
+                    if idx < len(herb_counter) - 1:
+                        log_text += ", "
+                    elif idx < len(herb_counter):
+                        log_text += " and "
+                log_text += "."
+                game.herb_events_list.append(log_text)
+
+            # handle injuries / illness
+            relevant_cats = healthy_warriors + healthy_meds
+            if game.clan.clan_settings.get("raid other clans"):
+                chance = info_dict[f"injury_chance_warrior"]
+                # increase the chance of injuries depending on how many clans are raided
+                increase = info_dict["chance_increase_per_clan"]
+                chance -= increase * len(game.clan.clans_in_focus)
+            for cat in relevant_cats:
+                # if the raid setting or 50/50 for hoarding to get to the injury part
+                if game.clan.clan_settings.get("raid other clans") or random.getrandbits(1):
+                    status_use = cat.status
+                    if status_use in ["deputy", "leader"]:
+                        status_use = "warrior"
+                    chance = info_dict[f"injury_chance_{status_use}"]
+                    if game.clan.clan_settings.get("raid other clans"):
+                        # increase the chance of injuries depending on how many clans are raided
+                        increase = info_dict["chance_increase_per_clan"]
+                        chance -= increase * len(game.clan.clans_in_focus)
+
+                    if not int(random.random() * chance): # 1/chance
+                        possible_injuries = []
+                        injury_dict = info_dict["injuries"]
+                        for injury, amount in injury_dict.items():
+                            possible_injuries.extend([injury] * amount)
+                        chosen_injury = random.choice(possible_injuries)
+                        cat.get_injured(chosen_injury)
+                        involved_cats["injured"].append(cat.ID)
+                else:
+                    chance = game.config["focus"]["hoarding"]["illness_chance"]
+                    if not int(random.random() * chance): # 1/chance
+                        possible_illnesses = []
+                        injury_dict = game.config["focus"]["hoarding"]["illnesses"]
+                        for illness, amount in injury_dict.items():
+                            possible_illnesses.extend([illness] * amount)
+                        chosen_illness = random.choice(possible_illnesses)
+                        cat.get_ill(chosen_illness)
+                        involved_cats["sick"].append(cat.ID)
+
+            # if it is raiding, lower the relation to other clans
+            if game.clan.clan_settings.get("raid other clans"):
+                for name in game.clan.clans_in_focus:
+                    clan = [clan for clan in game.clan.all_clans if clan.name  == name][0]
+                    amount = -game.config["focus"]["raid other clans"]["relation"]
+                    change_clan_relations(clan, amount)
+
+            # finish
+            text_snippet = "due the additional work of hoarding herbs and prey."
+            if game.clan.clan_settings.get("raid other clans"):
+                text_snippet = "while raiding other Clans to get additional prey."
+            for condition_type, value in involved_cats.items():
+                if len(value) == 1:
+                    game.cur_events_list.append(
+                        Single_Event(f"One cat got {condition_type} during {text_snippet}", "health", value)
+                    )
+                elif len(value) > 1:
+                    game.cur_events_list.append(
+                        Single_Event(f"Multiple cats got {condition_type} {text_snippet}", "health", value)
+                    )
+
+            if warrior_amount > 1 and herb_amount > 1:
+                focus_text = f"With the additional focus of the Clan, {warrior_amount} pieces of prey and {herb_amount} herbs were gathered."
+            elif warrior_amount > 1 and herb_amount == 1:
+                focus_text = f"With the additional focus of the Clan, {warrior_amount} pieces of prey and {herb_amount} herb were gathered."
+            elif warrior_amount > 1 and herb_amount <= 0:
+                focus_text = f"With the additional focus of the Clan, {warrior_amount} pieces of prey and no herbs were gathered."
+            elif warrior_amount == 1 and herb_amount > 1:
+                focus_text = f"With the additional focus of the Clan, {warrior_amount} piece of prey and {herb_amount} herbs were gathered."
+            elif warrior_amount <= 0 and herb_amount > 1:
+                focus_text = f"With the additional focus of the Clan, no prey and {herb_amount} herbs were gathered."
+            elif warrior_amount == 1 and herb_amount == 1:
+                focus_text = f"With the additional focus of the Clan, {warrior_amount} piece of prey and {herb_amount} herb were gathered."
+            elif warrior_amount <= 0 and herb_amount <= 0:
+                focus_text = "Despite the additional focus of the Clan, neither prey nor herbs could be gathered."
+            else:
+                focus_text = "This is a bug, report it - focus feature"
+
+        if focus_text:
+            game.cur_events_list.insert(0, Single_Event(focus_text, "misc"))
+
     def handle_lost_cats_return(self):
         """
         TODO: DOCS
@@ -616,7 +849,7 @@ class Events:
             'After a long journey, m_c has finally returned home to c_n.',
             'm_c was found at the border, tired, but happy to be home.',
             "m_c strides into camp, much to the everyone's surprise. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'re/'s} home!",
-            "{PRONOUN/m_c/subject/CAP} met so many friends on {PRONOUN/m_c/poss} jouney, but c_n is where m_c truly belongs. With a tearful goodbye, " 
+            "{PRONOUN/m_c/subject/CAP} met so many friends on {PRONOUN/m_c/poss} journey, but c_n is where m_c truly belongs. With a tearful goodbye, " 
                 "{PRONOUN/m_c/subject} {VERB/m_c/return/returns} home."
         ]
         lost_cat.outside = False
@@ -648,7 +881,7 @@ class Events:
                         self.ceremony(x, "warrior")
                 elif x.status in ["kitten", "newborn"] and x.moons >= 6:
                     self.ceremony(x, "apprentice") 
-            else:
+            elif x.status != 'medicine cat':
                 if x.moons == 0:
                     x.status = 'newborn'
                 elif x.moons < 6:
@@ -1671,13 +1904,17 @@ class Events:
             return True
 
         # chance to die of old age
-        age_chance = game.config["death_related"]["old_age_death_chance"]
         age_start = game.config["death_related"]["old_age_death_start"]
-        if cat.moons > int(
-                random.random() * age_chance) + age_start:  # cat.moons > 150 <--> 200
-            
-            Death_Events.handle_deaths(cat, other_cat, game.clan.war.get("at_war", False),
-                                            enemy_clan, alive_kits)
+        death_curve_setting = game.config["death_related"]["old_age_death_curve"]
+        death_curve_value = 0.001 * death_curve_setting
+        # made old_age_death_chance into a separate value to make testing with print statements easier
+        old_age_death_chance = ((1 + death_curve_value) ** (cat.moons - age_start)) - 1
+        if random.random() <= old_age_death_chance:
+            Death_Events.handle_deaths(cat, other_cat, game.clan.war.get("at_war", False), enemy_clan, alive_kits)
+            return True
+        # max age has been indicated to be 300, so if a cat reaches that age, they die of old age
+        elif cat.moons >= 300:
+            Death_Events.handle_deaths(cat, other_cat, game.clan.war.get("at_war", False), enemy_clan, alive_kits)
             return True
 
         # disaster death chance
@@ -1696,26 +1933,27 @@ class Events:
                                                                     enemy_clan, game.clan.current_season)
             return triggered_death
 
-        
-
     def handle_murder(self, cat):
         ''' Handles murder '''
         relationships = cat.relationships.values()
         targets = []
+
+        if cat.age in ["kitten", "newborn"]:
+            return
         
-        # if this cat is unstable and aggressive, we lower the random murder chance. 
+        # if this cat is unstable and aggressive, we lower the random murder chance
         random_murder_chance = int(game.config["death_related"]["base_random_murder_chance"])
         random_murder_chance -= 0.5 * ((cat.personality.aggression) + (16 - cat.personality.stability))
 
-        # Check to see if random murder is triggered. If so, we allow targets to be anyone they have even the smallest amount 
-        # of dislike for. 
+        # Check to see if random murder is triggered. If so, we allow targets to be anyone they have even the smallest amount
+        # of dislike for
         if random.getrandbits(max(1, int(random_murder_chance))) == 1:
             targets = [i for i in relationships if i.dislike > 1 and not Cat.fetch_cat(i.cat_to).dead and not Cat.fetch_cat(i.cat_to).outside]
             if not targets:
                 return
             
             chosen_target = random.choice(targets)
-            print("Random Murder!", str(cat.name),  str(Cat.fetch_cat(chosen_target.cat_to).name))
+            #print("Random Murder!", str(cat.name),  str(Cat.fetch_cat(chosen_target.cat_to).name))
             
             # If at war, grab enemy clans
             enemy_clan = None
@@ -1728,37 +1966,61 @@ class Events:
             
             Death_Events.handle_deaths(Cat.fetch_cat(chosen_target.cat_to), cat, game.clan.war.get("at_war", False),
                                             enemy_clan, alive_kits=get_alive_kits(Cat), murder=True)
-            
+
             return
-            
-   
-        # If random murder is not triggered, targets can only be those they have high dislike for. 
+
+        # will this cat actually murder? this takes into account stability and lawfulness
+        murder_capable = 7
+        if cat.personality.stability < 6:
+            murder_capable -= 3
+        if cat.personality.lawfulness < 6:
+            murder_capable -= 2
+        if cat.personality.aggression > 10:
+            murder_capable -= 1
+        elif cat.personality.aggression > 12:
+            murder_capable -= 3
+
+        murder_capable = max(1, murder_capable)
+
+        if random.getrandbits(murder_capable) != 1:
+            #print(f'{cat.name} is currently not capable of murder')
+            return
+
+        #print("Murder Capable: " + str(murder_capable))
+        #print(f'{cat.name} is feeling murderous')
+        # If random murder is not triggered, targets can only be those they have some dislike for
         hate_relation = [i for i in relationships if
-                        i.dislike > 50 and not Cat.fetch_cat(i.cat_to).dead and not Cat.fetch_cat(i.cat_to).outside]
+                        i.dislike > 15 and not Cat.fetch_cat(i.cat_to).dead and not Cat.fetch_cat(i.cat_to).outside]
         targets.extend(hate_relation)
         resent_relation = [i for i in relationships if
-                        i.jealousy > 50 and not Cat.fetch_cat(i.cat_to).dead and not Cat.fetch_cat(i.cat_to).outside]
+                        i.jealousy > 15 and not Cat.fetch_cat(i.cat_to).dead and not Cat.fetch_cat(i.cat_to).outside]
         targets.extend(resent_relation)
 
         # if we have some, then we need to decide if this cat will kill
         if targets:
             chosen_target = random.choice(targets)
-            
             #print(cat.name, 'TARGET CHOSEN', Cat.fetch_cat(chosen_target.cat_to).name)
 
             kill_chance = game.config["death_related"]["base_murder_kill_chance"]
-            
-            # chance to murder grows with the dislike and jealousy value
-            kill_chance -= chosen_target.dislike
-            #print('DISLIKE MODIFIER', kill_chance)
-            kill_chance -= chosen_target.jealousy
-            #print('JEALOUS MODIFIER', kill_chance)
 
-            facet_modifiers = cat.personality.aggression + \
-                (16 - cat.personality.stability) + (16 - cat.personality.lawfulness)
-            
-            kill_chance = kill_chance - facet_modifiers
-            kill_chance = max(15, kill_chance)
+            relation_modifier = int(0.5 * int(chosen_target.dislike + chosen_target.jealousy)) - \
+            int(0.5 * int(chosen_target.platonic_like + chosen_target.trust + chosen_target.comfortable))
+            #print("Relation Modifier: ", relation_modifier)
+            kill_chance -= relation_modifier
+
+            if len(chosen_target.log) > 0 and "(high negative effect)" in chosen_target.log[-1]:
+                kill_chance -= 50
+                #print(str(chosen_target.log[-1]))
+
+            if len(chosen_target.log) > 0 and "(medium negative effect)" in chosen_target.log[-1]:
+                kill_chance -= 20
+                #print(str(chosen_target.log[-1]))
+
+            # little easter egg just for fun
+            if cat.personality.trait == "ambitious" and Cat.fetch_cat(chosen_target.cat_to).status == 'leader':
+                kill_chance -= 10
+
+            kill_chance = max(1, int(kill_chance))
              
             #print("Final kill chance: " + str(kill_chance))
             
@@ -1868,7 +2130,28 @@ class Events:
             for poor_little_meowmeow in dead_cats:
                 poor_little_meowmeow.die()
                 # this next bit is temporary until we can rework it
-                History.add_death(poor_little_meowmeow, 'This cat died after disaster struck the Clan.')
+                if re.search("(drown|drowns) after the camp becomes flooded.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat died when the camp was flooded.')
+                elif re.search("(are|is) killed after a fire rages through the camp.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat died when a fire raged through camp.')
+                elif re.search("(are|is) killed in an ambush by a group of rogues.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat died in a rogue ambush.')
+                elif re.search("(go|goes) missing in the night.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat went missing in the night.')
+                elif re.search("(are|is) killed after a badger attack.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat was killed in a badger attack.')
+                elif re.search("(die|dies) to a greencough outbreak.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat died to a greencough outbreak.')
+                elif re.search("(eat|eats) tainted fresh-kill and die.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat died after eating tainted fresh-kill.')
+                elif re.search("(die|dies) after freezing from a snowstorm.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat froze to death in a snowstorm.')
+                elif re.search("(starve|starves) to death when no prey is found.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat starved to death when no prey was found.')
+                elif re.search("(die|dies) after overheating.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat died to a heatwave.')
+                elif re.search("(die|dies) after the water dries up from drought.", event_string):
+                    History.add_death(poor_little_meowmeow, 'This cat died to dehydration after a drought.')
 
     def handle_illnesses_or_illness_deaths(self, cat):
         """ 
@@ -1939,6 +2222,13 @@ class Events:
                 if game.clan.current_season not in ["Leaf-bare", "Leaf-fall"
                                                     ] and illness != 'fleas':
                     continue
+                
+                if game.clan.clan_settings.get("rest and recover"):
+                    stopping_chance = game.config["focus"]["rest and recover"]["outbreak_prevention"]
+                    if not int(random.random() * stopping_chance):
+                        # print(f"rest and recover - outbreak of {illness} prevented")
+                        continue
+
                 if illness == 'kittencough':
                     # adjust alive cats list to only include kittens
                     alive_cats = list(

@@ -9,21 +9,18 @@ TODO: Docs
 from random import choice, choices, randint, random, sample, getrandbits
 import re
 import pygame
-
-from scripts.cat.history import History
-from scripts.cat.names import names
-from scripts.cat.pelts import Pelt
-
 import ujson
 import logging
+from sys import exit as sys_exit
+from typing import Dict
+
 
 logger = logging.getLogger(__name__)
 from scripts.game_structure import image_cache
-
-from sys import exit as sys_exit
-
+from scripts.cat.history import History
+from scripts.cat.names import names
+from scripts.cat.pelts import Pelt
 from scripts.cat.sprites import sprites
-
 from scripts.game_structure.game_essentials import game, screen_x, screen_y
 
 
@@ -31,25 +28,34 @@ from scripts.game_structure.game_essentials import game, screen_x, screen_y
 #                              Counting Cats                                   #
 # ---------------------------------------------------------------------------- #
 
-def get_alive_clan_queens(cat_cls):
-    """
-    Returns a list with all cats with the 'status' queen.
-    """
-    queens = []
-    for inter_cat in cat_cls.all_cats.values():
-        if inter_cat.status in ['kitten', 'newborn'] and inter_cat.parent1 and not (inter_cat.dead or inter_cat.outside):
-            parents = [cat_cls.fetch_cat(i) for i in inter_cat.get_parents()]
-            filter(None, parents)
-            if parents:
-                parents = [par for par in parents if not par.dead or par.outside]
-                if parents:
-                    try:
-                        gender_idx = [par.gender for par in parents].index("female")
-                        queens.append(parents[gender_idx])
-                    except:
-                        queens.append(parents[0])
-    return queens
+def get_alive_clan_queens(living_cats):
+    living_kits = [cat for cat in living_cats if not (cat.dead or cat.outside) and cat.status in ["kitten", "newborn"]]
 
+    queen_dict = {}
+    for cat in living_kits.copy():
+        parents = cat.get_parents()
+        #Fetch parent object, only alive and not outside. 
+        parents = [cat.fetch_cat(i) for i in parents if cat.fetch_cat(i) and not(cat.fetch_cat(i).dead or cat.fetch_cat(i).outside)]
+        if not parents:
+            continue
+        
+        if len(parents) == 1 or len(parents) > 2 or\
+            all(i.gender == "male" for i in parents) or\
+            parents[0].gender == "female":
+            if parents[0].ID in queen_dict:
+                queen_dict[parents[0].ID].append(cat)
+                living_kits.remove(cat)
+            else:
+                queen_dict[parents[0].ID] = [cat]
+                living_kits.remove(cat)
+        elif len(parents) == 2:
+            if parents[1].ID in queen_dict:
+                queen_dict[parents[1].ID].append(cat)
+                living_kits.remove(cat)
+            else:
+                queen_dict[parents[1].ID] = [cat]
+                living_kits.remove(cat)
+    return queen_dict, living_kits
 
 def get_alive_kits(Cat):
     """
@@ -169,7 +175,7 @@ def create_new_cat(Cat,
                    outside:bool=False,
                    parent1:str=None,
                    parent2:str=None
-	) -> list:
+    ) -> list:
     """
     This function creates new cats and then returns a list of those cats
     :param Cat: pass the Cat class
@@ -560,16 +566,20 @@ def change_relationship_values(cats_to: list,
         changed = True"""
 
     # pick out the correct cats
-    for kitty in cats_from:
-        relationships = [i for i in kitty.relationships.values() if i.cat_to.ID in cats_to]
+    for single_cat_from in cats_from:
+        for single_cat_to_ID in cats_to:
+            single_cat_to = single_cat_from.fetch_cat(single_cat_to_ID)
 
-        # make sure that cats don't gain rel with themselves
-        for rel in relationships:
-            if kitty.ID == rel.cat_to.ID:
+            if single_cat_from == single_cat_to:
                 continue
+            
+            if single_cat_to_ID not in single_cat_from.relationships:
+                single_cat_from.create_one_relationship(single_cat_to)
+
+            rel = single_cat_from.relationships[single_cat_to_ID]
 
             # here we just double-check that the cats are allowed to be romantic with each other
-            if kitty.is_potential_mate(rel.cat_to, for_love_interest=True) or rel.cat_to.ID in kitty.mate:
+            if single_cat_from.is_potential_mate(single_cat_to, for_love_interest=True) or single_cat_to.ID in single_cat_from.mate:
                 # if cat already has romantic feelings then automatically increase romantic feelings
                 # when platonic feelings would increase
                 if rel.romantic_love > 0 and auto_romance:
@@ -650,8 +660,7 @@ def process_text(text, cat_dict, raise_exception=False):
     adjust_text = re.sub(r"\{(.*?)\}", lambda x: pronoun_repl(x, cat_dict, raise_exception),
                                                               text)
 
-    name_patterns = [re.escape(l) for l in cat_dict]
-
+    name_patterns = [r'(?<!\{)' + re.escape(l) + r'(?!\})' for l in cat_dict]
     adjust_text = re.sub("|".join(name_patterns), lambda x: name_repl(x, cat_dict), adjust_text)
     return adjust_text
 
@@ -804,9 +813,24 @@ def history_text_adjust(text,
     if "c_n" in text:
         text = text.replace("c_n", clan.name)
     if "r_c" in text and other_cat_rc:
-        text = text.replace("r_c", str(other_cat_rc.name))
+        text = selective_replace(text, "r_c", str(other_cat_rc.name))
     return text
 
+def selective_replace(text, pattern, replacement):
+    i = 0
+    while i < len(text):
+        index = text.find(pattern, i)
+        if index == -1:
+            break
+        start_brace = text.rfind('{', 0, index)
+        end_brace = text.find('}', index)
+        if start_brace != -1 and end_brace != -1 and start_brace < index < end_brace:
+            i = index + len(pattern)
+        else:
+            text = text[:index] + replacement + text[index + len(pattern):]
+            i = index + len(replacement)
+
+    return text
 
 def ongoing_event_text_adjust(Cat, text, clan=None, other_clan_name=None):
     """
@@ -878,7 +902,10 @@ def event_text_adjust(Cat,
         text = text.replace("acc_singular", str(ACC_DISPLAY[cat.pelt.accessory]["singular"]))
 
     if other_cat:
-        cat_dict["r_c"] = (str(other_cat.name), choice(other_cat.pronouns))
+        if other_cat.pronouns:
+            cat_dict["r_c"] = (str(other_cat.name), choice(other_cat.pronouns))
+        else:
+            cat_dict["r_c"] = (str(other_cat.name))
 
     if new_cat:
         cat_dict["n_c_pre"] = (str(new_cat.name.prefix), None)
@@ -898,7 +925,7 @@ def event_text_adjust(Cat,
 
     if murder_reveal and victim:
         victim_cat = Cat.fetch_cat(victim)
-        text = text.replace("mur_c", str(victim_cat.name))
+        cat_dict["mur_c"] = (str(victim_cat.name), choice(victim_cat.pronouns))
 
     # Dreams and Omens
     text, senses, list_type = find_special_list_types(text)
@@ -931,6 +958,7 @@ def leader_ceremony_text_adjust(Cat,
     text = process_text(text, replace_dict)
 
     if virtue:
+        virtue = process_text(virtue, replace_dict)
         text = text.replace("[virtue]", virtue)
 
     if extra_lives:

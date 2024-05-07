@@ -166,7 +166,7 @@
         ]
     },
     {
-        "id": "daring_kit",
+        "id": "fearless_kit",
         "thoughts": [
             "Is attempting to pounce on the tail of r_c",
             "Tries to sneak out of camp with a patrol",
@@ -186,7 +186,7 @@
 
         ],
         "main_trait_constraint": [
-            "daring"
+            "fearless"
         ]
     },
     {
@@ -201,7 +201,7 @@
             "Stares into nothing in particular",
             "Makes up a tale on the spot for the other kits",
             "Is annoying the elders for more tales",
-            "Wonders what the ancient clans were like",
+            "Wonders what the ancient Clans were like",
             "Wonders what it would be like to live in a different Clan",
             "Is pretending to be a twoleg kit",
             "Wants r_c to pretend to be {PRONOUN/m_c/poss} apprentice",
@@ -210,7 +210,7 @@
             "Asks r_c if {PRONOUN/r_c/subject} like to daydream too",
             "Is telling r_c another story, and another, and another, and...",
             "Wonders what it would be like to have a fish for a tail",
-            "Wants to learn everything they can and more",
+            "Wants to learn everything {PRONOUN/m_c/subject} can and more",
             "Tells the best stories"
         ],
         "main_trait_constraint": [
@@ -242,7 +242,7 @@
         ]
     },
     {
-        "id": "nervous_kit",
+        "id": "skittish_kit",
         "thoughts": [
             "Was startled by a croaking frog",
             "Is doing {PRONOUN/m_c/poss} best not to get stepped on",
@@ -274,7 +274,7 @@
             "Has a lot on {PRONOUN/m_c/poss} mind"
         ],
         "main_trait_constraint": [
-            "nervous"
+            "skittish"
         ]
     },
     {
@@ -328,7 +328,7 @@
         ]
     },
     {
-        "id": "troublesome_kit",
+        "id": "unruly_kit",
         "thoughts": [
             "Is thinking about mischief",
             "Is wondering what trouble {PRONOUN/m_c/subject} can create",
@@ -355,11 +355,11 @@
             "Is covered in mud"
         ],
         "main_trait_constraint": [
-            "troublesome"
+            "unruly"
         ]
     },
     {
-        "id": "lonesome_kit",
+        "id": "shy_kit",
         "thoughts": [
             "Is feeling alone",
             "Wishes {PRONOUN/m_c/subject} had friends",
@@ -374,7 +374,7 @@
             "Thought about talking to r_c but changed {PRONOUN/m_c/poss} mind"
         ],
         "main_trait_constraint": [
-            "lonesome"
+            "shy"
         ]
     },
     {
@@ -383,7 +383,7 @@
             "Wakes r_c in the middle of the night to ask a question about snails",
             "Wakes up early to say hello to the dawn patrol",
             "Follows r_c around so closely that {PRONOUN/m_c/subject} step on {PRONOUN/r_c/poss} paw",
-            "Says hello to r_c at least 10 times in a row, until {PRONOUN/r_c/subject} finally says hello back",
+            "Says hello to r_c at least 10 times in a row, until {PRONOUN/r_c/subject} finally {VERB/r_c/say/says} hello back",
             "Is showing everycat the bug {PRONOUN/m_c/subject} caught earlier",
             "Is in r_c's way... again",
             "Yowls loudly in the middle of the clearing for absolutely no reason",
@@ -414,7 +414,7 @@
         ]
     },
     {
-        "id": "insecure_kit",
+        "id": "self-conscious_kit",
         "thoughts": [
             "Doesn't think {PRONOUN/m_c/subject} will ever be an apprentice",
             "Thinks r_c doesn't like {PRONOUN/m_c/object}",
@@ -426,7 +426,7 @@
             "Is afraid of being in the way"
         ],
         "main_trait_constraint": [
-            "insecure"
+            "self-conscious"
         ]
     },
     {
@@ -451,7 +451,7 @@
         "id": "know-it-all_kit",
         "thoughts": [
             "Has already learned the hunter's crouch",
-            "Doesn't need r_c to tell them anything",
+            "Doesn't need r_c to tell {PRONOUN/m_c/object} anything",
             "Tells r_c a fact about snails, and another, and another...",
             "Is able to name 20 kinds of bird",
             "Memorized the Warrior Code ages ago",
