@@ -75,7 +75,7 @@
     "disgraced_dep": "diputado deshonrado"
   },
   "CAT_SCREEN.LIVES_CEREMONY": {
-    "intro": "%cat% se va para hablar con StarClan. Cierran los ojos e inmediatamente se ven rodeados de sus seres queridos, amigos y compañeros de clan que han fallecido. Las estrellas brillan en sus pieles y sus ojos se muestran cálidos al saludar al nuevo líder.\n\n",
+    "intro": "%cat% se va para hablar con StarClan. Cierran los ojos e inmediatamente se ven rodeados de sus seres queridos, amigos y companeros de clan que han fallecido. Las estrellas brillan en sus pieles y sus ojos se muestran cálidos al saludar al nuevo líder.\n\n",
     "known0": "%sc% se acerca primero al nuevo líder y toca suavemente la cabeza de %cat% con su nariz. Dan una vida por %virt%.\n\n",
     "unknown0": "Una reina se presenta como %sc%. Tocan suavemente la cabeza de %cat% con su nariz, lo que les da vida a %virt%.\n\n",
     "known1": "A continuación, %sc% se acerca a %cat% y le ofrece una vida a %virt%. Sonríen y afirman que al clan le irá bien bajo el liderazgo de %cat%.\n\n",
