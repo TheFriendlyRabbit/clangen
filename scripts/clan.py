@@ -788,9 +788,9 @@ class Clan():
                       encoding='utf-8') as write_file:
                 _load_settings = ujson.loads(write_file.read())
                 
-        for key, value in _load_settings.items():
-            if key in self.clan_settings:
-                self.clan_settings[key] = value
+            for key, value in _load_settings.items():
+                if key in self.clan_settings:
+                    self.clan_settings[key] = value
 
     def load_herbs(self, clan):
         """

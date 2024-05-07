@@ -97,13 +97,13 @@ def build_relationships(link_cats, src_cat):
             if src_cat.ID not in inter_cat.relationships:
                 inter_cat.create_one_relationship(src_cat)
 
-def get_cats_same_age(cat, Relationship, range=10):  # pylint: disable=redefined-builtin
+def get_cats_same_age(cat, range=10):  # pylint: disable=redefined-builtin
     """Look for all cats in the Clan and returns a list of cats, which are in the same age range as the given cat."""
     cats = [icat for icat in cat.all_cats.values() if not (icat.dead or icat.outside or icat.exiled) and icat.ID != cat.ID and abs(icat.moons - cat.moons) <= range]
     build_relationships(cats, cat)
     return cats
 
-def get_free_possible_mates(cat, Relationship):
+def get_free_possible_mates(cat):
     """Returns a list of available cats, which are possible mates for the given cat."""
     cats = [icat for icat in cat.all_cats.values() if not (icat.dead or icat.outside or icat.exiled) and icat.ID != cat.ID]
     build_relationships(cats, cat)
@@ -250,7 +250,7 @@ def create_new_cat(Cat,
                 if bool(getrandbits(1)):  # 50% chance old name is kept in some fashion
                     if name.count(" "):
                         # Cats with a name that includes spaces may keep their full name as a prefix, or choose just one word from that name
-                        name = choice(name.split(" ").append(name))
+                        name = choice(name.split(" ")).append(name)
                     new_pref = name
             else:
                 new_pref = name
