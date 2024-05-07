@@ -75,25 +75,26 @@ class Name():
         
         name_fixpref = False
         
-        game.langman.load_name_db()
-        col_names = self.fetch_cols()
-        
-        # Set prefix
-        if self.prefix is None:
-            self.give_prefix(eyes, colour, biome, col_names)
-            # needed for random dice when we're changing the Prefix
-            name_fixpref = True
-
-        # Set suffix
-        if self.suffix is None:
-            self.give_suffix(pelt, biome, tortiepattern, col_names)
-            if name_fixpref and self.prefix is None:
+        if game.langman:
+            game.langman.load_name_db()
+            col_names = self.fetch_cols()
+            
+            # Set prefix
+            if self.prefix is None:
+                self.give_prefix(eyes, colour, biome, col_names)
                 # needed for random dice when we're changing the Prefix
-                name_fixpref = False
-                
-        #self.localized = game.langman.fetch_localized_name(self.prefix, self.suffix)
-        self.last_lang = game.langman.current_lang
-        game.langman.close_name_db()
+                name_fixpref = True
+
+            # Set suffix
+            if self.suffix is None:
+                self.give_suffix(pelt, biome, tortiepattern, col_names)
+                if name_fixpref and self.prefix is None:
+                    # needed for random dice when we're changing the Prefix
+                    name_fixpref = False
+                    
+            #self.localized = game.langman.fetch_localized_name(self.prefix, self.suffix)
+            self.last_lang = game.langman.current_lang
+            game.langman.close_name_db()
         
     def fetch_cols(self):
         return [col[0] for col in game.langman.db_cursor.execute("SELECT * FROM NAMES").description]
